@@ -1,0 +1,84 @@
+# feladatok:
+
+
+
+Technológia:
+
+-MSSQL szerver
+
+-C# kliens (WPF)
+
+
+
+Architektúra:
+
+-Vastag kliens (DB szerver + kliens, ami hívja a db szolgáltatásait)
+
+-WCF
+
+Adatmodell tervezése:
+
+-Legalább 3 NF
+
+-Legalább 9 adattábla + 1 tábla bejelentkezés
+
+
+Kapcsolatok:
+-elõfordul benne egy-több
+-illetve több-több típusú kapcsolat is
+
+
+Dokumentáció:
+-adatbázis terv
+-táblák tényszerû bemutatása
+-megszorítások
+-ellenõrzõ algoritmus
+
+
+
+Adatmodell megvalósítása az MSSQL szerveren:
+-MSSQL
+-Csak belsõ szerveren
+
+-A kliens szolgáltatásai csak bejelentkezés után érhetõk el
+
+-Jelszavak tárolása titkosítva történik (MD5, SHA1)
+
+-Opcionálisan csoportkezelés
+
+-Adattartalmak megjelenítése, kezelési funkciók támogatása
+
+-Lekérdezések egyszerû SQL utasításként
+
+-Kezelésre (beszúrás, módosítás, törlése) szolgáló funkciók tárolt eljárásokon keresztül vehetõk igénybe
+
+-Egy adattbálához kapcsolódóan tesztadat generáló funkció megvalósítása
+
+-A kliensen keresztül tesztadatok generálásának a lehetõsége
+  Paraméterek: generálandó rekordok száma, generálás elõtt a táblát ki kell-e üríteni
+
+-Legalább egy tárolt függvény megvalósítása adatgenerálásra/ellenõrzésre
+
+-Valamilyen automatizmus megvalósítása (trigger)
+-legalább 1 db.
+
+Kliens
+
+-Napló készítése a felhasználó tevékenységrõl
+
+-Hibanapló készítése a rendszerhibák/felhasználói hibák vonatkozásában
+
+-Opcionálisan csv import
+-Valamely adattáblába rekordok beszúrása csv állomány felolvasásából
+
+-Opcionálisan csv export
+-Valamely adattábla tartalmának exportálása csv állományba
+
+
+
+határidõ: a vizsgaidõszak végéig, de a legtávolabbi vizsgaidõpont elõtt.
+
+
+Védés: valamely vizsgaalkalmon
+
+.
