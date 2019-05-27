@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+//Csak tesztelésre
+using System.Configuration;
 
 namespace WPF_client
 {
@@ -26,6 +28,7 @@ namespace WPF_client
         public MainWindow()
         {
             InitializeComponent();
+            Logger.Log("Új felhasználó.");
 
             timer.Interval = new TimeSpan(0, 0, 3);
             timer.Start();
