@@ -1,14 +1,5 @@
-/*DROP TABLE Person_Parent;
-DROP TABLE Person_Hobby;
-DROP TABLE Person_Pet;
-DROP TABLE Users;
-DROP TABLE Parents;
-DROP TABLE Hobbies;
-DROP TABLE Jobs;
-DROP TABLE Persons;
-DROP TABLE Cars;
-DROP TABLE Pets;*/
 
+ -- Táblák létrehozása --
 CREATE TABLE Users(
 	username VARCHAR(50) PRIMARY KEY,
 	password VARCHAR(50) NOT NULL
