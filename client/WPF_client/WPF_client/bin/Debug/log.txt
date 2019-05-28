@@ -98,3 +98,15 @@ Time 			| LogType 	| Message
 Time 			| LogType 	| Message
 2019. 05. 28.-20:38	| [INFO]	|Új felhasználó.
 2019. 05. 28.-20:38	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:46	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:46	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:47	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:47	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:48	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:48	| [INFO]	|Bejelentkezési ablak megnyitása

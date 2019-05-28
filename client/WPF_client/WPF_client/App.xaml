@@ -10,6 +10,7 @@
         <Color x:Key="ErrorColor" A="255" R="255" G="0" B="50"/>
         <Color x:Key="OkColor" A="255" R="0" G="255" B="50"/>
         <Color x:Key="LinkColor" A="255" R="0" G="0" B="255"/>
+        <Color x:Key="HighlighterColor" A="255" R="88" G="142" B="74" />
 
         <SolidColorBrush x:Key="DarkBackgroundBrush" Color="{StaticResource DarkBackgroundColor}"/>
         <SolidColorBrush x:Key="LightBackgroundBrush" Color="{StaticResource LightBackgroundColor}"/>
@@ -17,5 +18,7 @@
         <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}"/>
         <SolidColorBrush x:Key="OkBrush" Color="{StaticResource OkColor}"/>
         <SolidColorBrush x:Key="LinkBrush" Color="{StaticResource LinkColor}"/>
+        <SolidColorBrush x:Key="HightlighterBrush" Color="{StaticResource HighlighterColor}" />
+        <SolidColorBrush x:Key="DefaultHighlightingBrush" Color="Gray" />
     </Application.Resources>
 </Application>

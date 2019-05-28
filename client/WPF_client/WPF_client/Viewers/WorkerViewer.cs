@@ -13,10 +13,31 @@ namespace WPF_client.Viewers
     {
         public StackPanel main_sp;
 
+        private bool clicked = false;
+
+        private void Main_sp_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            if(!clicked) main_sp.Background = (SolidColorBrush)Application.Current.FindResource("DefaultHighlightingBrush");
+        }
+
+        private void Main_sp_MouseEnter(object sender, System.Windows.Input.MouseEventArgs e)
+        {
+            main_sp.Background = (SolidColorBrush)Application.Current.FindResource("HightlighterBrush");
+        }
+
+        //Kieg: őt hamisra kell állítani, ha másra klikkelnek
+        private void Main_sp_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+            clicked = true;
+        }
+
         public WorkerViewer(Image image, Label lbl_name, Label lbl_age, Button btn_view)
         {
             main_sp = new StackPanel();
             main_sp.Orientation = Orientation.Horizontal;
+            main_sp.MouseEnter += Main_sp_MouseEnter;
+            main_sp.MouseLeave += Main_sp_MouseLeave;
+            main_sp.MouseUp += Main_sp_MouseUp;
 
             StackPanel image_sp = new StackPanel();
             image_sp.Children.Add(image);
@@ -31,7 +52,7 @@ namespace WPF_client.Viewers
             main_sp.Children.Add(datas_sp);
 
             main_sp.Margin = new Thickness(5, 5, 5, 5);
-            main_sp.Background = new SolidColorBrush(Colors.Gray);
+            main_sp.Background = (SolidColorBrush)Application.Current.FindResource("DefaultHighlightingBrush");
         }
     }
 }
