@@ -1,0 +1,100 @@
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:02	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:02	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:03	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:03	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:05	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:05	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:06	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:06	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:06	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:06	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:07	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:07	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:08	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:08	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:10	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:10	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:11	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:11	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:12	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:12	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:14	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:14	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:24	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:24	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:24	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:24	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:26	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:26	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:26	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:26	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:27	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:27	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:28	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:28	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:29	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:29	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:29	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:30	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:31	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:31	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:31	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:31	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:32	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:32	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:34	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:34	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:36	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:36	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 28.-20:38	| [INFO]	|Új felhasználó.
+2019. 05. 28.-20:38	| [INFO]	|Bejelentkezési ablak megnyitása

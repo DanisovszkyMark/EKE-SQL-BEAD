@@ -64,6 +64,7 @@
     <Compile Include="ManageWorkerViewWindow.xaml.cs">
       <DependentUpon>ManageWorkerViewWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Viewers\WorkerViewer.cs" />
     <Compile Include="WorkersViewWindow.xaml.cs">
       <DependentUpon>WorkersViewWindow.xaml</DependentUpon>
     </Compile>
@@ -133,6 +134,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Gifs\lazy_load.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\login.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

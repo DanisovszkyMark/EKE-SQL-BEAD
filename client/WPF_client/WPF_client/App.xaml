@@ -9,12 +9,13 @@
         <Color x:Key="LightForegroundColor" A="255" R="255" G="255" B="255"/>
         <Color x:Key="ErrorColor" A="255" R="255" G="0" B="50"/>
         <Color x:Key="OkColor" A="255" R="0" G="255" B="50"/>
+        <Color x:Key="LinkColor" A="255" R="0" G="0" B="255"/>
 
         <SolidColorBrush x:Key="DarkBackgroundBrush" Color="{StaticResource DarkBackgroundColor}"/>
         <SolidColorBrush x:Key="LightBackgroundBrush" Color="{StaticResource LightBackgroundColor}"/>
         <SolidColorBrush x:Key="LightForegroundBrush" Color="{StaticResource LightForegroundColor}"/>
         <SolidColorBrush x:Key="ErrorBrush" Color="{StaticResource ErrorColor}"/>
         <SolidColorBrush x:Key="OkBrush" Color="{StaticResource OkColor}"/>
-
+        <SolidColorBrush x:Key="LinkBrush" Color="{StaticResource LinkColor}"/>
     </Application.Resources>
 </Application>

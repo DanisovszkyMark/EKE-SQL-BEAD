@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("gifs/lazy_load.gif")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/login.png")]
 
 

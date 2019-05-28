@@ -26,6 +26,10 @@ namespace WPF_client
             Logger.Info("Bejelentkezési ablak megnyitása");
 
             InitializeComponent();
+
+            //Csak tesztelésre:
+            WorkersViewWindow form = new WorkersViewWindow();
+            form.Show();
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
