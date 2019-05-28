@@ -28,7 +28,7 @@ namespace WPF_client
         public MainWindow()
         {
             InitializeComponent();
-            Logger.Log("Új felhasználó.");
+            Logger.Info("Új felhasználó.");
 
             timer.Interval = new TimeSpan(0, 0, 3);
             timer.Start();

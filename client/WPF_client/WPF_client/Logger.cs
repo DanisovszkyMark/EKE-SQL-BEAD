@@ -16,21 +16,31 @@ namespace WPF_client
         private static StreamWriter sw;
         private static bool opened = false;
 
-        public static void Log(string message)
+        public static void Log(string logType, string message)
         {
             if (sw == null)
             {
                 sw = new StreamWriter(filename + doctype, true);
                 sw.WriteLine("///// Log /////");
-                sw.WriteLine("Time \t\t\t| Message");
+                sw.WriteLine("Time \t\t\t| LogType \t| Message");
                 opened = true;
             }
             else if (!opened) sw = new StreamWriter(filename + doctype, true);
 
-            sw.WriteLine(DateTime.Now.ToShortDateString() + "-" + DateTime.Now.ToShortTimeString() + "\t| " + message);
+            sw.WriteLine(DateTime.Now.ToShortDateString() + "-" + DateTime.Now.ToShortTimeString() + "\t| [" + logType + "]\t|" + message);
 
             sw.Close();
             opened = false;
+        }
+
+        public static void Info(string message)
+        {
+            Log("INFO", message);
+        }
+
+        public static void Error(string message)
+        {
+            Log("ERROR", message);
         }
     }
 }
