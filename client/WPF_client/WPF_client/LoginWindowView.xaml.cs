@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_client.DatabaseManagers;
+using WPF_client.DatabaseManagers.Records;
 using WPF_client.Exceptions;
 
 namespace WPF_client
@@ -21,15 +23,14 @@ namespace WPF_client
     /// </summary>
     public partial class LoginWindowView : Window
     {
+        private UsersManager manager;
+
         public LoginWindowView()
         {
             Logger.Info("Bejelentkezési ablak megnyitása");
-
             InitializeComponent();
 
-            //Csak tesztelésre:
-            WorkersViewWindow form = new WorkersViewWindow();
-            form.Show();
+            manager = new UsersManager();
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
@@ -44,33 +45,46 @@ namespace WPF_client
                 if (canLogin())
                 {
                     Logger.Info(String.Format("Sikeres bejelentkezés ({0})", tb_username.Text));
-                    //felületváltás és logolás
+
+                    WorkersViewWindow newWindow = new WorkersViewWindow();
+                    newWindow.Show();
+                    this.Close();
                 }
                 else
                 {
                     Logger.Error("Sikertelen bejelentkezés. Helytelen adatok.");
-                    //Hiba logolása, visszaüzenés
+                    MessageBox.Show("Wrong username or password!");
                 }
             }
             catch (ConnectionException ce)
             {
                 Logger.Error("Hiba a szerver kapcsolatban.");
-                //Hiba logolása, visszaüzenés
+                MessageBox.Show("Wrong with server connection!");
             }
             catch (Exception exc)
             {
                 Logger.Error("Ismeretlen hiba történt.");
-                //Hiba logolása, visszaüzenés
+                MessageBox.Show("Unexpected error!");
             }
         }
 
         private void connectToServer()
         {
-            throw new ConnectionException();
+            //throw new ConnectionException();
         }
 
         private bool canLogin()
         {
+            UserRecord user = new UserRecord();
+            user.Username = this.tb_username.Text;
+            user.Password = this.pb_password.Password;
+
+            List<UserRecord> records = manager.Select();
+            foreach (UserRecord u in records)
+            {
+                if (u.Username == user.Username && u.Password == user.Password) return true;
+            }
+            
             return false;
         }
     }
