@@ -59,6 +59,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DatabaseManagers\BaseDatabaseManager.cs" />
+    <Compile Include="DatabaseManagers\Records\Record.cs" />
     <Compile Include="Exceptions\ConnectionException.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="ManageWorkerViewWindow.xaml.cs">
