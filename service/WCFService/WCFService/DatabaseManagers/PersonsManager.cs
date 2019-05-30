@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using WCFService.DatabaseManagers.Interfaces;
 using WCFService.DatabaseManagers.Records;
 
 namespace WCFService.DatabaseManagers
 {
-    public class PersonsManager : BaseDatabaseManager, IDML
+    public class PersonsManager : BaseDatabaseManager
     {
         public List<PersonRecord> Select()
         {
