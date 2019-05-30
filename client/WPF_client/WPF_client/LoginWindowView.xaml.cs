@@ -79,8 +79,11 @@ namespace WPF_client
             user.Username = this.tb_username.Text;
             user.Password = this.pb_password.Password;
 
-            List<UserRecord> records = manager.Select();
-            foreach (UserRecord u in records)
+            ServiceReference.ServiceClient client = new ServiceReference.ServiceClient();
+            List<ServiceReference.UserRecord> records = client.SelectAllUser().ToList();
+
+            //List<UserRecord> records = manager.Select();
+            foreach (ServiceReference.UserRecord u in records)
             {
                 if (u.Username == user.Username && u.Password == user.Password) return true;
             }
