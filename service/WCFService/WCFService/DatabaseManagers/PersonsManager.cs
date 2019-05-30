@@ -45,9 +45,42 @@ namespace WCFService.DatabaseManagers
             throw new NotImplementedException();
         }
 
-        public int Insert(Record record)
+        public void Insert(PersonRecord record)
         {
-            throw new NotImplementedException();
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = @"INSERT INTO Persons(name, birth_day, job_id, salary)
+                                    VALUES (@name, @birth_day, @job_id, @salary)";
+
+            SqlParameter name = new SqlParameter();
+            name.ParameterName = "@name"; 
+            name.SqlDbType = System.Data.SqlDbType.VarChar;
+            name.Direction = System.Data.ParameterDirection.Input; 
+            name.Value = record.Name;
+            command.Parameters.Add(name);
+
+            SqlParameter birth_day = new SqlParameter();
+            birth_day.ParameterName = "@birth_day";
+            birth_day.SqlDbType = System.Data.SqlDbType.DateTime;
+            birth_day.Direction = System.Data.ParameterDirection.Input;
+            birth_day.Value = record.Birt_day;
+            command.Parameters.Add(birth_day);
+
+            SqlParameter job_id = new SqlParameter();
+            job_id.ParameterName = "@job_id";
+            job_id.SqlDbType = System.Data.SqlDbType.Int;
+            job_id.Direction = System.Data.ParameterDirection.Input;
+            job_id.Value = record.Job_id;
+            command.Parameters.Add(job_id);
+
+            SqlParameter salary = new SqlParameter();
+            salary.ParameterName = "@salary";
+            salary.SqlDbType = System.Data.SqlDbType.Int;
+            salary.Direction = System.Data.ParameterDirection.Input;
+            salary.Value = record.Salary;
+            command.Parameters.Add(salary);
+
+            command.ExecuteNonQuery();
         }
 
         public int Update(Record record)

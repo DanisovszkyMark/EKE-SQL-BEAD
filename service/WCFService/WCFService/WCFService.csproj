@@ -66,8 +66,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseManagers\BaseDatabaseManager.cs" />
-    <Compile Include="DatabaseManagers\Interfaces\IDML.cs" />
-    <Compile Include="DatabaseManagers\Interfaces\IQL.cs" />
     <Compile Include="DatabaseManagers\PersonsManager.cs" />
     <Compile Include="DatabaseManagers\Records\PersonRecord.cs" />
     <Compile Include="DatabaseManagers\Records\Record.cs" />

@@ -26,9 +26,14 @@ namespace WCFService
             return personsManager.Select();
         }
 
-        public List<PersonRecord> Error_Persons()
+        public void InsertUser(UserRecord record)
         {
             throw new NotImplementedException();
+        }
+
+        public void InsertPerson(PersonRecord record)
+        {
+            personsManager.Insert(record);
         }
     }
 }

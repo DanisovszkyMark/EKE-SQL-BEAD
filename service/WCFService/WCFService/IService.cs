@@ -15,8 +15,15 @@ namespace WCFService
         [OperationContract]
         List<UserRecord> SelectAllUser();
 
+        //Regisztrációhoz
+        [OperationContract]
+        void InsertUser(UserRecord record);
+
         [OperationContract]
         List<PersonRecord> SelectAllPerson();
+
+        [OperationContract]
+        void InsertPerson(PersonRecord record);
 
     }
 }
