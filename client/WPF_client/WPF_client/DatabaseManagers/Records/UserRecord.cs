@@ -41,7 +41,6 @@ namespace WPF_client.DatabaseManagers.Records
 
         public UserRecord()
         {
-
         }
     }
 }

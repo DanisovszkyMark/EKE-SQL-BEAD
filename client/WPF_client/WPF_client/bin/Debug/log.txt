@@ -148,3 +148,100 @@ Time 			| LogType 	| Message
 2019. 05. 29.-12:03	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
 2019. 05. 29.-12:03	| [INFO]	|A szerver kapcsolat létrejött.
 2019. 05. 29.-12:03	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-12:11	| [INFO]	|Új felhasználó.
+2019. 05. 29.-12:11	| [INFO]	|Bejelentkezési ablak megnyitása
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-12:13	| [INFO]	|Új felhasználó.
+2019. 05. 29.-12:13	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-12:13	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin2
+2019. 05. 29.-12:13	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-12:13	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+2019. 05. 29.-12:14	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin2
+2019. 05. 29.-12:14	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-12:14	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+2019. 05. 29.-12:14	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-12:14	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-12:14	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:28	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:28	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:28	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:28	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:28	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:29	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:29	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:29	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:29	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:29	| [INFO]	|Sikeres bejelentkezés (admin)
+2019. 05. 29.-13:29	| [ERROR]	|Ismeretlen hiba történt.
+2019. 05. 29.-13:29	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:29	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:29	| [INFO]	|Sikeres bejelentkezés (admin)
+2019. 05. 29.-13:29	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:30	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:30	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:30	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:30	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:30	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:30	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:30	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:30	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:30	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:30	| [INFO]	|Sikeres bejelentkezés (admin)
+2019. 05. 29.-13:30	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:31	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:31	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:31	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:31	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:31	| [INFO]	|Sikeres bejelentkezés (admin)
+2019. 05. 29.-13:31	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:31	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:31	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:31	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:31	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:31	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:32	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:32	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:32	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:32	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:32	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:33	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:33	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:33	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:33	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:33	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:35	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:35	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:35	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:35	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:35	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 29.-13:37	| [INFO]	|Új felhasználó.
+2019. 05. 29.-13:37	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 29.-13:37	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: amin admin
+2019. 05. 29.-13:37	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:37	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+2019. 05. 29.-13:38	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 29.-13:38	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 29.-13:38	| [INFO]	|Sikeres bejelentkezés (admin)

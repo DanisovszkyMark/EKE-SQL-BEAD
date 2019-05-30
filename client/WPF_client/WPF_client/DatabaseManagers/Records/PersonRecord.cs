@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WPF_client.DatabaseManagers.Records
 {
-    class PersonRecord
+    class PersonRecord : Record
     {
         private string name;    
         public string Name
@@ -44,7 +44,6 @@ namespace WPF_client.DatabaseManagers.Records
         }
 
         private int? salary;
-
         public int? Salary
         {
             get { return salary; }
@@ -53,6 +52,14 @@ namespace WPF_client.DatabaseManagers.Records
                 if (value < 0) throw new ArgumentOutOfRangeException();
                 salary = value;
             }
+        }
+
+        public PersonRecord(int? id):base(id)
+        {
+        }
+
+        public PersonRecord() :base()
+        {
         }
     }
 }

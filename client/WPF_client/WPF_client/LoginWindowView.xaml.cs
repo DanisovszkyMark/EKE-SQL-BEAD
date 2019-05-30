@@ -56,12 +56,12 @@ namespace WPF_client
                     MessageBox.Show("Wrong username or password!");
                 }
             }
-            catch (ConnectionException ce)
+            catch (ConnectionException)
             {
                 Logger.Error("Hiba a szerver kapcsolatban.");
                 MessageBox.Show("Wrong with server connection!");
             }
-            catch (Exception exc)
+            catch (Exception)
             {
                 Logger.Error("Ismeretlen hiba történt.");
                 MessageBox.Show("Unexpected error!");

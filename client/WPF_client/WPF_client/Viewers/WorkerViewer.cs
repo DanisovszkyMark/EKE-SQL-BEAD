@@ -25,10 +25,18 @@ namespace WPF_client.Viewers
             main_sp.Background = (SolidColorBrush)Application.Current.FindResource("HightlighterBrush");
         }
 
-        //Kieg: őt hamisra kell állítani, ha másra klikkelnek
         private void Main_sp_MouseUp(object sender, System.Windows.Input.MouseButtonEventArgs e)
         {
-            clicked = true;
+            if (!clicked)
+            {
+                main_sp.Background = (SolidColorBrush)Application.Current.FindResource("HightlighterBrush");
+                clicked = true;
+            }
+            else
+            {
+                main_sp.Background = (SolidColorBrush)Application.Current.FindResource("DefaultHighlightingBrush");
+                clicked = false;
+            }
         }
 
         public WorkerViewer(Image image, Label lbl_name, Label lbl_age, Button btn_view)
