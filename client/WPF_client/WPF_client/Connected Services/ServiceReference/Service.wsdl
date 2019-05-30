@@ -13,20 +13,40 @@
   <wsdl:message name="IService_SelectAllUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:SelectAllUserResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
   <wsdl:message name="IService_SelectAllPerson_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectAllPerson" />
   </wsdl:message>
   <wsdl:message name="IService_SelectAllPerson_OutputMessage">
     <wsdl:part name="parameters" element="tns:SelectAllPersonResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_InsertPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="SelectAllUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllUser" message="tns:IService_SelectAllUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectAllUserResponse" message="tns:IService_SelectAllUser_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertUser" message="tns:IService_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertUserResponse" message="tns:IService_InsertUser_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="SelectAllPerson">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllPerson" message="tns:IService_SelectAllPerson_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectAllPersonResponse" message="tns:IService_SelectAllPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertPerson" message="tns:IService_InsertPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertPersonResponse" message="tns:IService_InsertPerson_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -40,8 +60,26 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="SelectAllPerson">
       <soap:operation soapAction="http://tempuri.org/IService/SelectAllPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPerson">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertPerson" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

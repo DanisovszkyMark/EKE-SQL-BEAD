@@ -13,6 +13,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="InsertUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="record" nillable="true" type="q2:UserRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertUserResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="SelectAllPerson">
     <xs:complexType>
       <xs:sequence />
@@ -21,8 +33,20 @@
   <xs:element name="SelectAllPersonResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="SelectAllPersonResult" nillable="true" type="q2:ArrayOfPersonRecord" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="SelectAllPersonResult" nillable="true" type="q3:ArrayOfPersonRecord" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPerson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="record" nillable="true" type="q4:PersonRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPersonResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>

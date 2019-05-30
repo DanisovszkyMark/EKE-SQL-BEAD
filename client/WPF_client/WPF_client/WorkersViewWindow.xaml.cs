@@ -22,20 +22,30 @@ namespace WPF_client
     public partial class WorkersViewWindow : Window
     {
         ServiceClient client;
+
+        private List<WorkerViewer> workerViewers;
+
         public WorkersViewWindow()
         {
             InitializeComponent();
             client = new ServiceClient();
+            workerViewers = new List<WorkerViewer>();
+
             FillDatas();
         }
 
         private void FillDatas()
         {
+            this.wp_datas.Items.Clear();
+            workerViewers.Clear();
+
             List<PersonRecord> records = client.SelectAllPerson().ToList();
 
-            foreach (PersonRecord u in records)
+            for (int i = 0; i < records.Count; i++)
             {
-                this.wp_datas.Items.Add(PersonToViewer(u).main_sp);
+                WorkerViewer v = PersonToViewer(records[i]);
+                workerViewers.Add(v);
+                this.wp_datas.Items.Add(workerViewers[i].main_sp);
             }
         }
 
@@ -92,7 +102,42 @@ namespace WPF_client
 
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
-            FillWithWorkers(1);
+            ManageWorkerViewWindow addWorker = new ManageWorkerViewWindow(-1);
+            addWorker.Closed += AddWorker_Closed;
+            addWorker.Show();
+        }
+
+        private void AddWorker_Closed(object sender, EventArgs e)
+        {
+            FillDatas();
+        }
+
+        private void Window_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            bool isActive = false;
+            bool moreThanOne = false;
+
+            for (int i = 0; i < workerViewers.Count; i++)
+            {
+                if (workerViewers[i].clicked)
+                {
+                    if (isActive)
+                    {
+                        moreThanOne = true;
+                        break;
+                    }
+
+                    this.btn_remove.IsEnabled = true;
+                    this.btn_update.IsEnabled = true;
+                    isActive = true;
+                }
+            }
+
+            if (!isActive || moreThanOne)
+            {
+                this.btn_remove.IsEnabled = false;
+                this.btn_update.IsEnabled = false;
+            }
         }
     }
 }

@@ -13,7 +13,7 @@ namespace WPF_client.Viewers
     {
         public StackPanel main_sp;
 
-        private bool clicked = false;
+        public bool clicked = false;
 
         private void Main_sp_MouseLeave(object sender, System.Windows.Input.MouseEventArgs e)
         {

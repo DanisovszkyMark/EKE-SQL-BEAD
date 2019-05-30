@@ -51,6 +51,7 @@ namespace WCFService.DatabaseManagers
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"INSERT INTO Persons(name, birth_day, job_id, salary)
                                     VALUES (@name, @birth_day, @job_id, @salary)";
+            command.Connection = getConnection();
 
             SqlParameter name = new SqlParameter();
             name.ParameterName = "@name"; 
@@ -77,6 +78,7 @@ namespace WCFService.DatabaseManagers
             salary.ParameterName = "@salary";
             salary.SqlDbType = System.Data.SqlDbType.Int;
             salary.Direction = System.Data.ParameterDirection.Input;
+            if (record.Salary == null) record.Salary = 0;
             salary.Value = record.Salary;
             command.Parameters.Add(salary);
 

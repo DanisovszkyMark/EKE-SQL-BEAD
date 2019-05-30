@@ -201,11 +201,23 @@ namespace WPF_client.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllUser", ReplyAction="http://tempuri.org/IService/SelectAllUserResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.UserRecord[]> SelectAllUserAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertUser", ReplyAction="http://tempuri.org/IService/InsertUserResponse")]
+        void InsertUser(WPF_client.ServiceReference.UserRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertUser", ReplyAction="http://tempuri.org/IService/InsertUserResponse")]
+        System.Threading.Tasks.Task InsertUserAsync(WPF_client.ServiceReference.UserRecord record);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
         WPF_client.ServiceReference.PersonRecord[] SelectAllPerson();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
+        void InsertPerson(WPF_client.ServiceReference.PersonRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
+        System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -243,12 +255,28 @@ namespace WPF_client.ServiceReference {
             return base.Channel.SelectAllUserAsync();
         }
         
+        public void InsertUser(WPF_client.ServiceReference.UserRecord record) {
+            base.Channel.InsertUser(record);
+        }
+        
+        public System.Threading.Tasks.Task InsertUserAsync(WPF_client.ServiceReference.UserRecord record) {
+            return base.Channel.InsertUserAsync(record);
+        }
+        
         public WPF_client.ServiceReference.PersonRecord[] SelectAllPerson() {
             return base.Channel.SelectAllPerson();
         }
         
         public System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync() {
             return base.Channel.SelectAllPersonAsync();
+        }
+        
+        public void InsertPerson(WPF_client.ServiceReference.PersonRecord record) {
+            base.Channel.InsertPerson(record);
+        }
+        
+        public System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record) {
+            return base.Channel.InsertPersonAsync(record);
         }
     }
 }
