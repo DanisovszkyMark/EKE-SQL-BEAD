@@ -66,15 +66,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="DatabaseManagers\BaseDatabaseManager.cs" />
-    <Compile Include="DatabaseManagers\Interfaces\IDML.cs" />
-    <Compile Include="DatabaseManagers\Interfaces\IQL.cs" />
-    <Compile Include="DatabaseManagers\PersonsManager.cs" />
-    <Compile Include="DatabaseManagers\Records\PersonRecord.cs" />
-    <Compile Include="DatabaseManagers\Records\Record.cs" />
-    <Compile Include="DatabaseManagers\UsersManager.cs" />
     <Compile Include="Exceptions\ConnectionException.cs" />
-    <Compile Include="Logger.cs" />
+    <Compile Include="Loggers\Logger.cs" />
     <Compile Include="ManageWorkerViewWindow.xaml.cs">
       <DependentUpon>ManageWorkerViewWindow.xaml</DependentUpon>
     </Compile>
@@ -137,6 +130,9 @@
     </None>
     <None Include="Connected Services\ServiceReference\Service2.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.Record.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.UserRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>

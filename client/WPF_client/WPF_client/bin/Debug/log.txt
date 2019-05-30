@@ -258,3 +258,10 @@ Time 			| LogType 	| Message
 2019. 05. 30.-15:19	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
 2019. 05. 30.-15:19	| [INFO]	|A szerver kapcsolat létrejött.
 2019. 05. 30.-15:19	| [INFO]	|Sikeres bejelentkezés (admin)
+///// Log /////
+Time 			| LogType 	| Message
+2019. 05. 30.-16:21	| [INFO]	|Új felhasználó.
+2019. 05. 30.-16:21	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 05. 30.-16:21	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 05. 30.-16:21	| [INFO]	|A szerver kapcsolat létrejött.
+2019. 05. 30.-16:21	| [ERROR]	|Ismeretlen hiba történt.

@@ -8,7 +8,6 @@ C:\Users\dmark\Desktop\WCFService\WCFService\obj\Debug\WCFService.pdb
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService\bin\WCFService.dll.config
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService\bin\WCFService.dll
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService\bin\WCFService.pdb
-D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService\obj\Debug\WCFService.csprojAssemblyReference.cache
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService\obj\Debug\WCFService.csproj.CoreCompileInputs.cache
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService\obj\Debug\WCFService.dll
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService\obj\Debug\WCFService.pdb

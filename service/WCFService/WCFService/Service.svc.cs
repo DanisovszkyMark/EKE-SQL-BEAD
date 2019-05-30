@@ -13,10 +13,17 @@ namespace WCFService
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service.svc or Service.svc.cs at the Solution Explorer and start debugging.
     public class Service : IService
     {
-        private UsersManager manager = new UsersManager();
+        private UsersManager usersManager = new UsersManager();
+        private PersonsManager personsManager = new PersonsManager();
+
         public List<UserRecord> SelectAllUser()
         {
-            return manager.Select();
+            return usersManager.Select();
+        }
+
+        public List<Record> SelectAllPerson()
+        {
+            return personsManager.Select();
         }
     }
 }

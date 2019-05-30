@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using WPF_client.DatabaseManagers;
 using WPF_client.DatabaseManagers.Records;
 using WPF_client.Exceptions;
+using WPF_client.ServiceReference;
 
 namespace WPF_client
 {
@@ -23,14 +24,10 @@ namespace WPF_client
     /// </summary>
     public partial class LoginWindowView : Window
     {
-        private UsersManager manager;
-
         public LoginWindowView()
         {
             Logger.Info("Bejelentkezési ablak megnyitása");
             InitializeComponent();
-
-            manager = new UsersManager();
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
@@ -79,11 +76,10 @@ namespace WPF_client
             user.Username = this.tb_username.Text;
             user.Password = this.pb_password.Password;
 
-            ServiceReference.ServiceClient client = new ServiceReference.ServiceClient();
-            List<ServiceReference.UserRecord> records = client.SelectAllUser().ToList();
+            ServiceClient client = new ServiceClient();
+            List<UserRecord> records = client.SelectAllUser().ToList();
 
-            //List<UserRecord> records = manager.Select();
-            foreach (ServiceReference.UserRecord u in records)
+            foreach (UserRecord u in records)
             {
                 if (u.Username == user.Username && u.Password == user.Password) return true;
             }

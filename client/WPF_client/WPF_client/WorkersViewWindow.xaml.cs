@@ -11,8 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WPF_client.DatabaseManagers;
-using WPF_client.DatabaseManagers.Records;
+using WPF_client.ServiceReference;
 using WPF_client.Viewers;
 
 namespace WPF_client
@@ -22,22 +21,21 @@ namespace WPF_client
     /// </summary>
     public partial class WorkersViewWindow : Window
     {
-        PersonsManager manager;
+        ServiceClient client = new ServiceClient();
 
         public WorkersViewWindow()
         {
             InitializeComponent();
-            manager = new PersonsManager();
             FillDatas();
         }
 
         private void FillDatas()
         {
-            List<Record> records = manager.Select();
+            List<Record> records = client.SelectAllPerson().ToList();
 
             foreach (Record u in records)
             {
-                this.wp_datas.Items.Add(PersonToViewer((PersonRecord)u).main_sp);
+                this.wp_datas.Items.Add(PersonToViewer((ServiceReference.PersonRecord)u).main_sp);
             }
         }
 

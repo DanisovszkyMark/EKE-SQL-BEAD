@@ -2,14 +2,13 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WPF_client.DatabaseManagers.Interfaces;
-using WPF_client.DatabaseManagers.Records;
+using System.Web;
+using WCFService.DatabaseManagers.Interfaces;
+using WCFService.DatabaseManagers.Records;
 
-namespace WPF_client.DatabaseManagers
+namespace WCFService.DatabaseManagers
 {
-    class PersonsManager : BaseDatabaseManager, IDML, IQL
+    public class PersonsManager : BaseDatabaseManager, IDML, IQL
     {
         public List<Record> Select()
         {

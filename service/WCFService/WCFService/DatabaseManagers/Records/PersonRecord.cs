@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Web;
 
-namespace WPF_client.DatabaseManagers.Records
+namespace WCFService.DatabaseManagers.Records
 {
-    class PersonRecord : Record
+    public class PersonRecord : Record
     {
-        private string name;    
+        private string name;
         public string Name
         {
             get { return name; }
@@ -54,11 +53,11 @@ namespace WPF_client.DatabaseManagers.Records
             }
         }
 
-        public PersonRecord(int? id):base(id)
+        public PersonRecord(int? id) : base(id)
         {
         }
 
-        public PersonRecord() :base()
+        public PersonRecord() : base()
         {
         }
     }
