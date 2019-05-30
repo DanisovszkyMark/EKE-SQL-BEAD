@@ -21,9 +21,14 @@ namespace WCFService
             return usersManager.Select();
         }
 
-        public List<Record> SelectAllPerson()
+        public List<PersonRecord> SelectAllPerson()
         {
             return personsManager.Select();
+        }
+
+        public List<PersonRecord> Error_Persons()
+        {
+            throw new NotImplementedException();
         }
     }
 }

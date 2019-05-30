@@ -21,21 +21,21 @@ namespace WPF_client
     /// </summary>
     public partial class WorkersViewWindow : Window
     {
-        ServiceClient client = new ServiceClient();
-
+        ServiceClient client;
         public WorkersViewWindow()
         {
             InitializeComponent();
+            client = new ServiceClient();
             FillDatas();
         }
 
         private void FillDatas()
         {
-            List<Record> records = client.SelectAllPerson().ToList();
+            List<PersonRecord> records = client.SelectAllPerson().ToList();
 
-            foreach (Record u in records)
+            foreach (PersonRecord u in records)
             {
-                this.wp_datas.Items.Add(PersonToViewer((ServiceReference.PersonRecord)u).main_sp);
+                this.wp_datas.Items.Add(PersonToViewer(u).main_sp);
             }
         }
 

@@ -16,6 +16,7 @@ namespace WCFService
         List<UserRecord> SelectAllUser();
 
         [OperationContract]
-        List<Record> SelectAllPerson();
+        List<PersonRecord> SelectAllPerson();
+
     }
 }

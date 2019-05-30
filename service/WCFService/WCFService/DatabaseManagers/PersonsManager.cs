@@ -8,11 +8,11 @@ using WCFService.DatabaseManagers.Records;
 
 namespace WCFService.DatabaseManagers
 {
-    public class PersonsManager : BaseDatabaseManager, IDML, IQL
+    public class PersonsManager : BaseDatabaseManager, IDML
     {
-        public List<Record> Select()
+        public List<PersonRecord> Select()
         {
-            List<Record> records = new List<Record>();
+            List<PersonRecord> records = new List<PersonRecord>();
 
             SqlCommand command = new SqlCommand();
             command.CommandType = System.Data.CommandType.Text;

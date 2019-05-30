@@ -21,7 +21,7 @@
   <xs:element name="SelectAllPersonResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="SelectAllPersonResult" nillable="true" type="q2:ArrayOfRecord" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="SelectAllPersonResult" nillable="true" type="q2:ArrayOfPersonRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

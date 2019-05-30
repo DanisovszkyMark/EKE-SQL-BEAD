@@ -76,8 +76,80 @@ namespace WPF_client.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="PersonRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
+    [System.SerializableAttribute()]
+    public partial class PersonRecord : WPF_client.ServiceReference.Record {
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime Birt_dayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int Job_idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.Nullable<int> SalaryField;
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Birt_day {
+            get {
+                return this.Birt_dayField;
+            }
+            set {
+                if ((this.Birt_dayField.Equals(value) != true)) {
+                    this.Birt_dayField = value;
+                    this.RaisePropertyChanged("Birt_day");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Job_id {
+            get {
+                return this.Job_idField;
+            }
+            set {
+                if ((this.Job_idField.Equals(value) != true)) {
+                    this.Job_idField = value;
+                    this.RaisePropertyChanged("Job_id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.Nullable<int> Salary {
+            get {
+                return this.SalaryField;
+            }
+            set {
+                if ((this.SalaryField.Equals(value) != true)) {
+                    this.SalaryField = value;
+                    this.RaisePropertyChanged("Salary");
+                }
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="Record", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
     [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WPF_client.ServiceReference.PersonRecord))]
     public partial class Record : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
@@ -130,10 +202,10 @@ namespace WPF_client.ServiceReference {
         System.Threading.Tasks.Task<WPF_client.ServiceReference.UserRecord[]> SelectAllUserAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
-        WPF_client.ServiceReference.Record[] SelectAllPerson();
+        WPF_client.ServiceReference.PersonRecord[] SelectAllPerson();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
-        System.Threading.Tasks.Task<WPF_client.ServiceReference.Record[]> SelectAllPersonAsync();
+        System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -171,11 +243,11 @@ namespace WPF_client.ServiceReference {
             return base.Channel.SelectAllUserAsync();
         }
         
-        public WPF_client.ServiceReference.Record[] SelectAllPerson() {
+        public WPF_client.ServiceReference.PersonRecord[] SelectAllPerson() {
             return base.Channel.SelectAllPerson();
         }
         
-        public System.Threading.Tasks.Task<WPF_client.ServiceReference.Record[]> SelectAllPersonAsync() {
+        public System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync() {
             return base.Channel.SelectAllPersonAsync();
         }
     }
