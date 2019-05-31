@@ -25,11 +25,29 @@
   <wsdl:message name="IService_SelectAllPerson_OutputMessage">
     <wsdl:part name="parameters" element="tns:SelectAllPersonResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_SelectPersonById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPersonById" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectPersonById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPersonByIdResponse" />
+  </wsdl:message>
   <wsdl:message name="IService_InsertPerson_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertPerson" />
   </wsdl:message>
   <wsdl:message name="IService_InsertPerson_OutputMessage">
     <wsdl:part name="parameters" element="tns:InsertPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePerson" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdatePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemovePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePerson" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemovePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePersonResponse" />
   </wsdl:message>
   <wsdl:message name="IService_NeedRefresh_InputMessage">
     <wsdl:part name="parameters" element="tns:NeedRefresh" />
@@ -50,9 +68,21 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllPerson" message="tns:IService_SelectAllPerson_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectAllPersonResponse" message="tns:IService_SelectAllPerson_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="SelectPersonById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectPersonById" message="tns:IService_SelectPersonById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectPersonByIdResponse" message="tns:IService_SelectPersonById_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="InsertPerson">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertPerson" message="tns:IService_InsertPerson_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertPersonResponse" message="tns:IService_InsertPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdatePerson" message="tns:IService_UpdatePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdatePersonResponse" message="tns:IService_UpdatePerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RemovePerson" message="tns:IService_RemovePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RemovePersonResponse" message="tns:IService_RemovePerson_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="NeedRefresh">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/NeedRefresh" message="tns:IService_NeedRefresh_InputMessage" />
@@ -88,8 +118,35 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="SelectPersonById">
+      <soap:operation soapAction="http://tempuri.org/IService/SelectPersonById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="InsertPerson">
       <soap:operation soapAction="http://tempuri.org/IService/InsertPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePerson">
+      <soap:operation soapAction="http://tempuri.org/IService/RemovePerson" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

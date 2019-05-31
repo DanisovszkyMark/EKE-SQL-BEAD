@@ -20,22 +20,13 @@
   </xs:complexType>
   <xs:element name="ArrayOfPersonRecord" nillable="true" type="tns:ArrayOfPersonRecord" />
   <xs:complexType name="PersonRecord">
-    <xs:complexContent mixed="false">
-      <xs:extension base="tns:Record">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="Birt_day" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="Job_id" type="xs:int" />
-          <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
-          <xs:element minOccurs="0" name="Salary" nillable="true" type="xs:int" />
-        </xs:sequence>
-      </xs:extension>
-    </xs:complexContent>
-  </xs:complexType>
-  <xs:element name="PersonRecord" nillable="true" type="tns:PersonRecord" />
-  <xs:complexType name="Record">
     <xs:sequence>
-      <xs:element minOccurs="0" name="Deleted" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Birt_day" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Job_id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salary" nillable="true" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="Record" nillable="true" type="tns:Record" />
+  <xs:element name="PersonRecord" nillable="true" type="tns:PersonRecord" />
 </xs:schema>

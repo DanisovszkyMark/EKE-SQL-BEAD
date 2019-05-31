@@ -11,19 +11,30 @@ namespace WCFService
     [ServiceContract]
     public interface IService
     {
+        //Users
         [OperationContract]
         List<UserRecord> SelectAllUser();
 
-        //Regisztrációhoz
         [OperationContract]
         void InsertUser(UserRecord record);
 
+        //Persons
         [OperationContract]
         List<PersonRecord> SelectAllPerson();
 
         [OperationContract]
+        PersonRecord SelectPersonById(int id);
+
+        [OperationContract]
         void InsertPerson(PersonRecord record);
 
+        [OperationContract]
+        void UpdatePerson(PersonRecord record);
+
+        [OperationContract]
+        void RemovePerson(int id);
+
+        //Refresh
         [OperationContract]
         bool NeedRefresh(DateTime lastRefresh);
     }

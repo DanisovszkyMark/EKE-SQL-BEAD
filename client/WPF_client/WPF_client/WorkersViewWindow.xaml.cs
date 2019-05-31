@@ -73,7 +73,7 @@ namespace WPF_client
             name.Content = record.Name;
 
             Label age = new Label();
-            age.Content = DateTime.Now - record.Birt_day;
+            age.Content = record.Birt_day;
 
             Button btn = new Button();
             btn.Height = 20;
@@ -85,37 +85,8 @@ namespace WPF_client
             img.Source = new BitmapImage(new Uri(@"D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\Images\login.png"));
             img.Height = 100;
             img.Width = 80;
-
-            return new WorkerViewer(img, name, age, btn);
-        }
-
-        //tesztelésre
-        private void FillWithWorkers(int n)
-        {
-            Random rnd = new Random();
-
-            for (int i = 0; i < n; i++)
-            {
-                Label name = new Label();
-                name.Content = "Worker" + (i + 1);
-
-                Label age = new Label();
-                age.Content = rnd.Next(18, 45);
-
-                Button btn = new Button();
-                btn.Height = 20;
-                btn.Width = 50;
-                btn.Margin = new Thickness(0, 20, 0, 0);
-                btn.Content = "view";
-
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"C:\Users\dmark\Desktop\test\test\wordpress-login-url-1.png"));
-                img.Height = 100;
-                img.Width = 80;
-
-                this.wp_datas.Items.Add(new WorkerViewer(img, name, age, btn).main_sp);
-            }
-
+            
+            return new WorkerViewer(record.Id,img, name, age, btn);
         }
 
         private void btn_add_Click(object sender, RoutedEventArgs e)
@@ -128,6 +99,8 @@ namespace WPF_client
         private void AddWorker_Closed(object sender, EventArgs e)
         {
             FillDatas();
+            this.btn_remove.IsEnabled = false;
+            this.btn_update.IsEnabled = false;
         }
 
         private void Window_MouseUp(object sender, MouseButtonEventArgs e)
@@ -181,6 +154,46 @@ namespace WPF_client
         private void img_refresh_MouseLeave(object sender, MouseEventArgs e)
         {
             this.img_refresh.Source = new BitmapImage(new Uri(@"D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\Images\refresh.png"));
+        }
+
+        private void btn_update_Click(object sender, RoutedEventArgs e)
+        {
+            int id = -1;
+            for (int i = 0; i < workerViewers.Count; i++)
+            {
+                if (workerViewers[i].clicked)
+                {
+                    id = workerViewers[i].Id;
+                    break;
+                }
+            }
+            if (id >= 0)
+            {
+                ManageWorkerViewWindow v = new ManageWorkerViewWindow(id);
+                v.Closed += AddWorker_Closed;
+                v.Show();
+            }
+        }
+
+        private void btn_remove_Click(object sender, RoutedEventArgs e)
+        {
+            int id = -1;
+            for (int i = 0; i < workerViewers.Count; i++)
+            {
+                if (workerViewers[i].clicked)
+                {
+                    id = workerViewers[i].Id;
+                    break;
+                }
+            }
+            if (MessageBox.Show("Are you sure?", "Warning", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.Yes)
+            {
+                this.btn_remove.IsEnabled = false;
+                this.btn_update.IsEnabled = false;
+                client.RemovePerson(id);
+                FillDatas();
+            }
+
         }
     }
 }

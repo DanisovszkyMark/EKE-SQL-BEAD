@@ -6,8 +6,19 @@ using System.Web;
 
 namespace WCFService.DatabaseManagers.Records
 {
-    public class PersonRecord : Record
+    public class PersonRecord
     {
+        private int id;
+        public int Id
+        {
+            get { return id; }
+            set
+            {
+                if (value < 0) throw new Exception();
+                id = value;
+            }
+        }
+
         private string name;
         public string Name
         {
@@ -54,11 +65,12 @@ namespace WCFService.DatabaseManagers.Records
             }
         }
 
-        public PersonRecord(int? id) : base(id)
+        public PersonRecord(int id)
         {
+            this.Id = id;
         }
 
-        public PersonRecord() : base()
+        public PersonRecord()
         {
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
@@ -22,20 +23,37 @@ namespace WCFService
             return usersManager.Select();
         }
 
-        public List<PersonRecord> SelectAllPerson()
-        {
-            return personsManager.Select();
-        }
-
         public void InsertUser(UserRecord record)
         {
             throw new NotImplementedException();
         }
 
+        public List<PersonRecord> SelectAllPerson()
+        {
+            return personsManager.Select();
+        }
+
+        public PersonRecord SelectPersonById(int id)
+        {
+            return personsManager.Select(id);
+        }
+
         public void InsertPerson(PersonRecord record)
         {
             personsManager.Insert(record);
-            refreshManager.UpdateLastTime(DateTime.Now); //ez jó?
+            refreshManager.UpdateLastTime(DateTime.Now);
+        }
+
+        public void UpdatePerson(PersonRecord record)
+        {
+            personsManager.Update(record);
+            refreshManager.UpdateLastTime(DateTime.Now);
+        }
+
+        public void RemovePerson(int id)
+        {
+            personsManager.Delete(id);
+            refreshManager.UpdateLastTime(DateTime.Now);
         }
 
         public bool NeedRefresh(DateTime lastRefresh)

@@ -11,6 +11,13 @@ namespace WPF_client.Viewers
 {
     public class WorkerViewer
     {
+        private int id;
+        public int Id
+        {
+            get { return id; }
+            set { id = value; }
+        }
+
         public StackPanel main_sp;
 
         public bool clicked = false;
@@ -39,8 +46,10 @@ namespace WPF_client.Viewers
             }
         }
 
-        public WorkerViewer(Image image, Label lbl_name, Label lbl_age, Button btn_view)
+        public WorkerViewer(int id, Image image, Label lbl_name, Label lbl_age, Button btn_view)
         {
+            this.Id = id;
+
             main_sp = new StackPanel();
             main_sp.Orientation = Orientation.Horizontal;
             main_sp.MouseEnter += Main_sp_MouseEnter;

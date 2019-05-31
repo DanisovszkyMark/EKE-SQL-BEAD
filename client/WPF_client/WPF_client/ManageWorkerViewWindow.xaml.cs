@@ -29,6 +29,7 @@ namespace WPF_client
             InitializeComponent();
             client = new ServiceClient();
             this.id = id;
+            if (id >= 0) this.lbl_type.Content = "Modify";
 
             FillDatas();
         }
@@ -37,7 +38,11 @@ namespace WPF_client
         {
             if (this.id != -1)
             {
+                PersonRecord record = client.SelectPersonById(this.id);
 
+                this.tb_name.Text = record.Name;
+                this.tb_birth.Text = record.Birt_day.ToString();
+                this.tb_job.Text = record.Job_id.ToString(); 
             }
         }
 
@@ -53,9 +58,16 @@ namespace WPF_client
                 client.InsertPerson(insertThis);
                 this.Close();
             }
-            else //upate
+            else //upate id alapján
             {
+                PersonRecord record = new PersonRecord();
+                record.Id = this.id;
+                record.Name = this.tb_name.Text;
+                record.Birt_day = DateTime.Parse(this.tb_birth.Text);
+                record.Job_id = int.Parse(this.tb_job.Text);
 
+                client.UpdatePerson(record);
+                this.Close();
             }
         }
 

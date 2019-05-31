@@ -17,11 +17,6 @@ namespace WCFService.DatabaseManagers
                                     FROM Refresh 
                                     WHERE id = @id";
 
-            // a lekérdezés paraméteres, ezt látjuk a @ jelölőkből
-            // => a lekérdezés futtatásához a paraméternek értéket kell adni, 
-            //    ez SqlParameter példányok segítségével történik
-            // => ahány különböző paramétert használunk annyi db példányt kell 
-            // készíteni, majd a lekérezéshez adni 
             SqlParameter pId = new SqlParameter();
             pId.ParameterName = "@id";
             pId.Value = 1;

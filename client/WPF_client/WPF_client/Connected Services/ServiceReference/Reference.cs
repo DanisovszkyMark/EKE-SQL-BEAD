@@ -78,10 +78,16 @@ namespace WPF_client.ServiceReference {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PersonRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
     [System.SerializableAttribute()]
-    public partial class PersonRecord : WPF_client.ServiceReference.Record {
+    public partial class PersonRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.DateTime Birt_dayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int Job_idField;
@@ -92,6 +98,16 @@ namespace WPF_client.ServiceReference {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private System.Nullable<int> SalaryField;
         
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
         [System.Runtime.Serialization.DataMemberAttribute()]
         public System.DateTime Birt_day {
             get {
@@ -101,6 +117,19 @@ namespace WPF_client.ServiceReference {
                 if ((this.Birt_dayField.Equals(value) != true)) {
                     this.Birt_dayField = value;
                     this.RaisePropertyChanged("Birt_day");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
                 }
             }
         }
@@ -143,43 +172,6 @@ namespace WPF_client.ServiceReference {
                 }
             }
         }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Record", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
-    [System.SerializableAttribute()]
-    [System.Runtime.Serialization.KnownTypeAttribute(typeof(WPF_client.ServiceReference.PersonRecord))]
-    public partial class Record : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool DeletedField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Deleted {
-            get {
-                return this.DeletedField;
-            }
-            set {
-                if ((this.DeletedField.Equals(value) != true)) {
-                    this.DeletedField = value;
-                    this.RaisePropertyChanged("Deleted");
-                }
-            }
-        }
         
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
         
@@ -213,11 +205,29 @@ namespace WPF_client.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync();
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
+        WPF_client.ServiceReference.PersonRecord SelectPersonById(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
+        System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(int id);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
         void InsertPerson(WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
         System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdatePerson", ReplyAction="http://tempuri.org/IService/UpdatePersonResponse")]
+        void UpdatePerson(WPF_client.ServiceReference.PersonRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdatePerson", ReplyAction="http://tempuri.org/IService/UpdatePersonResponse")]
+        System.Threading.Tasks.Task UpdatePersonAsync(WPF_client.ServiceReference.PersonRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RemovePerson", ReplyAction="http://tempuri.org/IService/RemovePersonResponse")]
+        void RemovePerson(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RemovePerson", ReplyAction="http://tempuri.org/IService/RemovePersonResponse")]
+        System.Threading.Tasks.Task RemovePersonAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         bool NeedRefresh(System.DateTime lastRefresh);
@@ -277,12 +287,36 @@ namespace WPF_client.ServiceReference {
             return base.Channel.SelectAllPersonAsync();
         }
         
+        public WPF_client.ServiceReference.PersonRecord SelectPersonById(int id) {
+            return base.Channel.SelectPersonById(id);
+        }
+        
+        public System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(int id) {
+            return base.Channel.SelectPersonByIdAsync(id);
+        }
+        
         public void InsertPerson(WPF_client.ServiceReference.PersonRecord record) {
             base.Channel.InsertPerson(record);
         }
         
         public System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record) {
             return base.Channel.InsertPersonAsync(record);
+        }
+        
+        public void UpdatePerson(WPF_client.ServiceReference.PersonRecord record) {
+            base.Channel.UpdatePerson(record);
+        }
+        
+        public System.Threading.Tasks.Task UpdatePersonAsync(WPF_client.ServiceReference.PersonRecord record) {
+            return base.Channel.UpdatePersonAsync(record);
+        }
+        
+        public void RemovePerson(int id) {
+            base.Channel.RemovePerson(id);
+        }
+        
+        public System.Threading.Tasks.Task RemovePersonAsync(int id) {
+            return base.Channel.RemovePersonAsync(id);
         }
         
         public bool NeedRefresh(System.DateTime lastRefresh) {
