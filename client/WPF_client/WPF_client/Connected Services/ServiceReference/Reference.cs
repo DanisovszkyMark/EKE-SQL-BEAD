@@ -218,6 +218,12 @@ namespace WPF_client.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
         System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
+        bool NeedRefresh(System.DateTime lastRefresh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
+        System.Threading.Tasks.Task<bool> NeedRefreshAsync(System.DateTime lastRefresh);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -277,6 +283,14 @@ namespace WPF_client.ServiceReference {
         
         public System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record) {
             return base.Channel.InsertPersonAsync(record);
+        }
+        
+        public bool NeedRefresh(System.DateTime lastRefresh) {
+            return base.Channel.NeedRefresh(lastRefresh);
+        }
+        
+        public System.Threading.Tasks.Task<bool> NeedRefreshAsync(System.DateTime lastRefresh) {
+            return base.Channel.NeedRefreshAsync(lastRefresh);
         }
     }
 }

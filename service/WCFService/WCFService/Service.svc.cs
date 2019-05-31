@@ -15,6 +15,7 @@ namespace WCFService
     {
         private UsersManager usersManager = new UsersManager();
         private PersonsManager personsManager = new PersonsManager();
+        private RefreshManager refreshManager = new RefreshManager();
 
         public List<UserRecord> SelectAllUser()
         {
@@ -34,6 +35,18 @@ namespace WCFService
         public void InsertPerson(PersonRecord record)
         {
             personsManager.Insert(record);
+            refreshManager.UpdateLastTime(DateTime.Now); //ez jó?
+        }
+
+        public bool NeedRefresh(DateTime lastRefresh)
+        {
+            if (lastRefresh < LastModify().Time) return true;
+            return false;
+        }
+
+        private RefreshRecord LastModify()
+        {
+            return refreshManager.lastRefresh();
         }
     }
 }

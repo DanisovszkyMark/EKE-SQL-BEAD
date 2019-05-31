@@ -69,7 +69,9 @@
     <Compile Include="DatabaseManagers\PersonsManager.cs" />
     <Compile Include="DatabaseManagers\Records\PersonRecord.cs" />
     <Compile Include="DatabaseManagers\Records\Record.cs" />
+    <Compile Include="DatabaseManagers\Records\RefreshRecord.cs" />
     <Compile Include="DatabaseManagers\Records\UserRecord.cs" />
+    <Compile Include="DatabaseManagers\RefreshManager.cs" />
     <Compile Include="DatabaseManagers\UsersManager.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

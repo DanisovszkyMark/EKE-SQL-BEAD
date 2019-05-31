@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using WPF_client.ServiceReference;
 using WPF_client.Viewers;
 
@@ -22,8 +23,10 @@ namespace WPF_client
     public partial class WorkersViewWindow : Window
     {
         ServiceClient client;
-
         private List<WorkerViewer> workerViewers;
+
+        private DateTime lastRefresh;
+        private DispatcherTimer refreshTimer;
 
         public WorkersViewWindow()
         {
@@ -31,7 +34,21 @@ namespace WPF_client
             client = new ServiceClient();
             workerViewers = new List<WorkerViewer>();
 
+            lastRefresh = new DateTime();
+            refreshTimer = new DispatcherTimer();
+            refreshTimer.Interval = new TimeSpan(0, 0, 2);
+            refreshTimer.Tick += RefreshTimer_Tick;
+            refreshTimer.Start();
+
             FillDatas();
+        }
+
+        private void RefreshTimer_Tick(object sender, EventArgs e)
+        {
+            if (client.NeedRefresh(lastRefresh))
+            {
+                FillDatas();
+            }
         }
 
         private void FillDatas()
@@ -47,6 +64,8 @@ namespace WPF_client
                 workerViewers.Add(v);
                 this.wp_datas.Items.Add(workerViewers[i].main_sp);
             }
+
+            lastRefresh = DateTime.Now;
         }
 
         private WorkerViewer PersonToViewer(PersonRecord record)
