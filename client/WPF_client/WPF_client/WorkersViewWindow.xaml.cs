@@ -38,7 +38,6 @@ namespace WPF_client
             refreshTimer = new DispatcherTimer();
             refreshTimer.Interval = new TimeSpan(0, 0, 2);
             refreshTimer.Tick += RefreshTimer_Tick;
-            refreshTimer.Start();
 
             FillDatas();
         }
@@ -157,6 +156,31 @@ namespace WPF_client
                 this.btn_remove.IsEnabled = false;
                 this.btn_update.IsEnabled = false;
             }
+        }
+
+        private void img_refresh_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            FillDatas();
+        }
+
+        private void cb_autoRefresh_Checked(object sender, RoutedEventArgs e)
+        {
+            refreshTimer.Start();
+        }
+
+        private void cb_autoRefresh_Unchecked(object sender, RoutedEventArgs e)
+        {
+            refreshTimer.Stop();
+        }
+
+        private void img_refresh_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.img_refresh.Source = new BitmapImage(new Uri(@"D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\Images\refresh_onMouse.ico"));
+        }
+
+        private void img_refresh_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.img_refresh.Source = new BitmapImage(new Uri(@"D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\Images\refresh.png"));
         }
     }
 }
