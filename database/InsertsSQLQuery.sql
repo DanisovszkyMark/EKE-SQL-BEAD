@@ -60,3 +60,7 @@ VALUES(1, 1);
 
 INSERT INTO [dbo].[Person_Parent]
 VALUES(2, 2);
+
+  -- Módosítás
+INSERT INTO [dbo].[Refresh](last_modify_time)
+VALUES('20190531 10:10:10 AM');

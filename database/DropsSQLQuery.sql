@@ -8,3 +8,4 @@ DROP TABLE dbo.Jobs;
 DROP TABLE dbo.Persons;
 DROP TABLE dbo.Cars;
 DROP TABLE dbo.Pets;
+DROP TABLE dbo.Refresh;

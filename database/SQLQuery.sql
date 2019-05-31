@@ -67,3 +67,8 @@ CREATE TABLE Person_Pet(
 	FOREIGN KEY(person_id) REFERENCES Persons(id),
 	FOREIGN KEY(pet_id) REFERENCES Pets(id)
 );
+
+CREATE TABLE Refresh(
+	id INT DEFAULT 1,
+	last_modify_time DATETIME NULL
+);
