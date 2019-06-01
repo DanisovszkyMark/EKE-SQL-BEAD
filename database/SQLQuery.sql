@@ -2,7 +2,8 @@
  -- Táblák létrehozása --
 CREATE TABLE Users(
 	username VARCHAR(50) PRIMARY KEY,
-	password VARCHAR(50) NOT NULL
+	password VARCHAR(50) NOT NULL,
+	logged BIT DEFAULT 0 
 );
 
 CREATE TABLE Parents(
