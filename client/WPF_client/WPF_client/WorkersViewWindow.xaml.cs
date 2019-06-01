@@ -23,6 +23,7 @@ namespace WPF_client
     public partial class WorkersViewWindow : Window
     {
         private string username;
+        private bool logged = true;
 
         private ServiceClient client;
         private List<WorkerViewer> workerViewers;
@@ -205,6 +206,7 @@ namespace WPF_client
             try
             {
                 client.Logout(this.username);
+                logged = false;
                 LoginWindowView v = new LoginWindowView();
                 v.Show();
                 this.Close();
@@ -227,16 +229,16 @@ namespace WPF_client
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            try
+            if (logged)
             {
-                client.Logout(this.username);
-                LoginWindowView v = new LoginWindowView();
-                v.Show();
-                this.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Unexpected error");
+                try
+                {
+                    client.Logout(this.username);
+                }
+                catch
+                {
+                    MessageBox.Show("Unexpected error");
+                }
             }
         }
     }
