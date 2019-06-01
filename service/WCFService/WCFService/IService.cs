@@ -18,6 +18,12 @@ namespace WCFService
         [OperationContract]
         void InsertUser(UserRecord record);
 
+        [OperationContract]
+        void Login(int id);
+
+        [OperationContract]
+        void Logout(int id);
+
         //Persons
         [OperationContract]
         List<PersonRecord> SelectAllPerson();

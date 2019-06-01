@@ -28,6 +28,16 @@ namespace WCFService
             throw new NotImplementedException();
         }
 
+        public void Login(int id)
+        {
+            usersManager.Login(id);
+        }
+
+        public void Logout(int id)
+        {
+            usersManager.Logout(id);
+        }
+
         public List<PersonRecord> SelectAllPerson()
         {
             return personsManager.Select();
@@ -66,5 +76,6 @@ namespace WCFService
         {
             return refreshManager.lastRefresh();
         }
+
     }
 }
