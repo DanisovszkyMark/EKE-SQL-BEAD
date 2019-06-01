@@ -28,14 +28,14 @@ namespace WCFService
             throw new NotImplementedException();
         }
 
-        public void Login(int id)
+        public void Login(string username)
         {
-            usersManager.Login(id);
+            usersManager.Login(username);
         }
 
-        public void Logout(int id)
+        public void Logout(string username)
         {
-            usersManager.Logout(id);
+            usersManager.Logout(username);
         }
 
         public List<PersonRecord> SelectAllPerson()

@@ -23,6 +23,9 @@ namespace WPF_client.ServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool LoggedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string PasswordField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -35,6 +38,19 @@ namespace WPF_client.ServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Logged {
+            get {
+                return this.LoggedField;
+            }
+            set {
+                if ((this.LoggedField.Equals(value) != true)) {
+                    this.LoggedField = value;
+                    this.RaisePropertyChanged("Logged");
+                }
             }
         }
         
@@ -199,6 +215,18 @@ namespace WPF_client.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertUser", ReplyAction="http://tempuri.org/IService/InsertUserResponse")]
         System.Threading.Tasks.Task InsertUserAsync(WPF_client.ServiceReference.UserRecord record);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Login", ReplyAction="http://tempuri.org/IService/LoginResponse")]
+        void Login(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Login", ReplyAction="http://tempuri.org/IService/LoginResponse")]
+        System.Threading.Tasks.Task LoginAsync(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Logout", ReplyAction="http://tempuri.org/IService/LogoutResponse")]
+        void Logout(string username);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Logout", ReplyAction="http://tempuri.org/IService/LogoutResponse")]
+        System.Threading.Tasks.Task LogoutAsync(string username);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
         WPF_client.ServiceReference.PersonRecord[] SelectAllPerson();
         
@@ -277,6 +305,22 @@ namespace WPF_client.ServiceReference {
         
         public System.Threading.Tasks.Task InsertUserAsync(WPF_client.ServiceReference.UserRecord record) {
             return base.Channel.InsertUserAsync(record);
+        }
+        
+        public void Login(string username) {
+            base.Channel.Login(username);
+        }
+        
+        public System.Threading.Tasks.Task LoginAsync(string username) {
+            return base.Channel.LoginAsync(username);
+        }
+        
+        public void Logout(string username) {
+            base.Channel.Logout(username);
+        }
+        
+        public System.Threading.Tasks.Task LogoutAsync(string username) {
+            return base.Channel.LogoutAsync(username);
         }
         
         public WPF_client.ServiceReference.PersonRecord[] SelectAllPerson() {

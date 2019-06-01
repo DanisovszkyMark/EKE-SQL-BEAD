@@ -24,26 +24,27 @@ namespace WCFService.DatabaseManagers
             {
                 UserRecord nextRecord = new UserRecord(reader["username"].ToString());
                 nextRecord.Password = reader["password"].ToString();
+                nextRecord.Logged = Boolean.Parse(reader["logged"].ToString());
                 records.Add(nextRecord);
             }
 
             return records;
         }
 
-        public void Login(int id)
+        public void Login(string username)
         {
             SqlCommand command = new SqlCommand();
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"UPDATE Users 
                                     SET logged = @logged
-                                    WHERE id = @_id";
+                                    WHERE username = @_username";
 
-            SqlParameter _id = new SqlParameter();
-            _id.ParameterName = "@id";
-            _id.SqlDbType = System.Data.SqlDbType.Int;
-            _id.Direction = System.Data.ParameterDirection.Input;
-            _id.Value = id;
-            command.Parameters.Add(_id);
+            SqlParameter _username = new SqlParameter();
+            _username.ParameterName = "@_username";
+            _username.SqlDbType = System.Data.SqlDbType.VarChar;
+            _username.Direction = System.Data.ParameterDirection.Input;
+            _username.Value = username;
+            command.Parameters.Add(_username);
 
             SqlParameter logged = new SqlParameter();
             logged.ParameterName = "@logged";
@@ -58,20 +59,20 @@ namespace WCFService.DatabaseManagers
             command.Connection.Close();
         }
 
-        public void Logout(int id)
+        public void Logout(string username)
         {
             SqlCommand command = new SqlCommand();
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"UPDATE Users 
                                     SET logged = @logged
-                                    WHERE id = @_id";
+                                    WHERE username = @_username";
 
-            SqlParameter _id = new SqlParameter();
-            _id.ParameterName = "@id";
-            _id.SqlDbType = System.Data.SqlDbType.Int;
-            _id.Direction = System.Data.ParameterDirection.Input;
-            _id.Value = id;
-            command.Parameters.Add(_id);
+            SqlParameter _username = new SqlParameter();
+            _username.ParameterName = "@_username";
+            _username.SqlDbType = System.Data.SqlDbType.VarChar;
+            _username.Direction = System.Data.ParameterDirection.Input;
+            _username.Value = username;
+            command.Parameters.Add(_username);
 
             SqlParameter logged = new SqlParameter();
             logged.ParameterName = "@logged";

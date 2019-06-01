@@ -22,6 +22,8 @@ namespace WPF_client
     /// </summary>
     public partial class LoginWindowView : Window
     {
+        private string username;
+
         public LoginWindowView()
         {
             Logger.Info("Bejelentkezési ablak megnyitása");
@@ -37,18 +39,19 @@ namespace WPF_client
                 connectToServer();
                 Logger.Info("A szerver kapcsolat létrejött.");
 
-                if (canLogin())
+                if (canLogin() && Login())
                 {
+                    Login();
                     Logger.Info(String.Format("Sikeres bejelentkezés ({0})", tb_username.Text));
 
-                    WorkersViewWindow newWindow = new WorkersViewWindow();
+                    WorkersViewWindow newWindow = new WorkersViewWindow(this.username);
                     newWindow.Show();
                     this.Close();
                 }
                 else
                 {
                     Logger.Error("Sikertelen bejelentkezés. Helytelen adatok.");
-                    MessageBox.Show("Wrong username or password!");
+                    MessageBox.Show("Wrong username or password or already logged!");
                 }
             }
             catch (ConnectionException)
@@ -79,10 +82,29 @@ namespace WPF_client
 
             foreach (UserRecord u in records)
             {
-                if (u.Username == user.Username && u.Password == user.Password) return true;
+                if (u.Username == user.Username && u.Password == user.Password && !u.Logged)
+                {
+                    this.username = u.Username;
+                    return true;
+                }
             }
             
             return false;
+        }
+
+        private bool Login()
+        {
+            
+            ServiceClient client = new ServiceClient();
+            try
+            {
+                client.Login(this.username);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

@@ -22,13 +22,15 @@ namespace WPF_client
     /// </summary>
     public partial class WorkersViewWindow : Window
     {
-        ServiceClient client;
+        private string username;
+
+        private ServiceClient client;
         private List<WorkerViewer> workerViewers;
 
         private DateTime lastRefresh;
         private DispatcherTimer refreshTimer;
 
-        public WorkersViewWindow()
+        public WorkersViewWindow(string username)
         {
             InitializeComponent();
             client = new ServiceClient();
@@ -38,6 +40,8 @@ namespace WPF_client
             refreshTimer = new DispatcherTimer();
             refreshTimer.Interval = new TimeSpan(0, 0, 2);
             refreshTimer.Tick += RefreshTimer_Tick;
+
+            this.username = username;
 
             FillDatas();
         }
@@ -194,6 +198,46 @@ namespace WPF_client
                 FillDatas();
             }
 
+        }
+
+        private void lbl_logout_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            try
+            {
+                client.Logout(this.username);
+                LoginWindowView v = new LoginWindowView();
+                v.Show();
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Unexpected error");
+            }
+        }
+
+        private void lbl_logout_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.lbl_logout.Foreground = (SolidColorBrush)Application.Current.FindResource("LinkMouseOverBrush");
+        }
+
+        private void lbl_logout_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.lbl_logout.Foreground = (SolidColorBrush)Application.Current.FindResource("LinkBrush");
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            try
+            {
+                client.Logout(this.username);
+                LoginWindowView v = new LoginWindowView();
+                v.Show();
+                this.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Unexpected error");
+            }
         }
     }
 }

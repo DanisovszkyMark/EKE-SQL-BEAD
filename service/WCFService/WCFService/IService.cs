@@ -19,10 +19,10 @@ namespace WCFService
         void InsertUser(UserRecord record);
 
         [OperationContract]
-        void Login(int id);
+        void Login(string username);
 
         [OperationContract]
-        void Logout(int id);
+        void Logout(string username);
 
         //Persons
         [OperationContract]

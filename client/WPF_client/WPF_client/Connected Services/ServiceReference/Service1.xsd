@@ -8,6 +8,7 @@
   <xs:element name="ArrayOfUserRecord" nillable="true" type="tns:ArrayOfUserRecord" />
   <xs:complexType name="UserRecord">
     <xs:sequence>
+      <xs:element minOccurs="0" name="Logged" type="xs:boolean" />
       <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Username" nillable="true" type="xs:string" />
     </xs:sequence>

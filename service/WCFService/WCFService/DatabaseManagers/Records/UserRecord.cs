@@ -32,6 +32,13 @@ namespace WCFService.DatabaseManagers.Records
             }
         }
 
+        private bool logged;
+        public bool Logged
+        {
+            get { return logged; }
+            set { logged = value; }
+        }
+
         public UserRecord(string Username)
         {
             if (Username == null) throw new ArgumentNullException();
