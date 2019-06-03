@@ -73,3 +73,7 @@ CREATE TABLE Refresh(
 	id INT DEFAULT 1,
 	last_modify_time DATETIME NULL
 );
+
+CREATE TABLE Tokens(
+	token CHAR(50) NOT NULL
+);

@@ -9,3 +9,4 @@ DROP TABLE dbo.Persons;
 DROP TABLE dbo.Cars;
 DROP TABLE dbo.Pets;
 DROP TABLE dbo.Refresh;
+DROP TABLE dbo.Tokens;
