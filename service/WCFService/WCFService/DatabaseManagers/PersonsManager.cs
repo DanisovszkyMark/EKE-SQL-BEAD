@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using WCFService.DatabaseManagers.Records;
+using WCFService.Exceptions;
 
 namespace WCFService.DatabaseManagers
 {
@@ -17,27 +18,45 @@ namespace WCFService.DatabaseManagers
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"SELECT *
                                     FROM Persons";
-            command.Connection = getConnection();
 
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            try { command.Connection = getConnection(); }
+            catch (Exception)
             {
-                PersonRecord nextRecord = new PersonRecord(int.Parse(reader["id"].ToString()));
-                nextRecord.Id = int.Parse(reader["id"].ToString());
-                nextRecord.Name = reader["name"].ToString();
-                nextRecord.Birt_day = DateTime.Parse(reader["birth_day"].ToString());
-                nextRecord.Job_id = int.Parse(reader["job_id"].ToString());
-                try
-                {
-                    nextRecord.Salary = int.Parse(reader["salary"].ToString());
-                }
-                catch (Exception)
-                {
-                    nextRecord.Salary = 0;
-                }
-                records.Add(nextRecord);
+                throw new DatabaseConnectionException();
             }
 
+            SqlDataReader reader;
+
+            try { reader = command.ExecuteReader(); }
+            catch
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            try
+            {
+                while (reader.Read())
+                {
+                    PersonRecord nextRecord = new PersonRecord(int.Parse(reader["id"].ToString()));
+                    nextRecord.Id = int.Parse(reader["id"].ToString());
+                    nextRecord.Name = reader["name"].ToString();
+                    nextRecord.Birt_day = DateTime.Parse(reader["birth_day"].ToString());
+                    nextRecord.Job_id = int.Parse(reader["job_id"].ToString());
+                    try
+                    {
+                        nextRecord.Salary = int.Parse(reader["salary"].ToString());
+                    }
+                    catch (Exception)
+                    {
+                        nextRecord.Salary = 0;
+                    }
+                    records.Add(nextRecord);
+                }
+            }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
             return records;
         }
 
@@ -56,17 +75,36 @@ namespace WCFService.DatabaseManagers
             pId.DbType = System.Data.DbType.Int64;
             command.Parameters.Add(pId);
 
-            command.Connection = getConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-            PersonRecord loadedRecord = new PersonRecord();
-            if (reader.Read())
+            try { command.Connection = getConnection(); }
+            catch (Exception)
             {
-                loadedRecord = new PersonRecord();
-                loadedRecord.Id = int.Parse(reader["id"].ToString());
-                loadedRecord.Name = reader["name"].ToString();
-                loadedRecord.Birt_day = DateTime.Parse(reader["birth_day"].ToString());
-                loadedRecord.Job_id = int.Parse(reader["job_id"].ToString());
+                throw new DatabaseConnectionException();
+            }
+
+            SqlDataReader reader;
+
+            try { reader = command.ExecuteReader(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            PersonRecord loadedRecord = new PersonRecord();
+
+            try
+            {
+                if (reader.Read())
+                {
+                    loadedRecord = new PersonRecord();
+                    loadedRecord.Id = int.Parse(reader["id"].ToString());
+                    loadedRecord.Name = reader["name"].ToString();
+                    loadedRecord.Birt_day = DateTime.Parse(reader["birth_day"].ToString());
+                    loadedRecord.Job_id = int.Parse(reader["job_id"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
             }
 
             return loadedRecord;
@@ -78,7 +116,12 @@ namespace WCFService.DatabaseManagers
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"INSERT INTO Persons(name, birth_day, job_id, salary)
                                     VALUES (@name, @birth_day, @job_id, @salary)";
-            command.Connection = getConnection();
+
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
 
             SqlParameter name = new SqlParameter();
             name.ParameterName = "@name"; 
@@ -109,7 +152,11 @@ namespace WCFService.DatabaseManagers
             salary.Value = record.Salary;
             command.Parameters.Add(salary);
 
-            command.ExecuteNonQuery();
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
         }
 
         public void Update(PersonRecord record)
@@ -150,9 +197,18 @@ namespace WCFService.DatabaseManagers
             job_id.Value = record.Job_id;
             command.Parameters.Add(job_id);
 
-            command.Connection = getConnection();
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
 
-            command.ExecuteNonQuery();
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
+
             command.Connection.Close();
         }
 
@@ -170,9 +226,18 @@ namespace WCFService.DatabaseManagers
             pId.Value = id;
             command.Parameters.Add(pId);
 
-            command.Connection = getConnection();
-            command.ExecuteNonQuery();
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
 
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
+            
             command.Connection.Close();
         }
     }

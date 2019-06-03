@@ -13,45 +13,69 @@ namespace WCFService
     {
         //Users
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             List<UserRecord> SelectAllUser();
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             void InsertUser(UserRecord record);
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             void Login(string username);
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             void Logout(string username);
 
         //Persons
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             List<PersonRecord> SelectAllPerson(string token);
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             PersonRecord SelectPersonById(string token, int id);
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             void InsertPerson(string token, PersonRecord record);
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             void UpdatePerson(string token, PersonRecord record);
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             void RemovePerson(string token, int id);
 
         //Refresh
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             bool NeedRefresh(DateTime lastRefresh);
 
         //Token
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             string GetToken();
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             bool Identification(string token);
 
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
             void DeleteToken(string token);
+    }
+
+    [DataContract]
+    public class ServiceData
+    {
+        [DataMember]
+        public bool Result { get; set; }
+        [DataMember]
+        public string ErrorMessage { get; set; }
+        [DataMember]
+        public string ErrorDetails { get; set; }
     }
 }

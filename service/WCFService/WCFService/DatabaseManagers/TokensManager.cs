@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Web;
+using WCFService.Exceptions;
 
 namespace WCFService.DatabaseManagers
 {
@@ -24,12 +25,30 @@ namespace WCFService.DatabaseManagers
             _token.DbType = System.Data.DbType.String;
             command.Parameters.Add(_token);
 
-            command.Connection = getConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-            if (reader.Read())
+            try { command.Connection = getConnection(); }
+            catch (Exception)
             {
-                if (token == reader["token"].ToString()) return true;
+                throw new DatabaseConnectionException();
+            }
+
+            SqlDataReader reader;
+
+            try { reader = command.ExecuteReader(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            try
+            {
+                if (reader.Read())
+                {
+                    if (token == reader["token"].ToString()) return true;
+                }
+            }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
             }
 
             return false;
@@ -55,7 +74,18 @@ namespace WCFService.DatabaseManagers
                 }
             }
             //INSERT
-            Insert(builder.ToString());
+            try
+            {
+                Insert(builder.ToString());
+            }
+            catch (DatabaseConnectionException e)
+            {
+                throw e;
+            }
+            catch (DatabaseParameterException e)
+            {
+                throw e;
+            }
 
             return builder.ToString();
         }
@@ -66,7 +96,12 @@ namespace WCFService.DatabaseManagers
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"INSERT INTO Tokens(token)
                                     VALUES (@_token)";
-            command.Connection = getConnection();
+
+            try { command.Connection = getConnection(); }
+            catch(Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
 
             SqlParameter _token = new SqlParameter();
             _token.ParameterName = "@_token";
@@ -75,7 +110,11 @@ namespace WCFService.DatabaseManagers
             _token.Value = token;
             command.Parameters.Add(_token);
 
-            command.ExecuteNonQuery();
+            try { command.ExecuteNonQuery(); }
+            catch
+            {
+                throw new DatabaseParameterException();
+            }
         }
 
         public void Delete(string token)
@@ -92,8 +131,17 @@ namespace WCFService.DatabaseManagers
             _token.Value = token;
             command.Parameters.Add(_token);
 
-            command.Connection = getConnection();
-            command.ExecuteNonQuery();
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
 
             command.Connection.Close();
         }

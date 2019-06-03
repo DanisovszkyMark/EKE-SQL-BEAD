@@ -73,6 +73,9 @@
     <Compile Include="DatabaseManagers\RefreshManager.cs" />
     <Compile Include="DatabaseManagers\TokensManager.cs" />
     <Compile Include="DatabaseManagers\UsersManager.cs" />
+    <Compile Include="Exceptions\DatabaseCommandTextException.cs" />
+    <Compile Include="Exceptions\DatabaseConnectionException.cs" />
+    <Compile Include="Exceptions\DatabaseParameterException.cs" />
     <Compile Include="IService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service.svc.cs">

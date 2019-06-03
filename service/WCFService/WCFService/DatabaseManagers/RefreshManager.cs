@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using WCFService.DatabaseManagers.Records;
+using WCFService.Exceptions;
 
 namespace WCFService.DatabaseManagers
 {
@@ -24,16 +25,35 @@ namespace WCFService.DatabaseManagers
             pId.DbType = System.Data.DbType.Int64;
             command.Parameters.Add(pId);
 
-            command.Connection = getConnection();
-
-            SqlDataReader reader = command.ExecuteReader();
-            RefreshRecord loadedRecord = new RefreshRecord();
-            if (reader.Read())
+            try { command.Connection = getConnection(); }
+            catch (Exception)
             {
-                loadedRecord = new RefreshRecord();
+                throw new DatabaseConnectionException();
+            }
 
-                loadedRecord.Id = int.Parse(reader["id"].ToString());
-                loadedRecord.Time = DateTime.Parse(reader["last_modify_time"].ToString());
+            SqlDataReader reader;
+
+            try { reader = command.ExecuteReader(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            RefreshRecord loadedRecord = new RefreshRecord();
+
+            try
+            {
+                if (reader.Read())
+                {
+                    loadedRecord = new RefreshRecord();
+
+                    loadedRecord.Id = int.Parse(reader["id"].ToString());
+                    loadedRecord.Time = DateTime.Parse(reader["last_modify_time"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
             }
 
             return loadedRecord;
@@ -55,9 +75,18 @@ namespace WCFService.DatabaseManagers
             last_modify_time.Value = time;
             command.Parameters.Add(last_modify_time);
 
-            command.Connection = getConnection();
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
 
-            int affectedRows = command.ExecuteNonQuery();
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
+
             command.Connection.Close();
         }
     }

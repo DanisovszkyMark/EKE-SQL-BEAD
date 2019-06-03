@@ -4,6 +4,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using WCFService.DatabaseManagers.Records;
+using WCFService.Exceptions;
 
 namespace WCFService.DatabaseManagers
 {
@@ -17,17 +18,35 @@ namespace WCFService.DatabaseManagers
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"SELECT *
                                     FROM Users";
-            command.Connection = getConnection();
 
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
+            try { command.Connection = getConnection(); }
+            catch (Exception)
             {
-                UserRecord nextRecord = new UserRecord(reader["username"].ToString());
-                nextRecord.Password = reader["password"].ToString();
-                nextRecord.Logged = Boolean.Parse(reader["logged"].ToString());
-                records.Add(nextRecord);
+                throw new DatabaseConnectionException();
             }
 
+            SqlDataReader reader;
+
+            try { reader = command.ExecuteReader(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            try
+            {
+                while (reader.Read())
+                {
+                    UserRecord nextRecord = new UserRecord(reader["username"].ToString());
+                    nextRecord.Password = reader["password"].ToString();
+                    nextRecord.Logged = Boolean.Parse(reader["logged"].ToString());
+                    records.Add(nextRecord);
+                }
+            }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
             return records;
         }
 
@@ -53,9 +72,17 @@ namespace WCFService.DatabaseManagers
             logged.Value = 1;
             command.Parameters.Add(logged);
 
-            command.Connection = getConnection();
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
 
-            command.ExecuteNonQuery();
+            try { command.ExecuteNonQuery(); }
+            catch(Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
             command.Connection.Close();
         }
 
@@ -81,9 +108,18 @@ namespace WCFService.DatabaseManagers
             logged.Value = 0;
             command.Parameters.Add(logged);
 
-            command.Connection = getConnection();
+            try { command.Connection = getConnection(); }
+            catch(Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
 
-            command.ExecuteNonQuery();
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
             command.Connection.Close();
         }
 
