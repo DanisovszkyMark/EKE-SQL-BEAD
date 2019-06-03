@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -36,11 +37,10 @@ namespace WPF_client
 
             try
             {
-                connectToServer();
-                Logger.Info("A szerver kapcsolat létrejött.");
-
                 if (canLogin() && Login())
                 {
+                    Logger.Info("A szerver kapcsolat létrejött.");
+
                     Login();
                     Logger.Info(String.Format("Sikeres bejelentkezés ({0})", tb_username.Text));
 
@@ -54,10 +54,10 @@ namespace WPF_client
                     MessageBox.Show("Wrong username or password or already logged!");
                 }
             }
-            catch (ConnectionException)
+            catch (FaultException<ServiceData> sd)
             {
-                Logger.Error("Hiba a szerver kapcsolatban.");
-                MessageBox.Show("Wrong with server connection!");
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
             }
             catch (Exception)
             {
@@ -71,6 +71,7 @@ namespace WPF_client
             //throw new ConnectionException();
         }
 
+        //Ezt illő lenne a szerveren elvégezni
         private bool canLogin()
         {
             UserRecord user = new UserRecord();

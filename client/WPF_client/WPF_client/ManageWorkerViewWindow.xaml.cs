@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -33,7 +34,15 @@ namespace WPF_client
             this.token = token;
             if (id >= 0) this.lbl_type.Content = "Modify";
 
-            FillDatas();
+            try
+            {
+                FillDatas();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
         }
 
         private void FillDatas()
@@ -57,7 +66,16 @@ namespace WPF_client
                 insertThis.Birt_day = DateTime.Parse(this.tb_birth.Text);
                 insertThis.Job_id = int.Parse(this.tb_job.Text);
 
-                client.InsertPerson(this.token, insertThis);
+                try
+                {
+                    client.InsertPerson(this.token, insertThis);
+                }
+                catch (FaultException<ServiceData> sd)
+                {
+                    Logger.Error("[Service] " + sd.Message);
+                    MessageBox.Show(sd.Message);
+                }
+
                 this.Close();
             }
             else //upate id alapján
@@ -68,7 +86,16 @@ namespace WPF_client
                 record.Birt_day = DateTime.Parse(this.tb_birth.Text);
                 record.Job_id = int.Parse(this.tb_job.Text);
 
-                client.UpdatePerson(this.token, record);
+                try
+                {
+                    client.UpdatePerson(this.token, record);
+                }
+                catch (FaultException<ServiceData> sd)
+                {
+                    Logger.Error("[Service] " + sd.Message);
+                    MessageBox.Show(sd.Message);
+                }
+
                 this.Close();
             }
         }

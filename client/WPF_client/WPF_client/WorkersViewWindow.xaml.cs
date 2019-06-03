@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -44,15 +45,40 @@ namespace WPF_client
             refreshTimer.Tick += RefreshTimer_Tick;
 
             this.username = username;
-            this.token = client.GetToken();
-            FillDatas();
+            try
+            {
+                this.token = client.GetToken();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
+
+            try
+            {
+                FillDatas();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
         }
 
         private void RefreshTimer_Tick(object sender, EventArgs e)
         {
-            if (client.NeedRefresh(lastRefresh))
+            try
             {
-                FillDatas();
+                if (client.NeedRefresh(lastRefresh))
+                {
+                    FillDatas();
+                }
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
             }
         }
 
@@ -104,7 +130,16 @@ namespace WPF_client
 
         private void AddWorker_Closed(object sender, EventArgs e)
         {
-            FillDatas();
+            try
+            {
+                FillDatas();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
+
             this.btn_remove.IsEnabled = false;
             this.btn_update.IsEnabled = false;
         }
@@ -139,7 +174,15 @@ namespace WPF_client
 
         private void img_refresh_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            FillDatas();
+            try
+            {
+                FillDatas();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
         }
 
         private void cb_autoRefresh_Checked(object sender, RoutedEventArgs e)
@@ -196,8 +239,16 @@ namespace WPF_client
             {
                 this.btn_remove.IsEnabled = false;
                 this.btn_update.IsEnabled = false;
-                client.RemovePerson(this.token, id);
-                FillDatas();
+                try
+                {
+                    client.RemovePerson(this.token, id);
+                    FillDatas();
+                }
+                catch (FaultException<ServiceData> sd)
+                {
+                    Logger.Error("[Service] " + sd.Message);
+                    MessageBox.Show(sd.Message);
+                }
             }
 
         }
@@ -213,9 +264,10 @@ namespace WPF_client
                 v.Show();
                 this.Close();
             }
-            catch
+            catch (FaultException<ServiceData> sd)
             {
-                MessageBox.Show("Unexpected error");
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
             }
         }
 
@@ -238,9 +290,10 @@ namespace WPF_client
                     client.Logout(this.username);
                     client.DeleteToken(this.token);
                 }
-                catch
+                catch (FaultException<ServiceData> sd)
                 {
-                    MessageBox.Show("Unexpected error");
+                    Logger.Error("[Service] " + sd.Message);
+                    MessageBox.Show(sd.Message);
                 }
             }
         }

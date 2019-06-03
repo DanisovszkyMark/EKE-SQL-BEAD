@@ -92,6 +92,83 @@ namespace WPF_client.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+    [System.SerializableAttribute()]
+    public partial class ServiceData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorDetailsField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ErrorMessageField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool ResultField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorDetails {
+            get {
+                return this.ErrorDetailsField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorDetailsField, value) != true)) {
+                    this.ErrorDetailsField = value;
+                    this.RaisePropertyChanged("ErrorDetails");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string ErrorMessage {
+            get {
+                return this.ErrorMessageField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ErrorMessageField, value) != true)) {
+                    this.ErrorMessageField = value;
+                    this.RaisePropertyChanged("ErrorMessage");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Result {
+            get {
+                return this.ResultField;
+            }
+            set {
+                if ((this.ResultField.Equals(value) != true)) {
+                    this.ResultField = value;
+                    this.RaisePropertyChanged("Result");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="PersonRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
     [System.SerializableAttribute()]
     public partial class PersonRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -204,78 +281,91 @@ namespace WPF_client.ServiceReference {
     public interface IService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllUser", ReplyAction="http://tempuri.org/IService/SelectAllUserResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectAllUserServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         WPF_client.ServiceReference.UserRecord[] SelectAllUser();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllUser", ReplyAction="http://tempuri.org/IService/SelectAllUserResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.UserRecord[]> SelectAllUserAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertUser", ReplyAction="http://tempuri.org/IService/InsertUserResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/InsertUserServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void InsertUser(WPF_client.ServiceReference.UserRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertUser", ReplyAction="http://tempuri.org/IService/InsertUserResponse")]
         System.Threading.Tasks.Task InsertUserAsync(WPF_client.ServiceReference.UserRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Login", ReplyAction="http://tempuri.org/IService/LoginResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/LoginServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void Login(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Login", ReplyAction="http://tempuri.org/IService/LoginResponse")]
         System.Threading.Tasks.Task LoginAsync(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Logout", ReplyAction="http://tempuri.org/IService/LogoutResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/LogoutServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void Logout(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Logout", ReplyAction="http://tempuri.org/IService/LogoutResponse")]
         System.Threading.Tasks.Task LogoutAsync(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectAllPersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         WPF_client.ServiceReference.PersonRecord[] SelectAllPerson(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectPersonByIdServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         WPF_client.ServiceReference.PersonRecord SelectPersonById(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/InsertPersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void InsertPerson(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
         System.Threading.Tasks.Task InsertPersonAsync(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdatePerson", ReplyAction="http://tempuri.org/IService/UpdatePersonResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/UpdatePersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void UpdatePerson(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdatePerson", ReplyAction="http://tempuri.org/IService/UpdatePersonResponse")]
         System.Threading.Tasks.Task UpdatePersonAsync(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RemovePerson", ReplyAction="http://tempuri.org/IService/RemovePersonResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/RemovePersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void RemovePerson(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RemovePerson", ReplyAction="http://tempuri.org/IService/RemovePersonResponse")]
         System.Threading.Tasks.Task RemovePersonAsync(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/NeedRefreshServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         bool NeedRefresh(System.DateTime lastRefresh);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         System.Threading.Tasks.Task<bool> NeedRefreshAsync(System.DateTime lastRefresh);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetToken", ReplyAction="http://tempuri.org/IService/GetTokenResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/GetTokenServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         string GetToken();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetToken", ReplyAction="http://tempuri.org/IService/GetTokenResponse")]
         System.Threading.Tasks.Task<string> GetTokenAsync();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Identification", ReplyAction="http://tempuri.org/IService/IdentificationResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/IdentificationServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         bool Identification(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Identification", ReplyAction="http://tempuri.org/IService/IdentificationResponse")]
         System.Threading.Tasks.Task<bool> IdentificationAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteToken", ReplyAction="http://tempuri.org/IService/DeleteTokenResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/DeleteTokenServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void DeleteToken(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteToken", ReplyAction="http://tempuri.org/IService/DeleteTokenResponse")]
