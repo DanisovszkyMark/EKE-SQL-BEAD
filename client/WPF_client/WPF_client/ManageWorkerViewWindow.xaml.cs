@@ -23,12 +23,14 @@ namespace WPF_client
     {
         private ServiceClient client;
         private int id;
+        private string token;
 
-        public ManageWorkerViewWindow(int id)
+        public ManageWorkerViewWindow(string token, int id)
         {
             InitializeComponent();
             client = new ServiceClient();
             this.id = id;
+            this.token = token;
             if (id >= 0) this.lbl_type.Content = "Modify";
 
             FillDatas();
@@ -38,7 +40,7 @@ namespace WPF_client
         {
             if (this.id != -1)
             {
-                PersonRecord record = client.SelectPersonById(this.id);
+                PersonRecord record = client.SelectPersonById(this.token, this.id);
 
                 this.tb_name.Text = record.Name;
                 this.tb_birth.Text = record.Birt_day.ToString();
@@ -55,7 +57,7 @@ namespace WPF_client
                 insertThis.Birt_day = DateTime.Parse(this.tb_birth.Text);
                 insertThis.Job_id = int.Parse(this.tb_job.Text);
 
-                client.InsertPerson(insertThis);
+                client.InsertPerson(this.token, insertThis);
                 this.Close();
             }
             else //upate id alapján
@@ -66,7 +68,7 @@ namespace WPF_client
                 record.Birt_day = DateTime.Parse(this.tb_birth.Text);
                 record.Job_id = int.Parse(this.tb_job.Text);
 
-                client.UpdatePerson(record);
+                client.UpdatePerson(this.token, record);
                 this.Close();
             }
         }

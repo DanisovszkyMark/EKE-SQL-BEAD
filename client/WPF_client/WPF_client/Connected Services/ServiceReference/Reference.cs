@@ -228,40 +228,58 @@ namespace WPF_client.ServiceReference {
         System.Threading.Tasks.Task LogoutAsync(string username);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
-        WPF_client.ServiceReference.PersonRecord[] SelectAllPerson();
+        WPF_client.ServiceReference.PersonRecord[] SelectAllPerson(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
-        System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync();
+        System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
-        WPF_client.ServiceReference.PersonRecord SelectPersonById(int id);
+        WPF_client.ServiceReference.PersonRecord SelectPersonById(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
-        System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(int id);
+        System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
-        void InsertPerson(WPF_client.ServiceReference.PersonRecord record);
+        void InsertPerson(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
-        System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record);
+        System.Threading.Tasks.Task InsertPersonAsync(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdatePerson", ReplyAction="http://tempuri.org/IService/UpdatePersonResponse")]
-        void UpdatePerson(WPF_client.ServiceReference.PersonRecord record);
+        void UpdatePerson(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdatePerson", ReplyAction="http://tempuri.org/IService/UpdatePersonResponse")]
-        System.Threading.Tasks.Task UpdatePersonAsync(WPF_client.ServiceReference.PersonRecord record);
+        System.Threading.Tasks.Task UpdatePersonAsync(string token, WPF_client.ServiceReference.PersonRecord record);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RemovePerson", ReplyAction="http://tempuri.org/IService/RemovePersonResponse")]
-        void RemovePerson(int id);
+        void RemovePerson(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RemovePerson", ReplyAction="http://tempuri.org/IService/RemovePersonResponse")]
-        System.Threading.Tasks.Task RemovePersonAsync(int id);
+        System.Threading.Tasks.Task RemovePersonAsync(string token, int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         bool NeedRefresh(System.DateTime lastRefresh);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         System.Threading.Tasks.Task<bool> NeedRefreshAsync(System.DateTime lastRefresh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetToken", ReplyAction="http://tempuri.org/IService/GetTokenResponse")]
+        string GetToken();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/GetToken", ReplyAction="http://tempuri.org/IService/GetTokenResponse")]
+        System.Threading.Tasks.Task<string> GetTokenAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Identification", ReplyAction="http://tempuri.org/IService/IdentificationResponse")]
+        bool Identification(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Identification", ReplyAction="http://tempuri.org/IService/IdentificationResponse")]
+        System.Threading.Tasks.Task<bool> IdentificationAsync(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteToken", ReplyAction="http://tempuri.org/IService/DeleteTokenResponse")]
+        void DeleteToken(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/DeleteToken", ReplyAction="http://tempuri.org/IService/DeleteTokenResponse")]
+        System.Threading.Tasks.Task DeleteTokenAsync(string token);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -323,44 +341,44 @@ namespace WPF_client.ServiceReference {
             return base.Channel.LogoutAsync(username);
         }
         
-        public WPF_client.ServiceReference.PersonRecord[] SelectAllPerson() {
-            return base.Channel.SelectAllPerson();
+        public WPF_client.ServiceReference.PersonRecord[] SelectAllPerson(string token) {
+            return base.Channel.SelectAllPerson(token);
         }
         
-        public System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync() {
-            return base.Channel.SelectAllPersonAsync();
+        public System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord[]> SelectAllPersonAsync(string token) {
+            return base.Channel.SelectAllPersonAsync(token);
         }
         
-        public WPF_client.ServiceReference.PersonRecord SelectPersonById(int id) {
-            return base.Channel.SelectPersonById(id);
+        public WPF_client.ServiceReference.PersonRecord SelectPersonById(string token, int id) {
+            return base.Channel.SelectPersonById(token, id);
         }
         
-        public System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(int id) {
-            return base.Channel.SelectPersonByIdAsync(id);
+        public System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(string token, int id) {
+            return base.Channel.SelectPersonByIdAsync(token, id);
         }
         
-        public void InsertPerson(WPF_client.ServiceReference.PersonRecord record) {
-            base.Channel.InsertPerson(record);
+        public void InsertPerson(string token, WPF_client.ServiceReference.PersonRecord record) {
+            base.Channel.InsertPerson(token, record);
         }
         
-        public System.Threading.Tasks.Task InsertPersonAsync(WPF_client.ServiceReference.PersonRecord record) {
-            return base.Channel.InsertPersonAsync(record);
+        public System.Threading.Tasks.Task InsertPersonAsync(string token, WPF_client.ServiceReference.PersonRecord record) {
+            return base.Channel.InsertPersonAsync(token, record);
         }
         
-        public void UpdatePerson(WPF_client.ServiceReference.PersonRecord record) {
-            base.Channel.UpdatePerson(record);
+        public void UpdatePerson(string token, WPF_client.ServiceReference.PersonRecord record) {
+            base.Channel.UpdatePerson(token, record);
         }
         
-        public System.Threading.Tasks.Task UpdatePersonAsync(WPF_client.ServiceReference.PersonRecord record) {
-            return base.Channel.UpdatePersonAsync(record);
+        public System.Threading.Tasks.Task UpdatePersonAsync(string token, WPF_client.ServiceReference.PersonRecord record) {
+            return base.Channel.UpdatePersonAsync(token, record);
         }
         
-        public void RemovePerson(int id) {
-            base.Channel.RemovePerson(id);
+        public void RemovePerson(string token, int id) {
+            base.Channel.RemovePerson(token, id);
         }
         
-        public System.Threading.Tasks.Task RemovePersonAsync(int id) {
-            return base.Channel.RemovePersonAsync(id);
+        public System.Threading.Tasks.Task RemovePersonAsync(string token, int id) {
+            return base.Channel.RemovePersonAsync(token, id);
         }
         
         public bool NeedRefresh(System.DateTime lastRefresh) {
@@ -369,6 +387,30 @@ namespace WPF_client.ServiceReference {
         
         public System.Threading.Tasks.Task<bool> NeedRefreshAsync(System.DateTime lastRefresh) {
             return base.Channel.NeedRefreshAsync(lastRefresh);
+        }
+        
+        public string GetToken() {
+            return base.Channel.GetToken();
+        }
+        
+        public System.Threading.Tasks.Task<string> GetTokenAsync() {
+            return base.Channel.GetTokenAsync();
+        }
+        
+        public bool Identification(string token) {
+            return base.Channel.Identification(token);
+        }
+        
+        public System.Threading.Tasks.Task<bool> IdentificationAsync(string token) {
+            return base.Channel.IdentificationAsync(token);
+        }
+        
+        public void DeleteToken(string token) {
+            base.Channel.DeleteToken(token);
+        }
+        
+        public System.Threading.Tasks.Task DeleteTokenAsync(string token) {
+            return base.Channel.DeleteTokenAsync(token);
         }
     }
 }

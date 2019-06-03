@@ -17,6 +17,7 @@ namespace WCFService
         private UsersManager usersManager = new UsersManager();
         private PersonsManager personsManager = new PersonsManager();
         private RefreshManager refreshManager = new RefreshManager();
+        private TokensManager tokenManager = new TokensManager();
 
         public List<UserRecord> SelectAllUser()
         {
@@ -38,32 +39,43 @@ namespace WCFService
             usersManager.Logout(username);
         }
 
-        public List<PersonRecord> SelectAllPerson()
+        public List<PersonRecord> SelectAllPerson(string token)
         {
-            return personsManager.Select();
+            if (Identification(token)) return personsManager.Select();
+            else return null;
         }
 
-        public PersonRecord SelectPersonById(int id)
+        public PersonRecord SelectPersonById(string token, int id)
         {
-            return personsManager.Select(id);
+            if (Identification(token)) return personsManager.Select(id);
+            else return null;
         }
 
-        public void InsertPerson(PersonRecord record)
+        public void InsertPerson(string token, PersonRecord record)
         {
-            personsManager.Insert(record);
-            refreshManager.UpdateLastTime(DateTime.Now);
+            if (Identification(token))
+            {
+                personsManager.Insert(record);
+                refreshManager.UpdateLastTime(DateTime.Now);
+            }
         }
 
-        public void UpdatePerson(PersonRecord record)
+        public void UpdatePerson(string token, PersonRecord record)
         {
-            personsManager.Update(record);
-            refreshManager.UpdateLastTime(DateTime.Now);
+            if (Identification(token))
+            {
+                personsManager.Update(record);
+                refreshManager.UpdateLastTime(DateTime.Now);
+            }
         }
 
-        public void RemovePerson(int id)
+        public void RemovePerson(string token, int id)
         {
-            personsManager.Delete(id);
-            refreshManager.UpdateLastTime(DateTime.Now);
+            if (Identification(token))
+            {
+                personsManager.Delete(id);
+                refreshManager.UpdateLastTime(DateTime.Now);
+            }
         }
 
         public bool NeedRefresh(DateTime lastRefresh)
@@ -77,5 +89,19 @@ namespace WCFService
             return refreshManager.lastRefresh();
         }
 
+        public string GetToken()
+        {
+            return tokenManager.GetToken();
+        }
+
+        public bool Identification(string token)
+        {
+            return tokenManager.Identification(token);
+        }
+
+        public void DeleteToken(string token)
+        {
+            tokenManager.Delete(token);
+        }
     }
 }

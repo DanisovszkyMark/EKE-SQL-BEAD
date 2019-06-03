@@ -67,6 +67,24 @@
   <wsdl:message name="IService_NeedRefresh_OutputMessage">
     <wsdl:part name="parameters" element="tns:NeedRefreshResponse" />
   </wsdl:message>
+  <wsdl:message name="IService_GetToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Identification_InputMessage">
+    <wsdl:part name="parameters" element="tns:Identification" />
+  </wsdl:message>
+  <wsdl:message name="IService_Identification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTokenResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="SelectAllUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllUser" message="tns:IService_SelectAllUser_InputMessage" />
@@ -107,6 +125,18 @@
     <wsdl:operation name="NeedRefresh">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/NeedRefresh" message="tns:IService_NeedRefresh_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/NeedRefreshResponse" message="tns:IService_NeedRefresh_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetToken" message="tns:IService_GetToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetTokenResponse" message="tns:IService_GetToken_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Identification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Identification" message="tns:IService_Identification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/IdentificationResponse" message="tns:IService_Identification_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteToken" message="tns:IService_DeleteToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteTokenResponse" message="tns:IService_DeleteToken_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
@@ -194,6 +224,33 @@
     </wsdl:operation>
     <wsdl:operation name="NeedRefresh">
       <soap:operation soapAction="http://tempuri.org/IService/NeedRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <soap:operation soapAction="http://tempuri.org/IService/GetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Identification">
+      <soap:operation soapAction="http://tempuri.org/IService/Identification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToken">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteToken" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

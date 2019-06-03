@@ -24,6 +24,7 @@ namespace WPF_client
     {
         private string username;
         private bool logged = true;
+        private string token;
 
         private ServiceClient client;
         private List<WorkerViewer> workerViewers;
@@ -43,7 +44,7 @@ namespace WPF_client
             refreshTimer.Tick += RefreshTimer_Tick;
 
             this.username = username;
-
+            this.token = client.GetToken();
             FillDatas();
         }
 
@@ -60,7 +61,7 @@ namespace WPF_client
             this.wp_datas.Items.Clear();
             workerViewers.Clear();
 
-            List<PersonRecord> records = client.SelectAllPerson().ToList();
+            List<PersonRecord> records = client.SelectAllPerson(this.token).ToList();
 
             for (int i = 0; i < records.Count; i++)
             {
@@ -96,7 +97,7 @@ namespace WPF_client
 
         private void btn_add_Click(object sender, RoutedEventArgs e)
         {
-            ManageWorkerViewWindow addWorker = new ManageWorkerViewWindow(-1);
+            ManageWorkerViewWindow addWorker = new ManageWorkerViewWindow(this.token, -1);
             addWorker.Closed += AddWorker_Closed;
             addWorker.Show();
         }
@@ -174,7 +175,7 @@ namespace WPF_client
             }
             if (id >= 0)
             {
-                ManageWorkerViewWindow v = new ManageWorkerViewWindow(id);
+                ManageWorkerViewWindow v = new ManageWorkerViewWindow(this.token, id);
                 v.Closed += AddWorker_Closed;
                 v.Show();
             }
@@ -195,7 +196,7 @@ namespace WPF_client
             {
                 this.btn_remove.IsEnabled = false;
                 this.btn_update.IsEnabled = false;
-                client.RemovePerson(id);
+                client.RemovePerson(this.token, id);
                 FillDatas();
             }
 
@@ -206,6 +207,7 @@ namespace WPF_client
             try
             {
                 client.Logout(this.username);
+                client.DeleteToken(this.token);
                 logged = false;
                 LoginWindowView v = new LoginWindowView();
                 v.Show();
@@ -234,6 +236,7 @@ namespace WPF_client
                 try
                 {
                     client.Logout(this.username);
+                    client.DeleteToken(this.token);
                 }
                 catch
                 {

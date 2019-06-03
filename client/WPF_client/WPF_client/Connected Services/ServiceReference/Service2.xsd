@@ -51,7 +51,9 @@
   </xs:element>
   <xs:element name="SelectAllPerson">
     <xs:complexType>
-      <xs:sequence />
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="SelectAllPersonResponse">
@@ -64,6 +66,7 @@
   <xs:element name="SelectPersonById">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
@@ -78,6 +81,7 @@
   <xs:element name="InsertPerson">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
         <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="record" nillable="true" type="q5:PersonRecord" />
       </xs:sequence>
     </xs:complexType>
@@ -90,6 +94,7 @@
   <xs:element name="UpdatePerson">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
         <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="record" nillable="true" type="q6:PersonRecord" />
       </xs:sequence>
     </xs:complexType>
@@ -102,6 +107,7 @@
   <xs:element name="RemovePerson">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="id" type="xs:int" />
       </xs:sequence>
     </xs:complexType>
@@ -123,6 +129,44 @@
       <xs:sequence>
         <xs:element minOccurs="0" name="NeedRefreshResult" type="xs:boolean" />
       </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetToken">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTokenResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTokenResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Identification">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IdentificationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IdentificationResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteToken">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteTokenResponse">
+    <xs:complexType>
+      <xs:sequence />
     </xs:complexType>
   </xs:element>
 </xs:schema>
