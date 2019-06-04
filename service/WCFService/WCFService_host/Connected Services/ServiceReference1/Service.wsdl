@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:61310/Service.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:61310/Service.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:61310/Service.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:61310/Service.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService_SelectAllUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectAllUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectAllUser_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q1:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertUser_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q2:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Login_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q3:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_InputMessage">
+    <wsdl:part name="parameters" element="tns:Logout" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LogoutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Logout_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q4:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectAllPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectAllPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectAllPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectAllPerson_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q5:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectPersonById_InputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPersonById" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectPersonById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SelectPersonByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_SelectPersonById_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q6:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPerson" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertPerson_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q7:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdatePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePerson" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdatePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdatePerson_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q8:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemovePerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePerson" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemovePerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RemovePersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_RemovePerson_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q9:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_NeedRefresh_InputMessage">
+    <wsdl:part name="parameters" element="tns:NeedRefresh" />
+  </wsdl:message>
+  <wsdl:message name="IService_NeedRefresh_OutputMessage">
+    <wsdl:part name="parameters" element="tns:NeedRefreshResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_NeedRefresh_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q10:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_GetToken_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q11:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_Identification_InputMessage">
+    <wsdl:part name="parameters" element="tns:Identification" />
+  </wsdl:message>
+  <wsdl:message name="IService_Identification_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IdentificationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_Identification_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q12:ServiceData" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteToken_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteToken" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteToken_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_DeleteToken_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q13:ServiceData" />
+  </wsdl:message>
+  <wsdl:portType name="IService">
+    <wsdl:operation name="SelectAllUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllUser" message="tns:IService_SelectAllUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectAllUserResponse" message="tns:IService_SelectAllUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/SelectAllUserServiceDataFault" name="ServiceDataFault" message="tns:IService_SelectAllUser_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertUser" message="tns:IService_InsertUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertUserResponse" message="tns:IService_InsertUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/InsertUserServiceDataFault" name="ServiceDataFault" message="tns:IService_InsertUser_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Login" message="tns:IService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LoginResponse" message="tns:IService_Login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/LoginServiceDataFault" name="ServiceDataFault" message="tns:IService_Login_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Logout" message="tns:IService_Logout_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/LogoutResponse" message="tns:IService_Logout_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/LogoutServiceDataFault" name="ServiceDataFault" message="tns:IService_Logout_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllPerson" message="tns:IService_SelectAllPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectAllPersonResponse" message="tns:IService_SelectAllPerson_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/SelectAllPersonServiceDataFault" name="ServiceDataFault" message="tns:IService_SelectAllPerson_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SelectPersonById">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectPersonById" message="tns:IService_SelectPersonById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectPersonByIdResponse" message="tns:IService_SelectPersonById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/SelectPersonByIdServiceDataFault" name="ServiceDataFault" message="tns:IService_SelectPersonById_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertPerson" message="tns:IService_InsertPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertPersonResponse" message="tns:IService_InsertPerson_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/InsertPersonServiceDataFault" name="ServiceDataFault" message="tns:IService_InsertPerson_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdatePerson" message="tns:IService_UpdatePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdatePersonResponse" message="tns:IService_UpdatePerson_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/UpdatePersonServiceDataFault" name="ServiceDataFault" message="tns:IService_UpdatePerson_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RemovePerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/RemovePerson" message="tns:IService_RemovePerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/RemovePersonResponse" message="tns:IService_RemovePerson_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/RemovePersonServiceDataFault" name="ServiceDataFault" message="tns:IService_RemovePerson_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="NeedRefresh">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/NeedRefresh" message="tns:IService_NeedRefresh_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/NeedRefreshResponse" message="tns:IService_NeedRefresh_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/NeedRefreshServiceDataFault" name="ServiceDataFault" message="tns:IService_NeedRefresh_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/GetToken" message="tns:IService_GetToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/GetTokenResponse" message="tns:IService_GetToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/GetTokenServiceDataFault" name="ServiceDataFault" message="tns:IService_GetToken_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Identification">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/Identification" message="tns:IService_Identification_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/IdentificationResponse" message="tns:IService_Identification_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/IdentificationServiceDataFault" name="ServiceDataFault" message="tns:IService_Identification_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToken">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/DeleteToken" message="tns:IService_DeleteToken_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/DeleteTokenResponse" message="tns:IService_DeleteToken_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/DeleteTokenServiceDataFault" name="ServiceDataFault" message="tns:IService_DeleteToken_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SelectAllUser">
+      <soap:operation soapAction="http://tempuri.org/IService/SelectAllUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertUser">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Logout">
+      <soap:operation soapAction="http://tempuri.org/IService/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectAllPerson">
+      <soap:operation soapAction="http://tempuri.org/IService/SelectAllPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="SelectPersonById">
+      <soap:operation soapAction="http://tempuri.org/IService/SelectPersonById" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertPerson">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertPerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePerson">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdatePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="RemovePerson">
+      <soap:operation soapAction="http://tempuri.org/IService/RemovePerson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="NeedRefresh">
+      <soap:operation soapAction="http://tempuri.org/IService/NeedRefresh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetToken">
+      <soap:operation soapAction="http://tempuri.org/IService/GetToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Identification">
+      <soap:operation soapAction="http://tempuri.org/IService/Identification" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteToken">
+      <soap:operation soapAction="http://tempuri.org/IService/DeleteToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="BasicHttpBinding_IService" binding="tns:BasicHttpBinding_IService">
+      <soap:address location="http://localhost:61310/Service.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

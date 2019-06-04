@@ -20,8 +20,9 @@ namespace WCFService.DatabaseManagers
                                     FROM Users";
 
             try { command.Connection = getConnection(); }
-            catch (Exception)
+            catch (Exception e)
             {
+                string message = e.Message;
                 throw new DatabaseConnectionException();
             }
 

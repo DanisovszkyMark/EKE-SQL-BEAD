@@ -1,0 +1,11 @@
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\bin\Debug\WCFService_host.exe.config
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\bin\Debug\WCFService_host.exe
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\bin\Debug\WCFService_host.pdb
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\bin\Debug\WCFService.dll
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\bin\Debug\WCFService.pdb
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\bin\Debug\WCFService.dll.config
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\obj\Debug\WCFService_host.csproj.CoreCompileInputs.cache
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\obj\Debug\WCFService_host.csproj.CopyComplete
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\obj\Debug\WCFService_host.exe
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\obj\Debug\WCFService_host.pdb
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\service\WCFService\WCFService_host\obj\Debug\WCFService_host.csprojAssemblyReference.cache
