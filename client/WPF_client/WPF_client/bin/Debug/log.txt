@@ -1169,3 +1169,205 @@ Time 			| LogType 	| Message
 2019. 06. 04.-0:08	| [ERROR]	|Ismeretlen hiba történt.
 2019. 06. 04.-0:08	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
 2019. 06. 04.-0:08	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:15	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:15	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:16	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:16	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:16	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:16	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:17	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:17	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:17	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:17	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:17	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:17	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:17	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+2019. 06. 04.-12:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:17	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:18	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:18	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:20	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:20	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:21	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:21	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:21	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:21	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:21	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:21	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:21	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:21	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:21	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:21	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:21	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:21	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:22	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:22	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:22	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:22	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:22	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:22	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:22	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:22	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:22	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:22	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:24	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:24	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:24	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:24	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+2019. 06. 04.-12:25	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:25	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:26	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:26	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+2019. 06. 04.-12:27	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:27	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:27	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:27	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:29	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:29	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:30	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:30	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:30	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:30	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:30	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:30	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:30	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:30	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:31	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:31	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:31	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:31	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:32	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:32	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:32	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:32	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:32	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:32	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:32	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:32	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:33	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:33	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:33	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:33	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:35	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:35	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:35	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:35	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:54	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:54	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:54	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:55	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:55	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:55	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-12:56	| [INFO]	|Új felhasználó.
+2019. 06. 04.-12:56	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-12:56	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:56	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:56	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:56	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:57	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:57	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:57	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:57	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:57	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:57	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-12:59	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-12:59	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-13:00	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:00	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-13:03	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:03	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-13:03	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:03	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-13:03	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:03	| [ERROR]	|Ismeretlen hiba történt.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-13:08	| [INFO]	|Új felhasználó.
+2019. 06. 04.-13:08	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-13:08	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:08	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-13:09	| [INFO]	|Új felhasználó.
+2019. 06. 04.-13:09	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-13:09	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:09	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-13:10	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:10	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-13:10	| [INFO]	|Új felhasználó.
+2019. 06. 04.-13:10	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-13:10	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:10	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 04.-13:10	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:10	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-13:12	| [INFO]	|Új felhasználó.
+2019. 06. 04.-13:12	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-13:12	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:12	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-13:13	| [INFO]	|Új felhasználó.
+2019. 06. 04.-13:13	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-13:13	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:14	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 04.-13:16	| [INFO]	|Új felhasználó.
+2019. 06. 04.-13:16	| [INFO]	|Bejelentkezési ablak megnyitása
+2019. 06. 04.-13:16	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:17	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 04.-13:17	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:18	| [ERROR]	|Ismeretlen hiba történt.
+2019. 06. 04.-13:19	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:19	| [ERROR]	|Sikertelen bejelentkezés. Helytelen adatok.
+2019. 06. 04.-13:28	| [INFO]	|Bejelentkezési kísérlet a következő adatokkal: admin admin
+2019. 06. 04.-13:28	| [ERROR]	|Ismeretlen hiba történt.

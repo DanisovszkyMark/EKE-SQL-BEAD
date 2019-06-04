@@ -121,19 +121,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Connected Services\ServiceReference\item.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\item1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\ServiceReference\item3.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\ServiceReference\Service.wsdl" />
-    <None Include="Connected Services\ServiceReference\Service.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceReference\Service1.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceReference\Service2.xsd">
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Connected Services\ServiceReference\Service3.xsd">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.PersonRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -170,7 +170,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Images\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\refresh_onMouse.ico" />
+  </ItemGroup>
+  <ItemGroup>
     <WCFMetadataStorage Include="Connected Services\ServiceReference\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\ServiceReference\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Connected Services\ServiceReference\configuration91.svcinfo" />
@@ -183,12 +192,6 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\refresh.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Images\refresh_onMouse.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
