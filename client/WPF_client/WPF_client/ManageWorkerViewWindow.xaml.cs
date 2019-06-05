@@ -49,6 +49,7 @@ namespace WPF_client
         {
             if (this.id != -1)
             {
+                Logger.Info("Quering employee data for update");
                 PersonRecord record = client.SelectPersonById(this.token, this.id);
 
                 this.tb_name.Text = record.Name;
@@ -68,6 +69,7 @@ namespace WPF_client
 
                 try
                 {
+                    Logger.Info("Adding a new worker to the database");
                     client.InsertPerson(this.token, insertThis);
                 }
                 catch (FaultException<ServiceData> sd)
@@ -88,6 +90,7 @@ namespace WPF_client
 
                 try
                 {
+                    Logger.Info("Update a worker to the database");
                     client.UpdatePerson(this.token, record);
                 }
                 catch (FaultException<ServiceData> sd)

@@ -47,6 +47,7 @@ namespace WPF_client
             this.username = username;
             try
             {
+                Logger.Info("Querying the token from the server");
                 this.token = client.GetToken();
             }
             catch (FaultException<ServiceData> sd)
@@ -84,6 +85,8 @@ namespace WPF_client
 
         private void FillDatas()
         {
+            Logger.Info("Querying Employee Data");
+
             this.wp_datas.Items.Clear();
             workerViewers.Clear();
 
@@ -241,6 +244,7 @@ namespace WPF_client
                 this.btn_update.IsEnabled = false;
                 try
                 {
+                    Logger.Info("record cancellation request");
                     client.RemovePerson(this.token, id);
                     FillDatas();
                 }
@@ -257,7 +261,10 @@ namespace WPF_client
         {
             try
             {
+                Logger.Info("Logout");
                 client.Logout(this.username);
+
+                Logger.Info("delete token");
                 client.DeleteToken(this.token);
                 logged = false;
                 LoginWindowView v = new LoginWindowView();
@@ -287,7 +294,10 @@ namespace WPF_client
             {
                 try
                 {
+                    Logger.Info("Logout");
                     client.Logout(this.username);
+
+                    Logger.Info("Delete token");
                     client.DeleteToken(this.token);
                 }
                 catch (FaultException<ServiceData> sd)

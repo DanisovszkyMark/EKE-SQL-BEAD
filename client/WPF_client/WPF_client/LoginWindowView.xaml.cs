@@ -27,22 +27,21 @@ namespace WPF_client
 
         public LoginWindowView()
         {
-            Logger.Info("Bejelentkezési ablak megnyitása");
             InitializeComponent();
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
-            Logger.Info("Bejelentkezési kísérlet a következő adatokkal: " + tb_username.Text + " " + pb_password.Password);
+            Logger.Info("login attempt. Username : " + tb_username.Text + " " + pb_password.Password);
 
             try
             {
                 if (canLogin() && Login())
                 {
-                    Logger.Info("A szerver kapcsolat létrejött.");
+                    Logger.Info("the server connection has been established.");
 
                     Login();
-                    Logger.Info(String.Format("Sikeres bejelentkezés ({0})", tb_username.Text));
+                    Logger.Info(String.Format("Login successful ({0})", tb_username.Text));
 
                     WorkersViewWindow newWindow = new WorkersViewWindow(this.username);
                     newWindow.Show();
@@ -50,8 +49,8 @@ namespace WPF_client
                 }
                 else
                 {
-                    Logger.Error("Sikertelen bejelentkezés. Helytelen adatok.");
-                    MessageBox.Show("Wrong username or password or already logged!");
+                    Logger.Error("Login failed");
+                    MessageBox.Show("Login failed");
                 }
             }
             catch (FaultException<ServiceData> sd)
@@ -61,8 +60,8 @@ namespace WPF_client
             }
             catch (Exception)
             {
-                Logger.Error("Ismeretlen hiba történt.");
-                MessageBox.Show("Unexpected error!");
+                Logger.Error("Error with Windows Service communication!");
+                MessageBox.Show("Error with Windows Service communication!");
             }
         }
 

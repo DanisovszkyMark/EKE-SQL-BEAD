@@ -12,6 +12,7 @@
         <Color x:Key="LinkColor" A="255" R="0" G="0" B="255"/>
         <Color x:Key="LinkMouseOver" A="255" R="255" G="201" B="14"/>
         <Color x:Key="HighlighterColor" A="255" R="88" G="142" B="74" />
+        <Color x:Key="MoreViewBackColor" A="255" R="37" G="36" B="36" />
 
         <SolidColorBrush x:Key="DarkBackgroundBrush" Color="{StaticResource DarkBackgroundColor}"/>
         <SolidColorBrush x:Key="LightBackgroundBrush" Color="{StaticResource LightBackgroundColor}"/>
@@ -22,5 +23,7 @@
         <SolidColorBrush x:Key="HightlighterBrush" Color="{StaticResource HighlighterColor}" />
         <SolidColorBrush x:Key="DefaultHighlightingBrush" Color="Gray" />
         <SolidColorBrush x:Key="LinkMouseOverBrush" Color="{StaticResource LinkMouseOver}" />
+        <SolidColorBrush x:Key="MoreViewBackBrush" Color="{StaticResource MoreViewBackColor}" />
+
     </Application.Resources>
 </Application>
