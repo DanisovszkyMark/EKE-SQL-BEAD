@@ -66,7 +66,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="ErrorLogControl.xaml.cs">
+      <DependentUpon>ErrorLogControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Exceptions\ConnectionException.cs" />
+    <Compile Include="GenerateDataControl.xaml.cs">
+      <DependentUpon>GenerateDataControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Loggers\Logger.cs" />
     <Compile Include="ManageWorkerViewWindow.xaml.cs">
       <DependentUpon>ManageWorkerViewWindow.xaml</DependentUpon>
@@ -78,6 +84,14 @@
     <Compile Include="WorkersViewWindow.xaml.cs">
       <DependentUpon>WorkersViewWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="ErrorLogControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GenerateDataControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindowView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

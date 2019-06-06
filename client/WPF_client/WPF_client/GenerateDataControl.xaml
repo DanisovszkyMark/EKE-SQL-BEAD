@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="WPF_client.GenerateDataControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WPF_client"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="500">
+    <Grid Background="{DynamicResource DarkBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition MinHeight="80" Height="80*"/>
+            <RowDefinition MinHeight="40" Height="80*"/>
+            <RowDefinition MinHeight="40" Height="80*"/>
+            <RowDefinition MinHeight="40" Height="80*"/>
+            <RowDefinition MinHeight="100" Height="150*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition MinWidth="50" Width="150"/>
+            <ColumnDefinition MinWidth="150" Width="150*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Generate Datas" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="{DynamicResource LightForegroundBrush}" FontSize="30"/>
+        <Label Content="Table name: " Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
+        <TextBox x:Name="tb_tableName" MinWidth="40" MaxWidth="500" Margin="20" Grid.Row="1" Grid.Column="2" FontSize="16" />
+
+        <Label Content="Number of records: " Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
+        <TextBox  MinWidth="40" MaxWidth="500" Margin="20" Grid.Row="2" Grid.Column="2" FontSize="16" />
+
+        <Label Content="Drop first: " Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
+        <CheckBox Grid.Row="3" Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+            <CheckBox.LayoutTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2"></ScaleTransform>
+            </CheckBox.LayoutTransform>
+        </CheckBox>
+
+        <Button Content="Generate" VerticalAlignment="Bottom" MaxWidth="400" MaxHeight="80" MinHeight="50" Grid.Row="4" Grid.ColumnSpan="2" Margin="50,20,50,20" FontSize="22"/>
+    </Grid>
+
+</UserControl>

@@ -12,6 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_client.Viewers;
 
 namespace WPF_client
 {
@@ -37,37 +38,25 @@ namespace WPF_client
 
         private void btn_errorLog_Click(object sender, RoutedEventArgs e)
         {
-            this.sp_views.Children.Clear();
+            ErrorLogControl control = new ErrorLogControl();
 
-            Label lbl = new Label();
-            lbl.Foreground = (Brush)Application.Current.FindResource("LightForegroundBrush");
-            lbl.Content = "Error Log";
-            lbl.FontSize = 30;
-            lbl.Margin = new Thickness(0,20,0,10);
-            lbl.VerticalAlignment = VerticalAlignment.Top;
-            lbl.HorizontalAlignment = HorizontalAlignment.Center;
-
-            RichTextBox rtb_log = new RichTextBox();
-            rtb_log.VerticalScrollBarVisibility = ScrollBarVisibility.Visible;
-            rtb_log.Height = this.Height;
-            rtb_log.IsReadOnly = true;
-            this.sp_views.Children.Add(lbl);
-            this.sp_views.Children.Add(rtb_log);
-
-            List<string> logs = new List<string>();
             StreamReader sr = new StreamReader("log.txt");
-
             while (!sr.EndOfStream)
             {
                 string line = sr.ReadLine();
-                if (line.Contains("[ERROR]")) logs.Add(line);
+                if (line.Contains("[ERROR]")) control.rtb_log.AppendText(line + '\n');
             }
-            sr.Close();
 
-            for (int i = 0; i < logs.Count; i++)
-            {
-                rtb_log.AppendText(logs[i] + '\n');
-            }
+            this.sp_view.Children.Clear();
+            this.sp_view.Children.Add(control);
+        }
+
+        private void btn_generate_Click(object sender, RoutedEventArgs e)
+        {
+            GenerateDataControl control = new GenerateDataControl();
+
+            this.sp_view.Children.Clear();
+            this.sp_view.Children.Add(control);
         }
     }
 }

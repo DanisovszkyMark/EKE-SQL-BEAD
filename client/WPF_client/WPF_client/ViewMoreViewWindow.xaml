@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WPF_client"
         mc:Ignorable="d"
         Title="View More" Height="480" MinHeight="480" Width="800" MinWidth="600">
-    <Grid Background="{DynamicResource LightBackgroundBrush}">
+    <Grid x:Name="grid" Background="{DynamicResource LightBackgroundBrush}">
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="30*" MaxWidth="300" MinWidth="150" />
@@ -16,13 +16,15 @@
         <StackPanel x:Name="sp_buttons" Orientation="Vertical">
             <Image Margin="0,5,0,0" Source="Images/logo.png" />
             <Button Content="Info" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" />
-            <Button Content="Person_Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" />
             <Button Content="New Job" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}"/>
             <Button Content="New Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" />
             <Button Content="Person_Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" />
+            <Button x:Name="btn_generate" Content="Generate Data" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_generate_Click"/>
             <Button x:Name="btn_errorLog" Content="Make Error Log" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" Click="btn_errorLog_Click"/>
         </StackPanel>
 
-        <StackPanel x:Name="sp_views" Orientation="Vertical" Grid.Column="1" Background="#FF252424"/>
+        <StackPanel x:Name="sp_view" Orientation="Vertical" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Background="{DynamicResource DarkBackgroundBrush}">
+        </StackPanel>
+
     </Grid>
 </Window>

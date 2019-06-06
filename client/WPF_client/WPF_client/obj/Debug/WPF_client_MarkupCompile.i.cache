@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\App.xaml
-5-1712547680
+7-684146843
 
-17-1814307946
+192038207704
 17-1114893451
-LoginWindowView.xaml;MainWindow.xaml;ManageWorkerViewWindow.xaml;ViewMoreViewWindow.xaml;WorkersViewWindow.xaml;
+ErrorLogControl.xaml;GenerateDataControl.xaml;LoginWindowView.xaml;MainWindow.xaml;ManageWorkerViewWindow.xaml;ViewMoreViewWindow.xaml;WorkersViewWindow.xaml;
 
-True
+False
 

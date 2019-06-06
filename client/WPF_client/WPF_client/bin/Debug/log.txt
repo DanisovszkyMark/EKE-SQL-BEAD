@@ -1564,3 +1564,560 @@ Time 			| LogType 	| Message
 2019. 06. 06.-2:06	| [INFO]	|Querying Employee Data
 2019. 06. 06.-2:07	| [INFO]	|Logout
 2019. 06. 06.-2:07	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-12:38	| [INFO]	|Új felhasználó.
+2019. 06. 06.-12:38	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-12:38	| [INFO]	|the server connection has been established.
+2019. 06. 06.-12:38	| [INFO]	|Login successful (admin)
+2019. 06. 06.-12:38	| [INFO]	|Querying the token from the server
+2019. 06. 06.-12:38	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-12:40	| [INFO]	|Új felhasználó.
+2019. 06. 06.-12:41	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-12:41	| [ERROR]	|Login failed
+2019. 06. 06.-12:42	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-12:42	| [INFO]	|the server connection has been established.
+2019. 06. 06.-12:42	| [INFO]	|Login successful (admin)
+2019. 06. 06.-12:42	| [INFO]	|Querying the token from the server
+2019. 06. 06.-12:42	| [INFO]	|Querying Employee Data
+2019. 06. 06.-12:44	| [INFO]	|Logout
+2019. 06. 06.-12:44	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-12:47	| [INFO]	|Új felhasználó.
+2019. 06. 06.-12:47	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-12:47	| [INFO]	|the server connection has been established.
+2019. 06. 06.-12:47	| [INFO]	|Login successful (admin)
+2019. 06. 06.-12:47	| [INFO]	|Querying the token from the server
+2019. 06. 06.-12:47	| [INFO]	|Querying Employee Data
+2019. 06. 06.-12:47	| [INFO]	|Logout
+2019. 06. 06.-12:47	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-12:53	| [INFO]	|Új felhasználó.
+2019. 06. 06.-12:53	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-12:53	| [INFO]	|the server connection has been established.
+2019. 06. 06.-12:53	| [INFO]	|Login successful (admin)
+2019. 06. 06.-12:53	| [INFO]	|Querying the token from the server
+2019. 06. 06.-12:53	| [INFO]	|Querying Employee Data
+2019. 06. 06.-12:53	| [INFO]	|Logout
+2019. 06. 06.-12:53	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-12:54	| [INFO]	|Új felhasználó.
+2019. 06. 06.-12:57	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-12:57	| [INFO]	|the server connection has been established.
+2019. 06. 06.-12:57	| [INFO]	|Login successful (admin)
+2019. 06. 06.-12:57	| [INFO]	|Querying the token from the server
+2019. 06. 06.-12:57	| [INFO]	|Querying Employee Data
+2019. 06. 06.-12:58	| [INFO]	|Logout
+2019. 06. 06.-12:58	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-12:58	| [INFO]	|Új felhasználó.
+2019. 06. 06.-12:58	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-12:58	| [INFO]	|the server connection has been established.
+2019. 06. 06.-12:58	| [INFO]	|Login successful (admin)
+2019. 06. 06.-12:58	| [INFO]	|Querying the token from the server
+2019. 06. 06.-12:58	| [INFO]	|Querying Employee Data
+2019. 06. 06.-12:58	| [INFO]	|Logout
+2019. 06. 06.-12:58	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:00	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:00	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:00	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:00	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:00	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:00	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:01	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:01	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:01	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:01	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:01	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:01	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:01	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:02	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:02	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:02	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:02	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:02	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:02	| [INFO]	|Logout
+2019. 06. 06.-13:02	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:02	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:02	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:02	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:02	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:02	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:02	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:04	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:04	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:04	| [ERROR]	|Login failed
+2019. 06. 06.-13:04	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:04	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:04	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:04	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:04	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:06	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:07	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:07	| [ERROR]	|Login failed
+2019. 06. 06.-13:07	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:07	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:07	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:07	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:07	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:13	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:13	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:13	| [ERROR]	|Login failed
+2019. 06. 06.-13:14	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:14	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:14	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:14	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:14	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:15	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:15	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:15	| [ERROR]	|Login failed
+2019. 06. 06.-13:15	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:15	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:15	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:15	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:15	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:17	| [INFO]	|Logout
+2019. 06. 06.-13:17	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:27	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:27	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:27	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:27	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:27	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:27	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:28	| [INFO]	|Logout
+2019. 06. 06.-13:28	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:28	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:28	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:28	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:28	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:28	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:28	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:29	| [INFO]	|Logout
+2019. 06. 06.-13:29	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:29	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:29	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:29	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:29	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:29	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:29	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:32	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:32	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:32	| [ERROR]	|Login failed
+2019. 06. 06.-13:32	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:32	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:32	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:32	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:32	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:33	| [INFO]	|Logout
+2019. 06. 06.-13:33	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:33	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:33	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:33	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:33	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:33	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:33	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:34	| [INFO]	|Logout
+2019. 06. 06.-13:34	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:34	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:34	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:34	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:34	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:34	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:34	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:35	| [INFO]	|Logout
+2019. 06. 06.-13:35	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:35	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:35	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:35	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:35	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:35	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:35	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:35	| [INFO]	|Logout
+2019. 06. 06.-13:35	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:48	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:49	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:49	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:49	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:49	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:49	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:49	| [INFO]	|Logout
+2019. 06. 06.-13:49	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:50	| [INFO]	|Új felhasználó.
+2019. 06. 06.-13:50	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-13:50	| [INFO]	|the server connection has been established.
+2019. 06. 06.-13:50	| [INFO]	|Login successful (admin)
+2019. 06. 06.-13:50	| [INFO]	|Querying the token from the server
+2019. 06. 06.-13:50	| [INFO]	|Querying Employee Data
+2019. 06. 06.-13:51	| [INFO]	|Logout
+2019. 06. 06.-13:51	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-13:58	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:05	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:05	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:05	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:05	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:05	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:06	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:06	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:06	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:06	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:06	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:06	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:07	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:07	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:07	| [ERROR]	|Login failed
+2019. 06. 06.-14:07	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:07	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:07	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:07	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:07	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:08	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:09	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:09	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:09	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:09	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:09	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:38	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:46	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:47	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:47	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:47	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:47	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:47	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:47	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:48	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:48	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:48	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:48	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:48	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:51	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:51	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:51	| [ERROR]	|Login failed
+2019. 06. 06.-14:51	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:51	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:51	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:51	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:51	| [INFO]	|Querying Employee Data
+2019. 06. 06.-14:51	| [INFO]	|Logout
+2019. 06. 06.-14:51	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:53	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:53	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:53	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:53	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:53	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:53	| [INFO]	|Querying Employee Data
+2019. 06. 06.-14:54	| [INFO]	|Logout
+2019. 06. 06.-14:54	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:55	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:55	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:55	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:55	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:55	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:55	| [INFO]	|Querying Employee Data
+2019. 06. 06.-14:56	| [INFO]	|Logout
+2019. 06. 06.-14:56	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:56	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:56	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:56	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:56	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:56	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:56	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-14:57	| [INFO]	|Új felhasználó.
+2019. 06. 06.-14:57	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:57	| [ERROR]	|Login failed
+2019. 06. 06.-14:58	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-14:58	| [INFO]	|the server connection has been established.
+2019. 06. 06.-14:58	| [INFO]	|Login successful (admin)
+2019. 06. 06.-14:58	| [INFO]	|Querying the token from the server
+2019. 06. 06.-14:58	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:16	| [INFO]	|Logout
+2019. 06. 06.-15:16	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:37	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:38	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:38	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:38	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:38	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:38	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:39	| [INFO]	|Logout
+2019. 06. 06.-15:39	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:43	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:43	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:43	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:43	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:43	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:43	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:45	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:45	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:45	| [ERROR]	|Login failed
+2019. 06. 06.-15:45	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:45	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:45	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:45	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:45	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:47	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:47	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:47	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:47	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:47	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:47	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:48	| [INFO]	|Logout
+2019. 06. 06.-15:48	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:49	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:49	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:49	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:49	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:49	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:49	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:49	| [INFO]	|Logout
+2019. 06. 06.-15:49	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:49	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:50	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:50	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:50	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:50	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:50	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:50	| [INFO]	|Logout
+2019. 06. 06.-15:50	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:50	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:50	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:50	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:50	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:50	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:50	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:50	| [INFO]	|Logout
+2019. 06. 06.-15:50	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:53	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:53	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:53	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:53	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:53	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:53	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:53	| [INFO]	|Logout
+2019. 06. 06.-15:53	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:55	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:56	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:56	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:56	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:56	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:56	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:56	| [INFO]	|Logout
+2019. 06. 06.-15:56	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-15:59	| [INFO]	|Új felhasználó.
+2019. 06. 06.-15:59	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-15:59	| [INFO]	|the server connection has been established.
+2019. 06. 06.-15:59	| [INFO]	|Login successful (admin)
+2019. 06. 06.-15:59	| [INFO]	|Querying the token from the server
+2019. 06. 06.-15:59	| [INFO]	|Querying Employee Data
+2019. 06. 06.-15:59	| [INFO]	|Logout
+2019. 06. 06.-15:59	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:00	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:00	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:00	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:00	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:00	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:00	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:01	| [INFO]	|Logout
+2019. 06. 06.-16:01	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:01	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:09	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:09	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:09	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:09	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:09	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:09	| [INFO]	|Logout
+2019. 06. 06.-16:09	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:12	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:12	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:12	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:12	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:12	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:12	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:13	| [INFO]	|Logout
+2019. 06. 06.-16:13	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:14	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:14	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:14	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:14	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:14	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:14	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:14	| [INFO]	|Logout
+2019. 06. 06.-16:14	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:15	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:15	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:15	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:15	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:15	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:15	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:16	| [INFO]	|Logout
+2019. 06. 06.-16:16	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:19	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:20	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:20	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:20	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:20	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:20	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:20	| [INFO]	|Logout
+2019. 06. 06.-16:20	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:22	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:22	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:22	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:22	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:22	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:22	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:22	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:23	| [INFO]	|Logout
+2019. 06. 06.-16:23	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:23	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:23	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:23	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:23	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:23	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:23	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:24	| [INFO]	|Logout
+2019. 06. 06.-16:24	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:27	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:27	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:27	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:27	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:27	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:27	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:27	| [INFO]	|Logout
+2019. 06. 06.-16:27	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:28	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:28	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:28	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:28	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:28	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:28	| [INFO]	|Querying Employee Data
+2019. 06. 06.-16:29	| [INFO]	|Logout
+2019. 06. 06.-16:29	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:36	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:36	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:36	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:36	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:36	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:36	| [INFO]	|Querying Employee Data
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:38	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:40	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:40	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-16:40	| [INFO]	|Új felhasználó.
+2019. 06. 06.-16:40	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-16:41	| [INFO]	|the server connection has been established.
+2019. 06. 06.-16:41	| [INFO]	|Login successful (admin)
+2019. 06. 06.-16:41	| [INFO]	|Querying the token from the server
+2019. 06. 06.-16:41	| [INFO]	|Querying Employee Data

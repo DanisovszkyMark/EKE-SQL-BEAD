@@ -25,3 +25,7 @@ D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\bin\Debug\Wp
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\WPF_client.csproj.CopyComplete
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ViewMoreViewWindow.g.cs
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ViewMoreViewWindow.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ErrorLogControl.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ErrorLogControl.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\GenerateDataControl.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\GenerateDataControl.baml
