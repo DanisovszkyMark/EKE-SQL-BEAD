@@ -19,11 +19,11 @@ namespace WCFService
         private TokensManager tokenManager = new TokensManager();
 
         //Users
-            public List<UserRecord> SelectAllUser()
+            public bool CanLogin(string username, string password)
             {
                 try
                 {
-                    return usersManager.Select();
+                    return usersManager.CanLogin(username,password);
                 }
                 catch (DatabaseConnectionException e)
                 {

@@ -10,19 +10,31 @@ namespace WCFService.DatabaseManagers
 {
     public class UsersManager : BaseDatabaseManager
     {
-        public List<UserRecord> Select()
+        public bool CanLogin(string username, string password)
         {
-            List<UserRecord> records = new List<UserRecord>();
-
             SqlCommand command = new SqlCommand();
             command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"SELECT *
-                                    FROM Users";
+            command.CommandText = @"SELECT * 
+                                    FROM Users 
+                                    WHERE username = @_username AND password = @_password";
+
+            SqlParameter _username = new SqlParameter();
+            _username.ParameterName = "@_username";
+            _username.Value = username;
+            _username.Direction = System.Data.ParameterDirection.Input;
+            _username.DbType = System.Data.DbType.String;
+            command.Parameters.Add(_username);
+
+            SqlParameter _password = new SqlParameter();
+            _password.ParameterName = "@_password";
+            _password.Value = password;
+            _password.Direction = System.Data.ParameterDirection.Input;
+            _password.DbType = System.Data.DbType.String;
+            command.Parameters.Add(_password);
 
             try { command.Connection = getConnection(); }
-            catch (Exception e)
+            catch (Exception)
             {
-                string message = e.Message;
                 throw new DatabaseConnectionException();
             }
 
@@ -34,21 +46,21 @@ namespace WCFService.DatabaseManagers
                 throw new DatabaseCommandTextException();
             }
 
+            int count = 0;
+
             try
             {
-                while (reader.Read())
+                if (reader.Read())
                 {
-                    UserRecord nextRecord = new UserRecord(reader["username"].ToString());
-                    nextRecord.Password = reader["password"].ToString();
-                    nextRecord.Logged = Boolean.Parse(reader["logged"].ToString());
-                    records.Add(nextRecord);
+                    count++;
                 }
             }
             catch (Exception)
             {
                 throw new DatabaseParameterException();
             }
-            return records;
+
+            return count == 1 ? true : false;
         }
 
         public void Login(string username)
@@ -123,6 +135,5 @@ namespace WCFService.DatabaseManagers
 
             command.Connection.Close();
         }
-
     }
 }

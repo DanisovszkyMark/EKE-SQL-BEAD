@@ -188,9 +188,6 @@
     <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.PersonRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.UserRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

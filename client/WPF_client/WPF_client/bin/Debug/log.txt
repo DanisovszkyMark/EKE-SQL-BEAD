@@ -2189,3 +2189,58 @@ Time 			| LogType 	| Message
 ///// Log /////
 Time 			| LogType 	| Message
 2019. 06. 06.-22:54	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:20	| [INFO]	|Új felhasználó.
+2019. 06. 06.-23:20	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:21	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 06.-23:21	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:21	| [ERROR]	|Login failed
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:22	| [INFO]	|Új felhasználó.
+2019. 06. 06.-23:22	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:22	| [ERROR]	|Login failed
+2019. 06. 06.-23:22	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:22	| [ERROR]	|Login failed
+2019. 06. 06.-23:22	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:22	| [ERROR]	|Login failed
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:25	| [INFO]	|Új felhasználó.
+2019. 06. 06.-23:25	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:25	| [ERROR]	|Login failed
+2019. 06. 06.-23:25	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:27	| [ERROR]	|Login failed
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:28	| [INFO]	|Új felhasználó.
+2019. 06. 06.-23:28	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:28	| [INFO]	|the server connection has been established.
+2019. 06. 06.-23:28	| [INFO]	|Login successful (admin)
+2019. 06. 06.-23:28	| [INFO]	|Querying the token from the server
+2019. 06. 06.-23:28	| [INFO]	|Querying Employee Data
+2019. 06. 06.-23:28	| [INFO]	|Logout
+2019. 06. 06.-23:28	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:29	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:33	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:35	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:37	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:39	| [INFO]	|Új felhasználó.
+2019. 06. 06.-23:40	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 06.-23:40	| [INFO]	|the server connection has been established.
+2019. 06. 06.-23:40	| [INFO]	|Login successful (admin)
+2019. 06. 06.-23:40	| [INFO]	|Querying the token from the server
+2019. 06. 06.-23:40	| [INFO]	|Querying Employee Data
+2019. 06. 06.-23:40	| [INFO]	|Logout
+2019. 06. 06.-23:40	| [INFO]	|Delete token

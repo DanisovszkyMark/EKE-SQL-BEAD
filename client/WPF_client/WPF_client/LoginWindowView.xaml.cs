@@ -29,12 +29,11 @@ namespace WPF_client
         public LoginWindowView()
         {
             InitializeComponent();
-
-            //StringToMD5("admin");
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
         {
+            this.username = this.tb_username.Text;
             Logger.Info("login attempt. Username : " + tb_username.Text + " " + pb_password.Password);
 
             try
@@ -73,26 +72,10 @@ namespace WPF_client
             //throw new ConnectionException();
         }
 
-        //Ezt a szerver végezze
         private bool canLogin()
         {
-            UserRecord user = new UserRecord();
-            user.Username = this.tb_username.Text;
-            user.Password = this.pb_password.Password;
-
             ServiceClient client = new ServiceClient();
-            List<UserRecord> records = client.SelectAllUser().ToList();
-
-            foreach (UserRecord u in records)
-            {
-                if (u.Username == user.Username && u.Password == user.Password && !u.Logged)
-                {
-                    this.username = u.Username;
-                    return true;
-                }
-            }
-            
-            return false;
+            return client.CanLogin(this.tb_username.Text, StringToMD5(this.pb_password.Password));
         }
 
         private bool Login()
@@ -101,13 +84,27 @@ namespace WPF_client
             ServiceClient client = new ServiceClient();
             try
             {
-                client.Login(this.username);
+                client.Login(this.tb_username.Text);
                 return true;
             }
             catch
             {
                 return false;
             }
+        }
+
+        private string StringToMD5(string s)
+        {
+            MD5CryptoServiceProvider csp = new MD5CryptoServiceProvider();
+            UTF8Encoding e = new UTF8Encoding();
+            byte[] b = csp.ComputeHash(e.GetBytes(s));
+            string password = "";
+            for (int i = 0; i < b.Length; i++)
+            {
+                password += b[i];
+            }
+
+            return password;
         }
     }
 }

@@ -15,83 +15,6 @@ namespace WPF_client.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="UserRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
-    [System.SerializableAttribute()]
-    public partial class UserRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private bool LoggedField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string PasswordField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string UsernameField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public bool Logged {
-            get {
-                return this.LoggedField;
-            }
-            set {
-                if ((this.LoggedField.Equals(value) != true)) {
-                    this.LoggedField = value;
-                    this.RaisePropertyChanged("Logged");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Password {
-            get {
-                return this.PasswordField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
-                    this.PasswordField = value;
-                    this.RaisePropertyChanged("Password");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Username {
-            get {
-                return this.UsernameField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
-                    this.UsernameField = value;
-                    this.RaisePropertyChanged("Username");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
     [System.SerializableAttribute()]
     public partial class ServiceData : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -153,6 +76,83 @@ namespace WPF_client.ServiceReference {
                 if ((this.ResultField.Equals(value) != true)) {
                     this.ResultField = value;
                     this.RaisePropertyChanged("Result");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="UserRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
+    [System.SerializableAttribute()]
+    public partial class UserRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool LoggedField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string PasswordField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string UsernameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool Logged {
+            get {
+                return this.LoggedField;
+            }
+            set {
+                if ((this.LoggedField.Equals(value) != true)) {
+                    this.LoggedField = value;
+                    this.RaisePropertyChanged("Logged");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Password {
+            get {
+                return this.PasswordField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.PasswordField, value) != true)) {
+                    this.PasswordField = value;
+                    this.RaisePropertyChanged("Password");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Username {
+            get {
+                return this.UsernameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.UsernameField, value) != true)) {
+                    this.UsernameField = value;
+                    this.RaisePropertyChanged("Username");
                 }
             }
         }
@@ -280,12 +280,12 @@ namespace WPF_client.ServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IService")]
     public interface IService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllUser", ReplyAction="http://tempuri.org/IService/SelectAllUserResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectAllUserServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
-        WPF_client.ServiceReference.UserRecord[] SelectAllUser();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CanLogin", ReplyAction="http://tempuri.org/IService/CanLoginResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/CanLoginServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        bool CanLogin(string username, string password);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllUser", ReplyAction="http://tempuri.org/IService/SelectAllUserResponse")]
-        System.Threading.Tasks.Task<WPF_client.ServiceReference.UserRecord[]> SelectAllUserAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/CanLogin", ReplyAction="http://tempuri.org/IService/CanLoginResponse")]
+        System.Threading.Tasks.Task<bool> CanLoginAsync(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertUser", ReplyAction="http://tempuri.org/IService/InsertUserResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/InsertUserServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
@@ -399,12 +399,12 @@ namespace WPF_client.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public WPF_client.ServiceReference.UserRecord[] SelectAllUser() {
-            return base.Channel.SelectAllUser();
+        public bool CanLogin(string username, string password) {
+            return base.Channel.CanLogin(username, password);
         }
         
-        public System.Threading.Tasks.Task<WPF_client.ServiceReference.UserRecord[]> SelectAllUserAsync() {
-            return base.Channel.SelectAllUserAsync();
+        public System.Threading.Tasks.Task<bool> CanLoginAsync(string username, string password) {
+            return base.Channel.CanLoginAsync(username, password);
         }
         
         public void InsertUser(WPF_client.ServiceReference.UserRecord record) {

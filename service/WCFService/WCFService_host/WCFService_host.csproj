@@ -68,12 +68,7 @@
     <None Include="Connected Services\ServiceReference1\Service3.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\ServiceReference1\WCFService_host.ServiceReference1.PersonRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
-    <None Include="Connected Services\ServiceReference1\WCFService_host.ServiceReference1.UserRecord.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
+    <None Include="Properties\DataSources\WCFService.DatabaseManagers.Records.PersonRecord.datasource" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

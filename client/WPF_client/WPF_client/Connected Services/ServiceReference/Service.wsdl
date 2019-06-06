@@ -3,18 +3,18 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:61310/?xsd=xsd0" namespace="http://tempuri.org/" />
-      <xsd:import schemaLocation="http://localhost:61310/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
+      <xsd:import schemaLocation="http://localhost:61310/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService" />
       <xsd:import schemaLocation="http://localhost:61310/?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
-      <xsd:import schemaLocation="http://localhost:61310/?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" />
+      <xsd:import schemaLocation="http://localhost:61310/?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IService_SelectAllUser_InputMessage">
-    <wsdl:part name="parameters" element="tns:SelectAllUser" />
+  <wsdl:message name="IService_CanLogin_InputMessage">
+    <wsdl:part name="parameters" element="tns:CanLogin" />
   </wsdl:message>
-  <wsdl:message name="IService_SelectAllUser_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SelectAllUserResponse" />
+  <wsdl:message name="IService_CanLogin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CanLoginResponse" />
   </wsdl:message>
-  <wsdl:message name="IService_SelectAllUser_ServiceDataFault_FaultMessage">
+  <wsdl:message name="IService_CanLogin_ServiceDataFault_FaultMessage">
     <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q1:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_InsertUser_InputMessage">
@@ -126,10 +126,10 @@
     <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q13:ServiceData" />
   </wsdl:message>
   <wsdl:portType name="IService">
-    <wsdl:operation name="SelectAllUser">
-      <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllUser" message="tns:IService_SelectAllUser_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectAllUserResponse" message="tns:IService_SelectAllUser_OutputMessage" />
-      <wsdl:fault wsaw:Action="http://tempuri.org/IService/SelectAllUserServiceDataFault" name="ServiceDataFault" message="tns:IService_SelectAllUser_ServiceDataFault_FaultMessage" />
+    <wsdl:operation name="CanLogin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/CanLogin" message="tns:IService_CanLogin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/CanLoginResponse" message="tns:IService_CanLogin_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/CanLoginServiceDataFault" name="ServiceDataFault" message="tns:IService_CanLogin_ServiceDataFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="InsertUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertUser" message="tns:IService_InsertUser_InputMessage" />
@@ -194,8 +194,8 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService" type="tns:IService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="SelectAllUser">
-      <soap:operation soapAction="http://tempuri.org/IService/SelectAllUser" style="document" />
+    <wsdl:operation name="CanLogin">
+      <soap:operation soapAction="http://tempuri.org/IService/CanLogin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

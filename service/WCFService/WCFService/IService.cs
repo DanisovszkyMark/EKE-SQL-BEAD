@@ -14,7 +14,7 @@ namespace WCFService
         //Users
             [OperationContract]
             [FaultContract(typeof(ServiceData))]
-            List<UserRecord> SelectAllUser();
+            bool CanLogin(string username, string password);
 
             [OperationContract]
             [FaultContract(typeof(ServiceData))]
