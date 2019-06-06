@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:WPF_client"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="{DynamicResource LightBackgroundBrush}">
+    <Grid Background="{DynamicResource DarkBackgroundBrush}">
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="80" Height="80"/>
             <RowDefinition MinHeight="150" Height="*"/>
@@ -14,7 +14,7 @@
 
         <Label Content="Error Log" HorizontalAlignment="Center" Grid.Row="0" Margin="0,20,0,0" Foreground="{DynamicResource LightForegroundBrush}" FontSize="36" />
 
-        <RichTextBox x:Name="rtb_log" MaxHeight="400" Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Margin="20" />
+        <RichTextBox IsReadOnly="True" x:Name="rtb_log" MaxHeight="400" Grid.Row="1" VerticalScrollBarVisibility="Visible" HorizontalAlignment="Center" Margin="20" />
     </Grid>
 
 </UserControl>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,8 @@ namespace WPF_client
         public LoginWindowView()
         {
             InitializeComponent();
+
+            //StringToMD5("admin");
         }
 
         private void btn_login_Click(object sender, RoutedEventArgs e)
@@ -70,7 +73,7 @@ namespace WPF_client
             //throw new ConnectionException();
         }
 
-        //Ezt illő lenne a szerveren elvégezni
+        //Ezt a szerver végezze
         private bool canLogin()
         {
             UserRecord user = new UserRecord();

@@ -15,10 +15,10 @@
 
         <StackPanel x:Name="sp_buttons" Orientation="Vertical">
             <Image Margin="0,5,0,0" Source="Images/logo.png" />
-            <Button Content="Info" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" />
-            <Button Content="New Job" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}"/>
-            <Button Content="New Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" />
-            <Button Content="Person_Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" />
+            <Button x:Name="btn_info" Content="Info" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_info_Click"/>
+            <Button x:Name="btn_newJob" Content="New Job" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" Click="btn_newJob_Click"/>
+            <Button x:Name="btn_newParent" Content="New Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" Click="btn_newParent_Click"/>
+            <Button x:Name="btn_PersonParent" Content="Person_Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" Click="btn_PersonParent_Click"/>
             <Button x:Name="btn_generate" Content="Generate Data" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_generate_Click"/>
             <Button x:Name="btn_errorLog" Content="Make Error Log" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" Click="btn_errorLog_Click"/>
         </StackPanel>

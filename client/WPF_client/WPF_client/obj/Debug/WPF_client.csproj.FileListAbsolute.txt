@@ -29,3 +29,11 @@ D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\Er
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ErrorLogControl.baml
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\GenerateDataControl.g.cs
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\GenerateDataControl.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\InfoControl.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\InfoControl.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\AddJobControl.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\AddJobControl.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\AddParentControl.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\PersonParentControl.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\AddParentControl.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\PersonParentControl.baml

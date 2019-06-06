@@ -24,6 +24,8 @@ namespace WPF_client
         public ViewMoreViewWindow()
         {
             InitializeComponent();
+
+            btn_info_Click(null, null);
         }
 
         private void Button_MouseEnter(object sender, MouseEventArgs e)
@@ -46,6 +48,7 @@ namespace WPF_client
                 string line = sr.ReadLine();
                 if (line.Contains("[ERROR]")) control.rtb_log.AppendText(line + '\n');
             }
+            sr.Close();
 
             this.sp_view.Children.Clear();
             this.sp_view.Children.Add(control);
@@ -54,6 +57,38 @@ namespace WPF_client
         private void btn_generate_Click(object sender, RoutedEventArgs e)
         {
             GenerateDataControl control = new GenerateDataControl();
+
+            this.sp_view.Children.Clear();
+            this.sp_view.Children.Add(control);
+        }
+
+        private void btn_info_Click(object sender, RoutedEventArgs e)
+        {
+            InfoControl control = new InfoControl();
+
+            this.sp_view.Children.Clear();
+            this.sp_view.Children.Add(control);
+        }
+
+        private void btn_newJob_Click(object sender, RoutedEventArgs e)
+        {
+            AddJobControl control = new AddJobControl();
+
+            this.sp_view.Children.Clear();
+            this.sp_view.Children.Add(control);
+        }
+
+        private void btn_newParent_Click(object sender, RoutedEventArgs e)
+        {
+            AddParentControl control = new AddParentControl();
+
+            this.sp_view.Children.Clear();
+            this.sp_view.Children.Add(control);
+        }
+
+        private void btn_PersonParent_Click(object sender, RoutedEventArgs e)
+        {
+            PersonParentControl control = new PersonParentControl();
 
             this.sp_view.Children.Clear();
             this.sp_view.Children.Add(control);
