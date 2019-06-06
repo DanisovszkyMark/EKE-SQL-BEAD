@@ -72,6 +72,9 @@
       <DependentUpon>ManageWorkerViewWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Viewers\WorkerViewer.cs" />
+    <Compile Include="ViewMoreViewWindow.xaml.cs">
+      <DependentUpon>ViewMoreViewWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="WorkersViewWindow.xaml.cs">
       <DependentUpon>WorkersViewWindow.xaml</DependentUpon>
     </Compile>
@@ -95,6 +98,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ManageWorkerViewWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ViewMoreViewWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

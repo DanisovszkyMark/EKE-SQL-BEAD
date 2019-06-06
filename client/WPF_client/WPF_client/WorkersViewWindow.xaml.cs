@@ -307,5 +307,11 @@ namespace WPF_client
                 }
             }
         }
+
+        private void btn_more_Click(object sender, RoutedEventArgs e)
+        {
+            ViewMoreViewWindow v = new ViewMoreViewWindow();
+            v.Show();
+        }
     }
 }

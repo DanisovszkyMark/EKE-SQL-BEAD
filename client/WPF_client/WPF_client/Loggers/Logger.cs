@@ -42,5 +42,18 @@ namespace WPF_client
         {
             Log("ERROR", message);
         }
+
+        public static void Close()
+        {
+            sw.Close();
+        }
+
+        /// <summary>
+        /// Only if the logger was once used
+        /// </summary>
+        public static void OpenAgain()
+        {
+            sw = new StreamWriter(filename + doctype, true);
+        }
     }
 }

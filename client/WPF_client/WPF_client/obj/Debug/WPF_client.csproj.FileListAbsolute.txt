@@ -23,3 +23,5 @@ D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\Wo
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\bin\Debug\WpfAnimatedGif.dll
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\bin\Debug\WpfAnimatedGif.xml
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\WPF_client.csproj.CopyComplete
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ViewMoreViewWindow.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ViewMoreViewWindow.baml

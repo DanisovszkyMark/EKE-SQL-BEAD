@@ -1,0 +1,28 @@
+﻿<Window x:Class="WPF_client.ViewMoreViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_client"
+        mc:Ignorable="d"
+        Title="View More" Height="480" MinHeight="480" Width="800" MinWidth="600">
+    <Grid Background="{DynamicResource LightBackgroundBrush}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="30*" MaxWidth="300" MinWidth="150" />
+            <ColumnDefinition Width="70*" />
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="sp_buttons" Orientation="Vertical">
+            <Image Margin="0,5,0,0" Source="Images/logo.png" />
+            <Button Content="Info" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" />
+            <Button Content="Person_Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" />
+            <Button Content="New Job" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}"/>
+            <Button Content="New Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" />
+            <Button Content="Person_Parent" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" />
+            <Button x:Name="btn_errorLog" Content="Make Error Log" MinHeight="60" MouseEnter="Button_MouseEnter" MouseLeave="Button_MouseLeave" Foreground="{DynamicResource LightForegroundBrush}" Background="{DynamicResource LightBackgroundBrush}" Click="btn_errorLog_Click"/>
+        </StackPanel>
+
+        <StackPanel x:Name="sp_views" Orientation="Vertical" Grid.Column="1" Background="#FF252424"/>
+    </Grid>
+</Window>
