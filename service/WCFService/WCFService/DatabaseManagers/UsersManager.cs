@@ -52,6 +52,7 @@ namespace WCFService.DatabaseManagers
             {
                 if (reader.Read())
                 {
+                    if (bool.Parse(reader["logged"].ToString()) == false)
                     count++;
                 }
             }

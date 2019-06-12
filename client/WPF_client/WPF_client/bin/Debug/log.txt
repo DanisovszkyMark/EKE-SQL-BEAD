@@ -2244,3 +2244,259 @@ Time 			| LogType 	| Message
 2019. 06. 06.-23:40	| [INFO]	|Querying Employee Data
 2019. 06. 06.-23:40	| [INFO]	|Logout
 2019. 06. 06.-23:40	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:56	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 06.-23:58	| [INFO]	|Új felhasználó.
+2019. 06. 07.-0:00	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 07.-0:00	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 07.-0:00	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 07.-0:00	| [INFO]	|the server connection has been established.
+2019. 06. 07.-0:00	| [INFO]	|Login successful (mark)
+2019. 06. 07.-0:00	| [INFO]	|Querying the token from the server
+2019. 06. 07.-0:00	| [INFO]	|Querying Employee Data
+2019. 06. 07.-0:00	| [INFO]	|Logout
+2019. 06. 07.-0:00	| [INFO]	|delete token
+2019. 06. 07.-0:00	| [INFO]	|login attempt. Username : test test
+2019. 06. 07.-0:00	| [INFO]	|the server connection has been established.
+2019. 06. 07.-0:00	| [INFO]	|Login successful (test)
+2019. 06. 07.-0:00	| [INFO]	|Querying the token from the server
+2019. 06. 07.-0:00	| [INFO]	|Querying Employee Data
+2019. 06. 07.-0:01	| [INFO]	|Logout
+2019. 06. 07.-0:01	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 10.-23:38	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 10.-23:38	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 10.-23:38	| [INFO]	|Új felhasználó.
+2019. 06. 10.-23:38	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 10.-23:38	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 10.-23:39	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 10.-23:40	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 10.-23:40	| [INFO]	|login attempt. Username : test test
+2019. 06. 10.-23:40	| [INFO]	|the server connection has been established.
+2019. 06. 10.-23:40	| [INFO]	|Login successful (test)
+2019. 06. 10.-23:40	| [INFO]	|Querying the token from the server
+2019. 06. 10.-23:40	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:40	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 10.-23:40	| [INFO]	|the server connection has been established.
+2019. 06. 10.-23:40	| [INFO]	|Login successful (admin)
+2019. 06. 10.-23:40	| [INFO]	|Querying the token from the server
+2019. 06. 10.-23:40	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:40	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 10.-23:40	| [INFO]	|the server connection has been established.
+2019. 06. 10.-23:40	| [INFO]	|Login successful (mark)
+2019. 06. 10.-23:40	| [INFO]	|Querying the token from the server
+2019. 06. 10.-23:40	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:41	| [INFO]	|Adding a new worker to the database
+2019. 06. 10.-23:41	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:41	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:41	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:41	| [INFO]	|record cancellation request
+2019. 06. 10.-23:41	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:41	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:41	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:41	| [INFO]	|Logout
+2019. 06. 10.-23:41	| [INFO]	|delete token
+2019. 06. 10.-23:41	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 10.-23:41	| [INFO]	|the server connection has been established.
+2019. 06. 10.-23:41	| [INFO]	|Login successful (mark)
+2019. 06. 10.-23:41	| [INFO]	|Querying the token from the server
+2019. 06. 10.-23:41	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:42	| [INFO]	|Logout
+2019. 06. 10.-23:42	| [INFO]	|delete token
+2019. 06. 10.-23:42	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 10.-23:42	| [INFO]	|the server connection has been established.
+2019. 06. 10.-23:42	| [INFO]	|Login successful (mark)
+2019. 06. 10.-23:42	| [INFO]	|Querying the token from the server
+2019. 06. 10.-23:42	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:42	| [INFO]	|Logout
+2019. 06. 10.-23:42	| [INFO]	|delete token
+2019. 06. 10.-23:42	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 10.-23:42	| [INFO]	|the server connection has been established.
+2019. 06. 10.-23:42	| [INFO]	|Login successful (mark)
+2019. 06. 10.-23:42	| [INFO]	|Querying the token from the server
+2019. 06. 10.-23:42	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:47	| [INFO]	|Quering employee data for update
+2019. 06. 10.-23:47	| [INFO]	|Querying Employee Data
+2019. 06. 10.-23:47	| [INFO]	|Logout
+2019. 06. 10.-23:47	| [INFO]	|Delete token
+2019. 06. 10.-23:47	| [INFO]	|Logout
+2019. 06. 10.-23:47	| [INFO]	|Delete token
+2019. 06. 10.-23:47	| [INFO]	|Logout
+2019. 06. 10.-23:47	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:10	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:10	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:11	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:11	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:11	| [INFO]	|Új felhasználó.
+2019. 06. 12.-14:11	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 12.-14:11	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 12.-14:12	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 12.-14:12	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 12.-14:12	| [INFO]	|login attempt. Username :  
+2019. 06. 12.-14:12	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 12.-14:12	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 12.-14:13	| [ERROR]	|Error with Windows Service communication!
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:18	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:18	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 12.-14:18	| [INFO]	|Új felhasználó.
+2019. 06. 12.-14:19	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 12.-14:19	| [INFO]	|the server connection has been established.
+2019. 06. 12.-14:19	| [INFO]	|Login successful (admin)
+2019. 06. 12.-14:19	| [INFO]	|Querying the token from the server
+2019. 06. 12.-14:19	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:19	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 12.-14:19	| [ERROR]	|Login failed
+2019. 06. 12.-14:19	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 12.-14:19	| [INFO]	|the server connection has been established.
+2019. 06. 12.-14:19	| [INFO]	|login attempt. Username : test test
+2019. 06. 12.-14:19	| [INFO]	|Login successful (mark)
+2019. 06. 12.-14:19	| [INFO]	|Querying the token from the server
+2019. 06. 12.-14:19	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:19	| [INFO]	|the server connection has been established.
+2019. 06. 12.-14:19	| [INFO]	|Login successful (test)
+2019. 06. 12.-14:19	| [INFO]	|Querying the token from the server
+2019. 06. 12.-14:19	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Adding a new worker to the database
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Quering employee data for update
+2019. 06. 12.-14:20	| [INFO]	|Update a worker to the database
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|record cancellation request
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Adding a new worker to the database
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|record cancellation request
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:20	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|Adding a new worker to the database
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|Quering employee data for update
+2019. 06. 12.-14:21	| [INFO]	|Update a worker to the database
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|Quering employee data for update
+2019. 06. 12.-14:21	| [INFO]	|Update a worker to the database
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|record cancellation request
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:21	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:22	| [INFO]	|Quering employee data for update
+2019. 06. 12.-14:22	| [INFO]	|Update a worker to the database
+2019. 06. 12.-14:22	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:22	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:22	| [INFO]	|record cancellation request
+2019. 06. 12.-14:22	| [ERROR]	|[Service] Hiba az adatbázis utasítás paraméterezésében.
+2019. 06. 12.-14:22	| [INFO]	|Quering employee data for update
+2019. 06. 12.-14:22	| [INFO]	|Update a worker to the database
+2019. 06. 12.-14:22	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:22	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Querying Employee Data
+2019. 06. 12.-14:23	| [INFO]	|Logout
+2019. 06. 12.-14:23	| [INFO]	|delete token
+2019. 06. 12.-14:23	| [INFO]	|Logout
+2019. 06. 12.-14:23	| [INFO]	|Delete token
