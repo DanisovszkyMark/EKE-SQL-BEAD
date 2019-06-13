@@ -22,19 +22,19 @@
 
         <Label Content="Generate Datas" HorizontalAlignment="Center" Margin="0,20,0,0" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Foreground="{DynamicResource LightForegroundBrush}" FontSize="30"/>
         <Label Content="Table name: " Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
-        <TextBox x:Name="tb_tableName" MinWidth="40" MaxWidth="500" Margin="20" Grid.Row="1" Grid.Column="2" FontSize="16" />
+        <TextBox x:Name="tb_tableName" Text="Persons" IsReadOnly="True" MinWidth="40" MaxWidth="500" Margin="20" Grid.Row="1" Grid.Column="2" FontSize="16" />
 
         <Label Content="Number of records: " Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
-        <TextBox  MinWidth="40" MaxWidth="500" Margin="20" Grid.Row="2" Grid.Column="2" FontSize="16" />
+        <TextBox x:Name="tb_numberOfRecords"  MinWidth="40" MaxWidth="500" Margin="20" Grid.Row="2" Grid.Column="2" FontSize="16" />
 
         <Label Content="Drop first: " Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Right" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
-        <CheckBox Grid.Row="3" Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
+        <CheckBox x:Name="cb_dropFirst" Grid.Row="3" Grid.Column="1" Margin="20,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center">
             <CheckBox.LayoutTransform>
-                <ScaleTransform ScaleX="2" ScaleY="2"></ScaleTransform>
+                <ScaleTransform ScaleX="2" ScaleY="2" />
             </CheckBox.LayoutTransform>
         </CheckBox>
 
-        <Button Content="Generate" VerticalAlignment="Bottom" MaxWidth="400" MaxHeight="80" MinHeight="50" Grid.Row="4" Grid.ColumnSpan="2" Margin="50,20,50,20" FontSize="22"/>
+        <Button x:Name="btn_generate" Content="Generate" VerticalAlignment="Bottom" MaxWidth="400" MaxHeight="80" MinHeight="50" Grid.Row="4" Grid.ColumnSpan="2" Margin="50,20,50,20" FontSize="22" Click="btn_generate_Click"/>
     </Grid>
 
 </UserControl>
