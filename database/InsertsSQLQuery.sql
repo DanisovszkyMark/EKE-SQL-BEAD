@@ -42,9 +42,15 @@ VALUES(1, 2);
 INSERT INTO [dbo].[Pets]([species], [name])
 VALUES('Tengerimalac', 'Bogyó');
 
-  -- Felhasználók (KÓDOLNI KELL MÉG)
+  -- Felhasználók
 INSERT INTO [dbo].[Users]([username], [password])
-VALUES('admin', 'admin');
+VALUES('admin','33354741122871651676713774147412831195')
+
+INSERT INTO [dbo].[Users]([username], [password])
+VALUES('mark','23413065121221531451291079423823522514922610')
+
+INSERT INTO [dbo].[Users]([username], [password])
+VALUES('test','91431072057033211115202222781313839180246')
 
   -- Autók
 INSERT INTO [dbo].[Cars]([licence_plate], [manufacurer], [model], [color], [person_id])
