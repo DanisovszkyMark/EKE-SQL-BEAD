@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -61,33 +62,23 @@ namespace WCFService.DatabaseManagers
 
         public void UpdateLastTime(DateTime time)
         {
-            //update where id = 1
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"UPDATE Refresh 
-                                    SET last_modify_time = @last_modify_time
-                                    WHERE id = 1";
+            SqlCommand cmd = new SqlCommand();
 
-            SqlParameter last_modify_time = new SqlParameter();
-            last_modify_time.ParameterName = "@last_modify_time";
-            last_modify_time.SqlDbType = System.Data.SqlDbType.DateTime;
-            last_modify_time.Direction = System.Data.ParameterDirection.Input;
-            last_modify_time.Value = time;
-            command.Parameters.Add(last_modify_time);
+            cmd.CommandText = "UpdateLastModifyTime";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@last_modify_time", time);
 
-            try { command.Connection = getConnection(); }
+            try { cmd.Connection = getConnection(); }
             catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            try { command.ExecuteNonQuery(); }
+            try { cmd.ExecuteNonQuery(); }
             catch (Exception)
             {
-                throw new DatabaseParameterException();
+                throw new DatabaseCommandTextException();
             }
-
-            command.Connection.Close();
         }
     }
 }
