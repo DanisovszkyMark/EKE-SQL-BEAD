@@ -2886,3 +2886,280 @@ Time 			| LogType 	| Message
 2019. 06. 13.-18:29	| [INFO]	|Querying Employee Data
 2019. 06. 13.-18:29	| [INFO]	|Logout
 2019. 06. 13.-18:29	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-22:05	| [INFO]	|Új felhasználó.
+2019. 06. 13.-22:05	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:05	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:05	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:05	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:05	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:06	| [ERROR]	|Error with Windows Service communication!
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-22:08	| [INFO]	|Új felhasználó.
+2019. 06. 13.-22:08	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:08	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:12	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:13	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:13	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:13	| [ERROR]	|Error with Windows Service communication!
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-22:18	| [INFO]	|Új felhasználó.
+2019. 06. 13.-22:19	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:19	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:19	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:19	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:19	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:19	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:21	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:21	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:22	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:22	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:22	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:22	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:23	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:23	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:23	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:23	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-22:31	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-22:31	| [INFO]	|the server connection has been established.
+2019. 06. 13.-22:31	| [INFO]	|Login successful (admin)
+2019. 06. 13.-22:31	| [INFO]	|Querying the token from the server
+2019. 06. 13.-22:31	| [INFO]	|Querying Employee Data
+2019. 06. 13.-22:31	| [INFO]	|Logout
+2019. 06. 13.-22:31	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-23:22	| [INFO]	|Új felhasználó.
+2019. 06. 13.-23:22	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-23:22	| [INFO]	|the server connection has been established.
+2019. 06. 13.-23:22	| [INFO]	|Login successful (admin)
+2019. 06. 13.-23:22	| [INFO]	|Querying the token from the server
+2019. 06. 13.-23:22	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:22	| [INFO]	|Logout
+2019. 06. 13.-23:22	| [INFO]	|delete token
+2019. 06. 13.-23:22	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 13.-23:22	| [INFO]	|the server connection has been established.
+2019. 06. 13.-23:22	| [INFO]	|Login successful (mark)
+2019. 06. 13.-23:22	| [INFO]	|Querying the token from the server
+2019. 06. 13.-23:22	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:22	| [INFO]	|Logout
+2019. 06. 13.-23:22	| [INFO]	|delete token
+2019. 06. 13.-23:22	| [INFO]	|login attempt. Username : mark2 mark
+2019. 06. 13.-23:22	| [ERROR]	|Login failed
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-23:40	| [INFO]	|Új felhasználó.
+2019. 06. 13.-23:40	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-23:40	| [INFO]	|the server connection has been established.
+2019. 06. 13.-23:40	| [INFO]	|Login successful (admin)
+2019. 06. 13.-23:40	| [INFO]	|Querying the token from the server
+2019. 06. 13.-23:40	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:40	| [INFO]	|Logout
+2019. 06. 13.-23:40	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-23:48	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-23:48	| [INFO]	|Új felhasználó.
+2019. 06. 13.-23:49	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-23:49	| [INFO]	|the server connection has been established.
+2019. 06. 13.-23:49	| [INFO]	|Login successful (admin)
+2019. 06. 13.-23:49	| [INFO]	|Querying the token from the server
+2019. 06. 13.-23:49	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:49	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 13.-23:49	| [INFO]	|the server connection has been established.
+2019. 06. 13.-23:49	| [INFO]	|Login successful (mark)
+2019. 06. 13.-23:49	| [INFO]	|Querying the token from the server
+2019. 06. 13.-23:49	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:49	| [INFO]	|Generate persons
+2019. 06. 13.-23:49	| [ERROR]	|[Service] Hiba az adatbázis utasítás felépítésében
+2019. 06. 13.-23:49	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:49	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:49	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:49	| [INFO]	|Quering employee data for update
+2019. 06. 13.-23:50	| [INFO]	|Update a worker to the database
+2019. 06. 13.-23:50	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:50	| [INFO]	|Quering employee data for update
+2019. 06. 13.-23:50	| [INFO]	|Update a worker to the database
+2019. 06. 13.-23:50	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:50	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:50	| [INFO]	|record cancellation request
+2019. 06. 13.-23:50	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:50	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:50	| [INFO]	|Generate persons
+2019. 06. 13.-23:50	| [ERROR]	|[Service] Hiba az adatbázis utasítás felépítésében
+2019. 06. 13.-23:50	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:51	| [INFO]	|Generate persons
+2019. 06. 13.-23:51	| [ERROR]	|[Service] Hiba az adatbázis utasítás felépítésében
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-23:51	| [INFO]	|Új felhasználó.
+2019. 06. 13.-23:51	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-23:51	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 13.-23:52	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-23:52	| [INFO]	|the server connection has been established.
+2019. 06. 13.-23:52	| [INFO]	|Login successful (admin)
+2019. 06. 13.-23:52	| [INFO]	|Querying the token from the server
+2019. 06. 13.-23:52	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:53	| [INFO]	|record cancellation request
+2019. 06. 13.-23:53	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:53	| [INFO]	|Generate persons
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-23:56	| [INFO]	|Új felhasználó.
+2019. 06. 13.-23:56	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-23:56	| [INFO]	|the server connection has been established.
+2019. 06. 13.-23:56	| [INFO]	|Login successful (admin)
+2019. 06. 13.-23:56	| [INFO]	|Querying the token from the server
+2019. 06. 13.-23:56	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:56	| [INFO]	|Generate persons
+2019. 06. 13.-23:56	| [INFO]	|Querying Employee Data
+2019. 06. 13.-23:56	| [INFO]	|Logout
+2019. 06. 13.-23:56	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:02	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:03	| [INFO]	|login attempt. Username : mark mark2
+2019. 06. 14.-0:03	| [ERROR]	|Login failed
+2019. 06. 14.-0:03	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 14.-0:04	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 14.-0:04	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 14.-0:04	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:04	| [INFO]	|Login successful (mark)
+2019. 06. 14.-0:04	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:04	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:04	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 14.-0:04	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 14.-0:04	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:04	| [INFO]	|Login successful (mark)
+2019. 06. 14.-0:04	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:04	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:04	| [ERROR]	|Error with Windows Service communication!
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:06	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:06	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:06	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:06	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:06	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:06	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:06	| [ERROR]	|Error with Windows Service communication!
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:09	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:09	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:09	| [INFO]	|login attempt. Username : admin admin2
+2019. 06. 14.-0:09	| [ERROR]	|Login failed
+2019. 06. 14.-0:10	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:10	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:10	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:10	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:10	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:10	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 14.-0:11	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:11	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:11	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:11	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:11	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:12	| [ERROR]	|Error with Windows Service communication!
+2019. 06. 14.-0:12	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:12	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:12	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:12	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:12	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:13	| [ERROR]	|Error with Windows Service communication!
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:13	| [INFO]	|Új felhasználó.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:14	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:15	| [INFO]	|login attempt. Username : mark mark
+2019. 06. 14.-0:15	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:15	| [INFO]	|Login successful (mark)
+2019. 06. 14.-0:15	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:15	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:15	| [INFO]	|Logout
+2019. 06. 14.-0:15	| [INFO]	|delete token
+2019. 06. 14.-0:15	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:15	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:16	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:16	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:16	| [ERROR]	|[Service] Hiba a szerver kapcsolatban.
+2019. 06. 14.-0:16	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:16	| [ERROR]	|[Service] Hiba az adatbázis utasítás felépítésében
+2019. 06. 14.-0:16	| [INFO]	|Logout
+2019. 06. 14.-0:16	| [INFO]	|delete token
+2019. 06. 14.-0:16	| [ERROR]	|[Service] Hiba az adatbázis utasítás paraméterezésében.
+2019. 06. 14.-0:16	| [INFO]	|Logout
+2019. 06. 14.-0:16	| [INFO]	|Delete token
+2019. 06. 14.-0:16	| [ERROR]	|[Service] Hiba az adatbázis utasítás paraméterezésében.
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:17	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:17	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:17	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:17	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:17	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:17	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:17	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:17	| [INFO]	|record cancellation request
+2019. 06. 14.-0:17	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:17	| [INFO]	|Generate persons
+2019. 06. 14.-0:18	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:18	| [INFO]	|Logout
+2019. 06. 14.-0:18	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:33	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:34	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:34	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:34	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:34	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:34	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:34	| [INFO]	|record cancellation request
+2019. 06. 14.-0:34	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:34	| [INFO]	|Logout
+2019. 06. 14.-0:34	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:44	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:44	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:44	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:44	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:44	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:44	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:45	| [INFO]	|Adding a new worker to the database
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:45	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:45	| [INFO]	|login attempt. Username : test test
+2019. 06. 14.-0:45	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:45	| [INFO]	|Login successful (test)
+2019. 06. 14.-0:45	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:45	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:45	| [INFO]	|Generate persons
+2019. 06. 14.-0:45	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:46	| [INFO]	|Generate persons
+2019. 06. 14.-0:46	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:46	| [INFO]	|Logout
+2019. 06. 14.-0:46	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-0:51	| [INFO]	|Új felhasználó.
+2019. 06. 14.-0:51	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-0:51	| [INFO]	|the server connection has been established.
+2019. 06. 14.-0:51	| [INFO]	|Login successful (admin)
+2019. 06. 14.-0:51	| [INFO]	|Querying the token from the server
+2019. 06. 14.-0:51	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:51	| [INFO]	|Adding a new worker to the database
+2019. 06. 14.-0:51	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:53	| [INFO]	|Querying Employee Data
+2019. 06. 14.-0:53	| [INFO]	|Logout
+2019. 06. 14.-0:53	| [INFO]	|delete token
