@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -12,46 +13,28 @@ namespace WCFService.DatabaseManagers
     {
         public bool Identification(string token)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"SELECT * 
-                                    FROM Tokens 
-                                    WHERE token = @_token";
+            SqlCommand cmd = new SqlCommand();
 
-            SqlParameter _token = new SqlParameter();
-            _token.ParameterName = "@_token";
-            _token.Value = token;
-            _token.Direction = System.Data.ParameterDirection.Input;
-            _token.DbType = System.Data.DbType.String;
-            command.Parameters.Add(_token);
+            cmd.CommandText = "Identification";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@token", token);
 
-            try { command.Connection = getConnection(); }
+            var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+            returnParameter.Direction = ParameterDirection.ReturnValue;
+
+            try { cmd.Connection = getConnection(); }
             catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            SqlDataReader reader;
-
-            try { reader = command.ExecuteReader(); }
+            try { cmd.ExecuteNonQuery(); }
             catch (Exception)
             {
                 throw new DatabaseCommandTextException();
             }
-
-            try
-            {
-                if (reader.Read())
-                {
-                    if (token == reader["token"].ToString()) return true;
-                }
-            }
-            catch (Exception)
-            {
-                throw new DatabaseParameterException();
-            }
-
-            return false;
+            var value = returnParameter.Value;
+            return Convert.ToBoolean(returnParameter.Value);
         }
 
         public string GetToken()
@@ -73,7 +56,7 @@ namespace WCFService.DatabaseManagers
                     builder.Append(nums[rnd.Next(nums.Length)]);
                 }
             }
-            //INSERT
+
             try
             {
                 Insert(builder.ToString());
@@ -92,58 +75,44 @@ namespace WCFService.DatabaseManagers
 
         private void Insert(string token)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"INSERT INTO Tokens(token)
-                                    VALUES (@_token)";
+            SqlCommand cmd = new SqlCommand();
 
-            try { command.Connection = getConnection(); }
-            catch(Exception)
+            cmd.CommandText = "InsertToken";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@token", token);
+
+            try { cmd.Connection = getConnection(); }
+            catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            SqlParameter _token = new SqlParameter();
-            _token.ParameterName = "@_token";
-            _token.SqlDbType = System.Data.SqlDbType.Char;
-            _token.Direction = System.Data.ParameterDirection.Input;
-            _token.Value = token;
-            command.Parameters.Add(_token);
-
-            try { command.ExecuteNonQuery(); }
-            catch
+            try { cmd.ExecuteNonQuery(); }
+            catch (Exception)
             {
-                throw new DatabaseParameterException();
+                throw new DatabaseCommandTextException();
             }
         }
 
         public void Delete(string token)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"DELETE FROM Tokens 
-                                    WHERE token = @_token";
+            SqlCommand cmd = new SqlCommand();
 
-            SqlParameter _token = new SqlParameter();
-            _token.ParameterName = "@_token";
-            _token.SqlDbType = System.Data.SqlDbType.Char;
-            _token.Direction = System.Data.ParameterDirection.Input;
-            _token.Value = token;
-            command.Parameters.Add(_token);
+            cmd.CommandText = "DeleteToken";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@token", token);
 
-            try { command.Connection = getConnection(); }
+            try { cmd.Connection = getConnection(); }
             catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            try { command.ExecuteNonQuery(); }
+            try { cmd.ExecuteNonQuery(); }
             catch (Exception)
             {
-                throw new DatabaseParameterException();
+                throw new DatabaseCommandTextException();
             }
-
-            command.Connection.Close();
         }
     }
 }
