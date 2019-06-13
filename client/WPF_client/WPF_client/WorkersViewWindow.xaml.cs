@@ -311,7 +311,13 @@ namespace WPF_client
         private void btn_more_Click(object sender, RoutedEventArgs e)
         {
             ViewMoreViewWindow v = new ViewMoreViewWindow();
+            v.Closed += V_Closed;
             v.Show();
+        }
+
+        private void V_Closed(object sender, EventArgs e)
+        {
+            FillDatas();
         }
     }
 }

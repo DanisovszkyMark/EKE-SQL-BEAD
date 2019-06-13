@@ -18,19 +18,26 @@ namespace WPF_client
 
         public static void Log(string logType, string message)
         {
-            if (sw == null)
+            try
             {
-                sw = new StreamWriter(filename + doctype, true);
-                sw.WriteLine("///// Log /////");
-                sw.WriteLine("Time \t\t\t| LogType \t| Message");
-                opened = true;
+                if (sw == null)
+                {
+                    sw = new StreamWriter(filename + doctype, true);
+                    sw.WriteLine("///// Log /////");
+                    sw.WriteLine("Time \t\t\t| LogType \t| Message");
+                    opened = true;
+                }
+                else if (!opened) sw = new StreamWriter(filename + doctype, true);
+
+                sw.WriteLine(DateTime.Now.ToShortDateString() + "-" + DateTime.Now.ToShortTimeString() + "\t| [" + logType + "]\t|" + message);
+
+                sw.Close();
+                opened = false;
             }
-            else if (!opened) sw = new StreamWriter(filename + doctype, true);
+            catch (Exception)
+            {
 
-            sw.WriteLine(DateTime.Now.ToShortDateString() + "-" + DateTime.Now.ToShortTimeString() + "\t| [" + logType + "]\t|" + message);
-
-            sw.Close();
-            opened = false;
+            }
         }
 
         public static void Info(string message)

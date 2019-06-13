@@ -1,7 +1,6 @@
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\bin\Debug\WPF_client.exe.config
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\bin\Debug\WPF_client.exe
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\bin\Debug\WPF_client.pdb
-D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\WPF_client.csprojAssemblyReference.cache
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\MainWindow.g.cs
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\App.g.cs
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\WPF_client_MarkupCompile.cache
@@ -37,3 +36,4 @@ D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\Ad
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\PersonParentControl.g.cs
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\AddParentControl.baml
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\PersonParentControl.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\WPF_client.csprojAssemblyReference.cache
