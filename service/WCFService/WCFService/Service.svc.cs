@@ -382,7 +382,55 @@ namespace WCFService
                 }
             }
 
-        //Refresh
+            public void generatePersons(int numberOfPersons, bool dropFirst)
+            {
+                bool ok = false;
+                try
+                {
+                    personsManager.GeneratePersons(numberOfPersons, dropFirst);
+                    ok = true;
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+
+                if (ok)
+                {
+                    try
+                    {
+                        refreshManager.UpdateLastTime(DateTime.Now);
+                    }
+                    catch (DatabaseConnectionException e)
+                    {
+                        ServiceData sd = new ServiceData();
+                        sd.ErrorMessage = e.Message;
+                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                    }
+                    catch (DatabaseParameterException e)
+                    {
+                        ServiceData sd = new ServiceData();
+                        sd.ErrorMessage = e.Message;
+                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                    }
+                }
+            }
+
+            //Refresh
             public bool NeedRefresh(DateTime lastRefresh)
             {
                 try

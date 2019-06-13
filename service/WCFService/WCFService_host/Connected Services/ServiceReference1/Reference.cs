@@ -78,6 +78,13 @@ namespace WCFService_host.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/RemovePerson", ReplyAction="http://tempuri.org/IService/RemovePersonResponse")]
         System.Threading.Tasks.Task RemovePersonAsync(string token, int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/generatePersons", ReplyAction="http://tempuri.org/IService/generatePersonsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/generatePersonsServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void generatePersons(int numberOfPersons, bool dropFirst);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/generatePersons", ReplyAction="http://tempuri.org/IService/generatePersonsResponse")]
+        System.Threading.Tasks.Task generatePersonsAsync(int numberOfPersons, bool dropFirst);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/NeedRefreshServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         bool NeedRefresh(System.DateTime lastRefresh);
@@ -204,6 +211,14 @@ namespace WCFService_host.ServiceReference1 {
         
         public System.Threading.Tasks.Task RemovePersonAsync(string token, int id) {
             return base.Channel.RemovePersonAsync(token, id);
+        }
+        
+        public void generatePersons(int numberOfPersons, bool dropFirst) {
+            base.Channel.generatePersons(numberOfPersons, dropFirst);
+        }
+        
+        public System.Threading.Tasks.Task generatePersonsAsync(int numberOfPersons, bool dropFirst) {
+            return base.Channel.generatePersonsAsync(numberOfPersons, dropFirst);
         }
         
         public bool NeedRefresh(System.DateTime lastRefresh) {

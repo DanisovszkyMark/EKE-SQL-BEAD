@@ -120,6 +120,19 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="generatePersons">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numberOfPersons" type="xs:int" />
+        <xs:element minOccurs="0" name="dropFirst" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="generatePersonsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="NeedRefresh">
     <xs:complexType>
       <xs:sequence>

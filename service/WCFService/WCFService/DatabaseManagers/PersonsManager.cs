@@ -214,6 +214,8 @@ namespace WCFService.DatabaseManagers
 
         public void Delete(int id)
         {
+            DeleteConnection(id);
+
             SqlCommand command = new SqlCommand();
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = @"DELETE FROM Persons 
@@ -235,10 +237,182 @@ namespace WCFService.DatabaseManagers
             try { command.ExecuteNonQuery(); }
             catch (Exception)
             {
+                
                 throw new DatabaseParameterException();
             }
             
             command.Connection.Close();
+        }
+
+        public void DeleteConnection(int id)
+        {
+            DeletePersonConnection(id);
+            DeletePetConnection(id);
+            DeleteHobbyConnection(id);
+            DeleteCarConnection(id);
+        }
+
+        public void DeletePersonConnection(int id)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = @"DELETE FROM Person_Parent 
+                                    WHERE person_id = @_id";
+
+            SqlParameter pId = new SqlParameter();
+            pId.ParameterName = "@_id";
+            pId.SqlDbType = System.Data.SqlDbType.BigInt;
+            pId.Direction = System.Data.ParameterDirection.Input;
+            pId.Value = id;
+            command.Parameters.Add(pId);
+
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            command.Connection.Close();
+        }
+
+        public void DeletePetConnection(int id)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = @"DELETE FROM Person_Pet 
+                                    WHERE person_id = @_id";
+
+            SqlParameter pId = new SqlParameter();
+            pId.ParameterName = "@_id";
+            pId.SqlDbType = System.Data.SqlDbType.BigInt;
+            pId.Direction = System.Data.ParameterDirection.Input;
+            pId.Value = id;
+            command.Parameters.Add(pId);
+
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            command.Connection.Close();
+        }
+
+        public void DeleteHobbyConnection(int id)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = @"DELETE FROM Person_Hobby 
+                                    WHERE person_id = @_id";
+
+            SqlParameter pId = new SqlParameter();
+            pId.ParameterName = "@_id";
+            pId.SqlDbType = System.Data.SqlDbType.BigInt;
+            pId.Direction = System.Data.ParameterDirection.Input;
+            pId.Value = id;
+            command.Parameters.Add(pId);
+
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            command.Connection.Close();
+        }
+
+        public void DeleteCarConnection(int id)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = @"DELETE FROM Cars 
+                                    WHERE person_id = @_id";
+
+            SqlParameter pId = new SqlParameter();
+            pId.ParameterName = "@_id";
+            pId.SqlDbType = System.Data.SqlDbType.BigInt;
+            pId.Direction = System.Data.ParameterDirection.Input;
+            pId.Value = id;
+            command.Parameters.Add(pId);
+
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            try { command.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            command.Connection.Close();
+        }
+
+        public void GeneratePersons(int numberOfRecords, bool dropFirst)
+        {
+            if (dropFirst)
+            {
+                List<PersonRecord> records;
+                try
+                {
+                    records = Select();
+                }
+                catch (Exception)
+                {
+                    throw new DatabaseCommandTextException();
+                }
+
+                for (int i = 0; i < records.Count; i++)
+                {
+                    try
+                    {
+                        DeleteConnection(records[i].Id);
+                        Delete(records[i].Id);
+                    }
+                    catch (Exception)
+                    {
+                        throw new DatabaseCommandTextException();
+                    }
+                }
+            }
+
+            for (int i = 0; i < numberOfRecords; i++)
+            {
+                PersonRecord r = new PersonRecord();
+                r.Name = "Worker" + i;
+                r.Birt_day = DateTime.Now;
+                r.Job_id = 1;
+                r.Salary = 100000;
+
+                try
+                {
+                    Insert(r);
+                }
+                catch (Exception)
+                {
+                    throw new DatabaseCommandTextException();
+                }
+            }
         }
     }
 }

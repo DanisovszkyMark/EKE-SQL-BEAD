@@ -49,8 +49,12 @@ namespace WCFService
             [FaultContract(typeof(ServiceData))]
             void RemovePerson(string token, int id);
 
-        //Refresh
             [OperationContract]
+            [FaultContract(typeof(ServiceData))]
+            void generatePersons(int numberOfPersons, bool dropFirst);
+
+        //Refresh
+        [OperationContract]
             [FaultContract(typeof(ServiceData))]
             bool NeedRefresh(DateTime lastRefresh);
 
