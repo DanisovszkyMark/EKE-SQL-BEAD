@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -12,56 +13,29 @@ namespace WCFService.DatabaseManagers
     {
         public bool CanLogin(string username, string password)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"SELECT * 
-                                    FROM Users 
-                                    WHERE username = @_username AND password = @_password";
+            SqlCommand cmd = new SqlCommand();
 
-            SqlParameter _username = new SqlParameter();
-            _username.ParameterName = "@_username";
-            _username.Value = username;
-            _username.Direction = System.Data.ParameterDirection.Input;
-            _username.DbType = System.Data.DbType.String;
-            command.Parameters.Add(_username);
+            cmd.CommandText = "CanLogin";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
 
-            SqlParameter _password = new SqlParameter();
-            _password.ParameterName = "@_password";
-            _password.Value = password;
-            _password.Direction = System.Data.ParameterDirection.Input;
-            _password.DbType = System.Data.DbType.String;
-            command.Parameters.Add(_password);
+            var returnParameter = cmd.Parameters.Add("@ReturnVal", SqlDbType.Int);
+            returnParameter.Direction = ParameterDirection.ReturnValue;
 
-            try { command.Connection = getConnection(); }
+            try { cmd.Connection = getConnection(); }
             catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            SqlDataReader reader;
-
-            try { reader = command.ExecuteReader(); }
+            try { cmd.ExecuteNonQuery(); }
             catch (Exception)
             {
                 throw new DatabaseCommandTextException();
             }
 
-            int count = 0;
-
-            try
-            {
-                if (reader.Read())
-                {
-                    if (bool.Parse(reader["logged"].ToString()) == false)
-                    count++;
-                }
-            }
-            catch (Exception)
-            {
-                throw new DatabaseParameterException();
-            }
-
-            return count == 1 ? true : false;
+            return Convert.ToBoolean(returnParameter.Value);
         }
 
         public void Login(string username)
@@ -93,7 +67,7 @@ namespace WCFService.DatabaseManagers
             }
 
             try { command.ExecuteNonQuery(); }
-            catch(Exception)
+            catch (Exception)
             {
                 throw new DatabaseCommandTextException();
             }
@@ -123,7 +97,7 @@ namespace WCFService.DatabaseManagers
             command.Parameters.Add(logged);
 
             try { command.Connection = getConnection(); }
-            catch(Exception)
+            catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }

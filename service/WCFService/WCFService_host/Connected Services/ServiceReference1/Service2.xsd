@@ -123,6 +123,7 @@
   <xs:element name="generatePersons">
     <xs:complexType>
       <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
         <xs:element minOccurs="0" name="numberOfPersons" type="xs:int" />
         <xs:element minOccurs="0" name="dropFirst" type="xs:boolean" />
       </xs:sequence>

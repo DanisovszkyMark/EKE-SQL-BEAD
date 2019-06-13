@@ -51,7 +51,7 @@ namespace WCFService
 
             [OperationContract]
             [FaultContract(typeof(ServiceData))]
-            void generatePersons(int numberOfPersons, bool dropFirst);
+            void generatePersons(string token, int numberOfPersons, bool dropFirst);
 
         //Refresh
         [OperationContract]

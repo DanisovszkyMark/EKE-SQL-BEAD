@@ -382,13 +382,12 @@ namespace WCFService
                 }
             }
 
-            public void generatePersons(int numberOfPersons, bool dropFirst)
+            public void generatePersons(string token, int numberOfPersons, bool dropFirst)
             {
-                bool ok = false;
+                bool ok;
                 try
                 {
-                    personsManager.GeneratePersons(numberOfPersons, dropFirst);
-                    ok = true;
+                    ok = Identification(token);
                 }
                 catch (DatabaseConnectionException e)
                 {
@@ -413,9 +412,16 @@ namespace WCFService
                 {
                     try
                     {
+                        personsManager.GeneratePersons(numberOfPersons, dropFirst);
                         refreshManager.UpdateLastTime(DateTime.Now);
                     }
                     catch (DatabaseConnectionException e)
+                    {
+                        ServiceData sd = new ServiceData();
+                        sd.ErrorMessage = e.Message;
+                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                    }
+                    catch (DatabaseCommandTextException e)
                     {
                         ServiceData sd = new ServiceData();
                         sd.ErrorMessage = e.Message;
@@ -427,9 +433,11 @@ namespace WCFService
                         sd.ErrorMessage = e.Message;
                         throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
                     }
-                }
-            }
 
+                }
+
+            }
+        
             //Refresh
             public bool NeedRefresh(DateTime lastRefresh)
             {
