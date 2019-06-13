@@ -59,7 +59,7 @@ namespace WPF_client
 
         private void btn_generate_Click(object sender, RoutedEventArgs e)
         {
-            GenerateDataControl control = new GenerateDataControl();
+            GenerateDataControl control = new GenerateDataControl(this.token);
 
             this.sp_view.Children.Clear();
             this.sp_view.Children.Add(control);

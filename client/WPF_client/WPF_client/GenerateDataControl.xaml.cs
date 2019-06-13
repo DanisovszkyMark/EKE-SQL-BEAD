@@ -23,10 +23,12 @@ namespace WPF_client
     public partial class GenerateDataControl : UserControl
     {
         private ServiceClient client;
-        public GenerateDataControl()
+        private string token;
+
+        public GenerateDataControl(string token)
         {
             InitializeComponent();
-
+            this.token = token;
             client = new ServiceClient();
         }
 
@@ -35,7 +37,7 @@ namespace WPF_client
             try
             {
                 Logger.Info("Generate persons");
-                client.generatePersons(Convert.ToInt32(this.tb_numberOfRecords.Text), this.cb_dropFirst.IsChecked == true ? true : false);
+                client.generatePersons(this.token,Convert.ToInt32(this.tb_numberOfRecords.Text), this.cb_dropFirst.IsChecked == true ? true : false);
                 MessageBox.Show("Success!");
             }
             catch (FaultException<ServiceData> sd)
