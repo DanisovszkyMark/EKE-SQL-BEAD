@@ -21,9 +21,12 @@ namespace WPF_client
     /// </summary>
     public partial class ViewMoreViewWindow : Window
     {
-        public ViewMoreViewWindow()
+        private string token;
+
+        public ViewMoreViewWindow(string token)
         {
             InitializeComponent();
+            this.token = token;
 
             btn_info_Click(null, null);
         }
@@ -64,7 +67,7 @@ namespace WPF_client
 
         private void btn_info_Click(object sender, RoutedEventArgs e)
         {
-            InfoControl control = new InfoControl();
+            InfoControl control = new InfoControl(this.token);
 
             this.sp_view.Children.Clear();
             this.sp_view.Children.Add(control);

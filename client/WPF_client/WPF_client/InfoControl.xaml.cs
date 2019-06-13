@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_client.ServiceReference;
 
 namespace WPF_client
 {
@@ -20,9 +22,35 @@ namespace WPF_client
     /// </summary>
     public partial class InfoControl : UserControl
     {
-        public InfoControl()
+        string token;
+
+        public InfoControl(string token)
         {
             InitializeComponent();
+            this.token = token;
+
+            FillDatas();
+        }
+
+        private void FillDatas()
+        {
+            ServiceClient client = new ServiceClient();
+            List<PersonRecord> records = new List<PersonRecord>(); 
+
+            try
+            {
+                records = client.SelectAllPerson(this.token).ToList();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
+
+            this.lbl_numOfWorkers.Content = records.Count;
+            this.lbl_lowestSalary.Content = records.Min(x => x.Salary);
+            this.lbl_hightestSalary.Content = records.Max(x => x.Salary);
+            this.lbl_avgSalary.Content = records.Average(x => x.Salary);
         }
     }
 }

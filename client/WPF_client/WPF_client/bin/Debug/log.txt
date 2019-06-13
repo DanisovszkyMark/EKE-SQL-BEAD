@@ -2851,3 +2851,38 @@ Time 			| LogType 	| Message
 2019. 06. 13.-16:35	| [INFO]	|Delete token
 2019. 06. 13.-16:35	| [INFO]	|Logout
 2019. 06. 13.-16:35	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-18:26	| [INFO]	|Új felhasználó.
+2019. 06. 13.-18:26	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-18:26	| [INFO]	|the server connection has been established.
+2019. 06. 13.-18:26	| [INFO]	|Login successful (admin)
+2019. 06. 13.-18:26	| [INFO]	|Querying the token from the server
+2019. 06. 13.-18:26	| [INFO]	|Querying Employee Data
+2019. 06. 13.-18:27	| [INFO]	|Querying Employee Data
+2019. 06. 13.-18:27	| [INFO]	|Logout
+2019. 06. 13.-18:27	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-18:27	| [INFO]	|Új felhasználó.
+2019. 06. 13.-18:27	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-18:27	| [INFO]	|the server connection has been established.
+2019. 06. 13.-18:27	| [INFO]	|Login successful (admin)
+2019. 06. 13.-18:27	| [INFO]	|Querying the token from the server
+2019. 06. 13.-18:27	| [INFO]	|Querying Employee Data
+2019. 06. 13.-18:27	| [INFO]	|Querying Employee Data
+2019. 06. 13.-18:28	| [INFO]	|Logout
+2019. 06. 13.-18:28	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 13.-18:28	| [INFO]	|Új felhasználó.
+2019. 06. 13.-18:28	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 13.-18:28	| [INFO]	|the server connection has been established.
+2019. 06. 13.-18:28	| [INFO]	|Login successful (admin)
+2019. 06. 13.-18:28	| [INFO]	|Querying the token from the server
+2019. 06. 13.-18:28	| [INFO]	|Querying Employee Data
+2019. 06. 13.-18:29	| [INFO]	|Querying Employee Data
+2019. 06. 13.-18:29	| [INFO]	|Quering employee data for update
+2019. 06. 13.-18:29	| [INFO]	|Querying Employee Data
+2019. 06. 13.-18:29	| [INFO]	|Logout
+2019. 06. 13.-18:29	| [INFO]	|Delete token
