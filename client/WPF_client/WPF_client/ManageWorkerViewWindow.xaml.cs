@@ -66,6 +66,7 @@ namespace WPF_client
                 insertThis.Name = this.tb_name.Text;
                 insertThis.Birt_day = DateTime.Parse(this.tb_birth.Text);
                 insertThis.Job_id = int.Parse(this.tb_job.Text);
+                insertThis.Salary = int.Parse(this.tb_salary.Text);
 
                 try
                 {
