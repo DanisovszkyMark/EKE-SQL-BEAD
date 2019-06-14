@@ -75,7 +75,7 @@ namespace WPF_client
 
         private void btn_newJob_Click(object sender, RoutedEventArgs e)
         {
-            AddJobControl control = new AddJobControl();
+            AddJobControl control = new AddJobControl(this.token);
 
             this.sp_view.Children.Clear();
             this.sp_view.Children.Add(control);

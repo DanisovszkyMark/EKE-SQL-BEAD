@@ -25,11 +25,11 @@
         <Label Content="Job:" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="0" VerticalAlignment="Center" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
         <Label Content="Descriprion:" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="0" VerticalAlignment="Center" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
 
-        <TextBox Grid.Row="1" Grid.Column="1" FontSize="16" Margin="20,10,60,10" />
-        <TextBox Grid.Row="2" Grid.Column="1" FontSize="16" Margin="20,10,60,10" />
-        <TextBox Grid.Row="3" Grid.Column="1" FontSize="16" Margin="20,10,60,10" />
+        <TextBox x:Name="tb_workplace" Grid.Row="1" Grid.Column="1" FontSize="16" Margin="20,15,60,15" />
+        <TextBox x:Name="tb_job" Grid.Row="2" Grid.Column="1" FontSize="16" Margin="20,15,60,15" />
+        <TextBox x:Name="tb_description" Grid.Row="3" Grid.Column="1" FontSize="16" Margin="20,15,60,15" />
 
 
-        <Button Content="Add" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Height="50" FontSize="20"/>
+        <Button x:Name="btn_addJob" Content="Add" Grid.Row="4" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Height="50" FontSize="20" Click="btn_addJob_Click"/>
     </Grid>
 </UserControl>

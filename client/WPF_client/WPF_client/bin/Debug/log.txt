@@ -3669,3 +3669,78 @@ Time 			| LogType 	| Message
 2019. 06. 14.-22:52	| [INFO]	|Querying Employee Data
 2019. 06. 14.-22:52	| [INFO]	|Logout
 2019. 06. 14.-22:52	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-23:03	| [INFO]	|Új felhasználó.
+2019. 06. 14.-23:19	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-23:19	| [INFO]	|the server connection has been established.
+2019. 06. 14.-23:19	| [INFO]	|Login successful (admin)
+2019. 06. 14.-23:19	| [INFO]	|Querying the token from the server
+2019. 06. 14.-23:19	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:19	| [INFO]	|Quering employee data for update
+2019. 06. 14.-23:21	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:22	| [INFO]	|Adding a new worker to the database
+2019. 06. 14.-23:22	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:23	| [INFO]	|Quering employee data for update
+2019. 06. 14.-23:23	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:23	| [INFO]	|Quering employee data for update
+2019. 06. 14.-23:23	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:23	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:23	| [INFO]	|Logout
+2019. 06. 14.-23:23	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-23:26	| [INFO]	|Új felhasználó.
+2019. 06. 14.-23:26	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-23:26	| [INFO]	|the server connection has been established.
+2019. 06. 14.-23:26	| [INFO]	|Login successful (admin)
+2019. 06. 14.-23:26	| [INFO]	|Querying the token from the server
+2019. 06. 14.-23:26	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:26	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:27	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:27	| [INFO]	|Generate persons
+2019. 06. 14.-23:28	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:28	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:28	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:28	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:29	| [INFO]	|Adding a new worker to the database
+2019. 06. 14.-23:29	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:29	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:29	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:29	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:30	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:30	| [INFO]	|Logout
+2019. 06. 14.-23:30	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 14.-23:30	| [INFO]	|Új felhasználó.
+2019. 06. 14.-23:30	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 14.-23:30	| [INFO]	|the server connection has been established.
+2019. 06. 14.-23:30	| [INFO]	|Login successful (admin)
+2019. 06. 14.-23:30	| [INFO]	|Querying the token from the server
+2019. 06. 14.-23:30	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:31	| [INFO]	|Querying Employee Data
+2019. 06. 14.-23:31	| [INFO]	|Logout
+2019. 06. 14.-23:31	| [INFO]	|Delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 15.-0:18	| [INFO]	|Új felhasználó.
+2019. 06. 15.-0:18	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 15.-0:18	| [INFO]	|the server connection has been established.
+2019. 06. 15.-0:18	| [INFO]	|Login successful (admin)
+2019. 06. 15.-0:18	| [INFO]	|Querying the token from the server
+2019. 06. 15.-0:18	| [INFO]	|Querying Employee Data
+2019. 06. 15.-0:18	| [INFO]	|Querying Employee Data
+2019. 06. 15.-0:19	| [INFO]	|Querying Employee Data
+2019. 06. 15.-0:19	| [INFO]	|Querying Employee Data
+2019. 06. 15.-0:19	| [INFO]	|Quering employee data for update
+2019. 06. 15.-0:19	| [INFO]	|Update a worker to the database
+2019. 06. 15.-0:19	| [INFO]	|Querying Employee Data
+2019. 06. 15.-0:19	| [INFO]	|Quering employee data for update
+2019. 06. 15.-0:19	| [INFO]	|Update a worker to the database
+2019. 06. 15.-0:19	| [INFO]	|Querying Employee Data
+2019. 06. 15.-0:20	| [INFO]	|Logout
+2019. 06. 15.-0:20	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 15.-0:21	| [INFO]	|Új felhasználó.

@@ -450,6 +450,13 @@ namespace WPF_client.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllJobs", ReplyAction="http://tempuri.org/IService/SelectAllJobsResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.JobRecord[]> SelectAllJobsAsync(string token);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertJob", ReplyAction="http://tempuri.org/IService/InsertJobResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/InsertJobServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void InsertJob(string token, string workplace_name, string job, string description);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertJob", ReplyAction="http://tempuri.org/IService/InsertJobResponse")]
+        System.Threading.Tasks.Task InsertJobAsync(string token, string workplace_name, string job, string description);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/NeedRefreshServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         bool NeedRefresh(System.DateTime lastRefresh);
@@ -592,6 +599,14 @@ namespace WPF_client.ServiceReference {
         
         public System.Threading.Tasks.Task<WPF_client.ServiceReference.JobRecord[]> SelectAllJobsAsync(string token) {
             return base.Channel.SelectAllJobsAsync(token);
+        }
+        
+        public void InsertJob(string token, string workplace_name, string job, string description) {
+            base.Channel.InsertJob(token, workplace_name, job, description);
+        }
+        
+        public System.Threading.Tasks.Task InsertJobAsync(string token, string workplace_name, string job, string description) {
+            return base.Channel.InsertJobAsync(token, workplace_name, job, description);
         }
         
         public bool NeedRefresh(System.DateTime lastRefresh) {
