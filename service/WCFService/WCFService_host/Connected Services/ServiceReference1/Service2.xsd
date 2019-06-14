@@ -148,6 +148,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="InsertJob">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="workplace_name" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="job" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertJobResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="NeedRefresh">
     <xs:complexType>
       <xs:sequence>

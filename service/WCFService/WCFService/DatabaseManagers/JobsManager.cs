@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -39,7 +40,7 @@ namespace WCFService.DatabaseManagers
                 {
                     JobRecord nextRecord = new JobRecord();
                     nextRecord.Id = int.Parse(reader["id"].ToString());
-                    nextRecord.WorkplaceName = reader["workpalce_name"].ToString();
+                    nextRecord.WorkplaceName = reader["workplace_name"].ToString();
                     nextRecord.Job = reader["job"].ToString();
                     nextRecord.Description = reader["description"].ToString();
 
@@ -51,6 +52,29 @@ namespace WCFService.DatabaseManagers
                 throw new DatabaseParameterException();
             }
             return records;
+        }
+
+        public void InsertJob(string workplace_name, string job, string description)
+        {
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "InsertJob";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@workplace_name", workplace_name);
+            cmd.Parameters.AddWithValue("@job", job);
+            cmd.Parameters.AddWithValue("@description", description);
+
+            try { cmd.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            try { cmd.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
         }
     }
 }

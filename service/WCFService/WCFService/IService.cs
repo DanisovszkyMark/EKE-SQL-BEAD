@@ -58,6 +58,10 @@ namespace WCFService
         [FaultContract(typeof(ServiceData))]
         List<JobRecord> SelectAllJobs(string token);
 
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
+        void InsertJob(string token, string workplace_name, string job, string description);
+
         //Refresh
         [OperationContract]
         [FaultContract(typeof(ServiceData))]

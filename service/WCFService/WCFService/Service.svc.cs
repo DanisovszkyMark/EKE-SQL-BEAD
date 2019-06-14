@@ -495,6 +495,38 @@ namespace WCFService
             return null;
         }
 
+        public void InsertJob(string token, string workplace_name, string job, string description)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                jobManager.InsertJob(workplace_name, job, description);
+            }
+        }
+
         //Refresh
         public bool NeedRefresh(DateTime lastRefresh)
         {

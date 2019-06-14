@@ -107,6 +107,15 @@
   <wsdl:message name="IService_SelectAllJobs_ServiceDataFault_FaultMessage">
     <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q11:ServiceData" />
   </wsdl:message>
+  <wsdl:message name="IService_InsertJob_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJob" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertJob_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertJobResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_InsertJob_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q12:ServiceData" />
+  </wsdl:message>
   <wsdl:message name="IService_NeedRefresh_InputMessage">
     <wsdl:part name="parameters" element="tns:NeedRefresh" />
   </wsdl:message>
@@ -114,7 +123,7 @@
     <wsdl:part name="parameters" element="tns:NeedRefreshResponse" />
   </wsdl:message>
   <wsdl:message name="IService_NeedRefresh_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q12:ServiceData" />
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q13:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_GetToken_InputMessage">
     <wsdl:part name="parameters" element="tns:GetToken" />
@@ -123,7 +132,7 @@
     <wsdl:part name="parameters" element="tns:GetTokenResponse" />
   </wsdl:message>
   <wsdl:message name="IService_GetToken_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q13:ServiceData" />
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q14:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_Identification_InputMessage">
     <wsdl:part name="parameters" element="tns:Identification" />
@@ -132,7 +141,7 @@
     <wsdl:part name="parameters" element="tns:IdentificationResponse" />
   </wsdl:message>
   <wsdl:message name="IService_Identification_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q14:ServiceData" />
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q15:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_DeleteToken_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteToken" />
@@ -141,7 +150,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTokenResponse" />
   </wsdl:message>
   <wsdl:message name="IService_DeleteToken_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q15:ServiceData" />
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q16:ServiceData" />
   </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="CanLogin">
@@ -198,6 +207,11 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllJobs" message="tns:IService_SelectAllJobs_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/SelectAllJobsResponse" message="tns:IService_SelectAllJobs_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IService/SelectAllJobsServiceDataFault" name="ServiceDataFault" message="tns:IService_SelectAllJobs_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertJob">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/InsertJob" message="tns:IService_InsertJob_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/InsertJobResponse" message="tns:IService_InsertJob_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/InsertJobServiceDataFault" name="ServiceDataFault" message="tns:IService_InsertJob_ServiceDataFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="NeedRefresh">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/NeedRefresh" message="tns:IService_NeedRefresh_InputMessage" />
@@ -344,6 +358,18 @@
     </wsdl:operation>
     <wsdl:operation name="SelectAllJobs">
       <soap:operation soapAction="http://tempuri.org/IService/SelectAllJobs" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsertJob">
+      <soap:operation soapAction="http://tempuri.org/IService/InsertJob" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
