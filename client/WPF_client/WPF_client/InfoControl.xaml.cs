@@ -50,7 +50,7 @@ namespace WPF_client
             this.lbl_numOfWorkers.Content = records.Count;
             this.lbl_lowestSalary.Content = records.Min(x => x.Salary);
             this.lbl_hightestSalary.Content = records.Max(x => x.Salary);
-            this.lbl_avgSalary.Content = records.Average(x => x.Salary);
+            this.lbl_avgSalary.Content = String.Format("{0:F0}",records.Average(x => x.Salary));
         }
     }
 }
