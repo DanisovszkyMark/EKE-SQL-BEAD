@@ -66,7 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DatabaseManagers\BaseDatabaseManager.cs" />
+    <Compile Include="DatabaseManagers\JobsManager.cs" />
     <Compile Include="DatabaseManagers\PersonsManager.cs" />
+    <Compile Include="DatabaseManagers\Records\JobRecord.cs" />
     <Compile Include="DatabaseManagers\Records\PersonRecord.cs" />
     <Compile Include="DatabaseManagers\Records\RefreshRecord.cs" />
     <Compile Include="DatabaseManagers\Records\UserRecord.cs" />

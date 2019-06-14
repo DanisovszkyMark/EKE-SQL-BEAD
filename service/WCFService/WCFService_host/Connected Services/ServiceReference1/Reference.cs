@@ -85,6 +85,13 @@ namespace WCFService_host.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/generatePersons", ReplyAction="http://tempuri.org/IService/generatePersonsResponse")]
         System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllJobs", ReplyAction="http://tempuri.org/IService/SelectAllJobsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/SelectAllJobsServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        WCFService.DatabaseManagers.Records.JobRecord[] SelectAllJobs(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllJobs", ReplyAction="http://tempuri.org/IService/SelectAllJobsResponse")]
+        System.Threading.Tasks.Task<WCFService.DatabaseManagers.Records.JobRecord[]> SelectAllJobsAsync(string token);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/NeedRefreshServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         bool NeedRefresh(System.DateTime lastRefresh);
@@ -219,6 +226,14 @@ namespace WCFService_host.ServiceReference1 {
         
         public System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst) {
             return base.Channel.generatePersonsAsync(token, numberOfPersons, dropFirst);
+        }
+        
+        public WCFService.DatabaseManagers.Records.JobRecord[] SelectAllJobs(string token) {
+            return base.Channel.SelectAllJobs(token);
+        }
+        
+        public System.Threading.Tasks.Task<WCFService.DatabaseManagers.Records.JobRecord[]> SelectAllJobsAsync(string token) {
+            return base.Channel.SelectAllJobsAsync(token);
         }
         
         public bool NeedRefresh(System.DateTime lastRefresh) {

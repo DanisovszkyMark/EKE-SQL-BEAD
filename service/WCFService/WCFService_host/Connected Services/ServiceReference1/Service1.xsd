@@ -24,4 +24,19 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PersonRecord" nillable="true" type="tns:PersonRecord" />
+  <xs:complexType name="ArrayOfJobRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobRecord" nillable="true" type="tns:JobRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobRecord" nillable="true" type="tns:ArrayOfJobRecord" />
+  <xs:complexType name="JobRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Job" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkplaceName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobRecord" nillable="true" type="tns:JobRecord" />
 </xs:schema>

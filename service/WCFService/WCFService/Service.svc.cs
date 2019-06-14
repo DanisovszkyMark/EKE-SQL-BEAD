@@ -17,6 +17,7 @@ namespace WCFService
         private PersonsManager personsManager = new PersonsManager();
         private RefreshManager refreshManager = new RefreshManager();
         private TokensManager tokenManager = new TokensManager();
+        private JobsManager jobManager = new JobsManager();
 
         //Users
         public bool CanLogin(string username, string password)
@@ -436,6 +437,62 @@ namespace WCFService
 
             }
 
+        }
+
+        //Jobs
+        public List<JobRecord> SelectAllJobs(string token)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
+                {
+                    return jobManager.SelectAllJob();
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+            }
+
+            return null;
         }
 
         //Refresh

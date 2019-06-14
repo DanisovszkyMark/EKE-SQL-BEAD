@@ -53,6 +53,11 @@ namespace WCFService
         [FaultContract(typeof(ServiceData))]
         void generatePersons(string token, int numberOfPersons, bool dropFirst);
 
+        //Jobs
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
+        List<JobRecord> SelectAllJobs(string token);
+
         //Refresh
         [OperationContract]
         [FaultContract(typeof(ServiceData))]
