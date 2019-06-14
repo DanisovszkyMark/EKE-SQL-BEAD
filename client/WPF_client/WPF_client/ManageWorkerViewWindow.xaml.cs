@@ -54,7 +54,8 @@ namespace WPF_client
 
                 this.tb_name.Text = record.Name;
                 this.tb_birth.Text = record.Birt_day.ToString();
-                this.tb_job.Text = record.Job_id.ToString(); 
+                this.tb_job.Text = record.Job_id.ToString();
+                this.tb_salary.Text = record.Salary.ToString();
             }
         }
 
@@ -88,6 +89,7 @@ namespace WPF_client
                 record.Name = this.tb_name.Text;
                 record.Birt_day = DateTime.Parse(this.tb_birth.Text);
                 record.Job_id = int.Parse(this.tb_job.Text);
+                record.Salary = int.Parse(this.tb_salary.Text);
 
                 try
                 {

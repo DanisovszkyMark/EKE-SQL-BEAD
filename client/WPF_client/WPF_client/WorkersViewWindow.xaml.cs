@@ -99,7 +99,7 @@ namespace WPF_client
                 this.wp_datas.Items.Add(workerViewers[i].main_sp);
             }
 
-            lastRefresh = DateTime.Now;
+            lastRefresh = DateTime.Now.AddMinutes(-1).AddSeconds(-10);
         }
 
         private WorkerViewer PersonToViewer(PersonRecord record)
@@ -120,8 +120,8 @@ namespace WPF_client
             img.Source = new BitmapImage(new Uri(@"D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\Images\login.png"));
             img.Height = 100;
             img.Width = 80;
-            
-            return new WorkerViewer(record.Id,img, name, age, btn);
+
+            return new WorkerViewer(record.Id, img, name, age, btn);
         }
 
         private void btn_add_Click(object sender, RoutedEventArgs e)

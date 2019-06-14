@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
@@ -100,6 +101,7 @@ namespace WCFService.DatabaseManagers
                     loadedRecord.Name = reader["name"].ToString();
                     loadedRecord.Birt_day = DateTime.Parse(reader["birth_day"].ToString());
                     loadedRecord.Job_id = int.Parse(reader["job_id"].ToString());
+                    loadedRecord.Salary = int.Parse(reader["salary"].ToString());
                 }
             }
             catch (Exception)
@@ -112,260 +114,96 @@ namespace WCFService.DatabaseManagers
 
         public void Insert(PersonRecord record)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"INSERT INTO Persons(name, birth_day, job_id, salary)
-                                    VALUES (@name, @birth_day, @job_id, @salary)";
+            SqlCommand cmd = new SqlCommand();
 
-            try { command.Connection = getConnection(); }
-            catch (Exception)
-            {
-                throw new DatabaseCommandTextException();
-            }
+            cmd.CommandText = "InsertPerson";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@name", record.Name);
+            cmd.Parameters.AddWithValue("@birth_day", record.Birt_day);
+            cmd.Parameters.AddWithValue("@job_id", record.Job_id);
+            cmd.Parameters.AddWithValue("@salary", record.Salary);
 
-            SqlParameter name = new SqlParameter();
-            name.ParameterName = "@name"; 
-            name.SqlDbType = System.Data.SqlDbType.VarChar;
-            name.Direction = System.Data.ParameterDirection.Input; 
-            name.Value = record.Name;
-            command.Parameters.Add(name);
-
-            SqlParameter birth_day = new SqlParameter();
-            birth_day.ParameterName = "@birth_day";
-            birth_day.SqlDbType = System.Data.SqlDbType.DateTime;
-            birth_day.Direction = System.Data.ParameterDirection.Input;
-            birth_day.Value = record.Birt_day;
-            command.Parameters.Add(birth_day);
-
-            SqlParameter job_id = new SqlParameter();
-            job_id.ParameterName = "@job_id";
-            job_id.SqlDbType = System.Data.SqlDbType.Int;
-            job_id.Direction = System.Data.ParameterDirection.Input;
-            job_id.Value = record.Job_id;
-            command.Parameters.Add(job_id);
-
-            SqlParameter salary = new SqlParameter();
-            salary.ParameterName = "@salary";
-            salary.SqlDbType = System.Data.SqlDbType.Int;
-            salary.Direction = System.Data.ParameterDirection.Input;
-            if (record.Salary == null) record.Salary = 0;
-            salary.Value = record.Salary;
-            command.Parameters.Add(salary);
-
-            try { command.ExecuteNonQuery(); }
-            catch (Exception)
-            {
-                throw new DatabaseParameterException();
-            }
-        }
-
-        public void Update(PersonRecord record)
-        {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"UPDATE Persons 
-                                    SET name = @name,
-                                        birth_day = @birth_day,
-                                        job_id = @job_id
-                                    WHERE id = @id";
-
-            SqlParameter id = new SqlParameter();
-            id.ParameterName = "@id";
-            id.SqlDbType = System.Data.SqlDbType.Int;
-            id.Direction = System.Data.ParameterDirection.Input;
-            id.Value = record.Id;
-            command.Parameters.Add(id);
-
-            SqlParameter name = new SqlParameter();
-            name.ParameterName = "@name";
-            name.SqlDbType = System.Data.SqlDbType.VarChar;
-            name.Direction = System.Data.ParameterDirection.Input;
-            name.Value = record.Name;
-            command.Parameters.Add(name);
-
-            SqlParameter birth_day = new SqlParameter();
-            birth_day.ParameterName = "@birth_day";
-            birth_day.SqlDbType = System.Data.SqlDbType.DateTime;
-            birth_day.Direction = System.Data.ParameterDirection.Input;
-            birth_day.Value = record.Birt_day;
-            command.Parameters.Add(birth_day);
-
-            SqlParameter job_id = new SqlParameter();
-            job_id.ParameterName = "@job_id";
-            job_id.SqlDbType = System.Data.SqlDbType.Int;
-            job_id.Direction = System.Data.ParameterDirection.Input;
-            job_id.Value = record.Job_id;
-            command.Parameters.Add(job_id);
-
-            try { command.Connection = getConnection(); }
+            try { cmd.Connection = getConnection(); }
             catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            try { command.ExecuteNonQuery(); }
+            try { cmd.ExecuteNonQuery(); }
             catch (Exception)
             {
-                throw new DatabaseParameterException();
+                throw new DatabaseCommandTextException();
+            }
+        }
+
+
+        public void Update(PersonRecord record)
+        {
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "UpdatePerson";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", record.Id);
+            cmd.Parameters.AddWithValue("@name", record.Name);
+            cmd.Parameters.AddWithValue("@birth_day", record.Birt_day);
+            cmd.Parameters.AddWithValue("@job_id", record.Job_id);
+            cmd.Parameters.AddWithValue("@salary", record.Salary);
+
+            try { cmd.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
             }
 
-            command.Connection.Close();
+            try { cmd.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
         }
 
         public void Delete(int id)
         {
             DeleteConnection(id);
 
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"DELETE FROM Persons 
-                                    WHERE id = @id";
+            SqlCommand cmd = new SqlCommand();
 
-            SqlParameter pId = new SqlParameter();
-            pId.ParameterName = "@id";
-            pId.SqlDbType = System.Data.SqlDbType.BigInt;
-            pId.Direction = System.Data.ParameterDirection.Input;
-            pId.Value = id;
-            command.Parameters.Add(pId);
+            cmd.CommandText = "DeletePerson";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
 
-            try { command.Connection = getConnection(); }
+            try { cmd.Connection = getConnection(); }
             catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            try { command.ExecuteNonQuery(); }
-            catch (Exception)
-            {
-                
-                throw new DatabaseParameterException();
-            }
-            
-            command.Connection.Close();
-        }
-
-        public void DeleteConnection(int id)
-        {
-            DeletePersonConnection(id);
-            DeletePetConnection(id);
-            DeleteHobbyConnection(id);
-            DeleteCarConnection(id);
-        }
-
-        public void DeletePersonConnection(int id)
-        {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"DELETE FROM Person_Parent 
-                                    WHERE person_id = @_id";
-
-            SqlParameter pId = new SqlParameter();
-            pId.ParameterName = "@_id";
-            pId.SqlDbType = System.Data.SqlDbType.BigInt;
-            pId.Direction = System.Data.ParameterDirection.Input;
-            pId.Value = id;
-            command.Parameters.Add(pId);
-
-            try { command.Connection = getConnection(); }
-            catch (Exception)
-            {
-                throw new DatabaseConnectionException();
-            }
-
-            try { command.ExecuteNonQuery(); }
+            try { cmd.ExecuteNonQuery(); }
             catch (Exception)
             {
                 throw new DatabaseCommandTextException();
             }
-
-            command.Connection.Close();
         }
 
-        public void DeletePetConnection(int id)
+        private void DeleteConnection(int id)
         {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"DELETE FROM Person_Pet 
-                                    WHERE person_id = @_id";
+            SqlCommand cmd = new SqlCommand();
 
-            SqlParameter pId = new SqlParameter();
-            pId.ParameterName = "@_id";
-            pId.SqlDbType = System.Data.SqlDbType.BigInt;
-            pId.Direction = System.Data.ParameterDirection.Input;
-            pId.Value = id;
-            command.Parameters.Add(pId);
+            cmd.CommandText = "DeletePersonConnection";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@id", id);
 
-            try { command.Connection = getConnection(); }
+            try { cmd.Connection = getConnection(); }
             catch (Exception)
             {
                 throw new DatabaseConnectionException();
             }
 
-            try { command.ExecuteNonQuery(); }
+            try { cmd.ExecuteNonQuery(); }
             catch (Exception)
             {
                 throw new DatabaseCommandTextException();
             }
-
-            command.Connection.Close();
-        }
-
-        public void DeleteHobbyConnection(int id)
-        {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"DELETE FROM Person_Hobby 
-                                    WHERE person_id = @_id";
-
-            SqlParameter pId = new SqlParameter();
-            pId.ParameterName = "@_id";
-            pId.SqlDbType = System.Data.SqlDbType.BigInt;
-            pId.Direction = System.Data.ParameterDirection.Input;
-            pId.Value = id;
-            command.Parameters.Add(pId);
-
-            try { command.Connection = getConnection(); }
-            catch (Exception)
-            {
-                throw new DatabaseConnectionException();
-            }
-
-            try { command.ExecuteNonQuery(); }
-            catch (Exception)
-            {
-                throw new DatabaseCommandTextException();
-            }
-
-            command.Connection.Close();
-        }
-
-        public void DeleteCarConnection(int id)
-        {
-            SqlCommand command = new SqlCommand();
-            command.CommandType = System.Data.CommandType.Text;
-            command.CommandText = @"DELETE FROM Cars 
-                                    WHERE person_id = @_id";
-
-            SqlParameter pId = new SqlParameter();
-            pId.ParameterName = "@_id";
-            pId.SqlDbType = System.Data.SqlDbType.BigInt;
-            pId.Direction = System.Data.ParameterDirection.Input;
-            pId.Value = id;
-            command.Parameters.Add(pId);
-
-            try { command.Connection = getConnection(); }
-            catch (Exception)
-            {
-                throw new DatabaseConnectionException();
-            }
-
-            try { command.ExecuteNonQuery(); }
-            catch (Exception)
-            {
-                throw new DatabaseCommandTextException();
-            }
-
-            command.Connection.Close();
         }
 
         public void GeneratePersons(int numberOfRecords, bool dropFirst)

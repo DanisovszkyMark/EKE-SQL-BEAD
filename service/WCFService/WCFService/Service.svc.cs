@@ -19,138 +19,109 @@ namespace WCFService
         private TokensManager tokenManager = new TokensManager();
 
         //Users
-            public bool CanLogin(string username, string password)
+        public bool CanLogin(string username, string password)
+        {
+            try
             {
-                try
-                {
-                    return usersManager.CanLogin(username,password);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
+                return usersManager.CanLogin(username, password);
             }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+        }
 
-            public void InsertUser(UserRecord record)
-            {
-                throw new NotImplementedException();
-            }
+        public void InsertUser(UserRecord record)
+        {
+            throw new NotImplementedException();
+        }
 
-            public void Login(string username)
+        public void Login(string username)
+        {
+            try
             {
-                try
-                {
-                    usersManager.Login(username);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
+                usersManager.Login(username);
             }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+        }
 
-            public void Logout(string username)
+        public void Logout(string username)
+        {
+            try
             {
-                try
-                {
-                    usersManager.Logout(username);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
+                usersManager.Logout(username);
             }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+        }
 
         //Persons
-            public List<PersonRecord> SelectAllPerson(string token)
+        public List<PersonRecord> SelectAllPerson(string token)
+        {
+            bool ok;
+            try
             {
-                bool ok;
-                try
-                {
-                    ok = Identification(token);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-
-                if (ok)
-                {
-                    try
-                    {
-                        return personsManager.Select();
-                    }
-                    catch (DatabaseConnectionException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseCommandTextException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseParameterException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                }
-                else return null;
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
             }
 
-            public PersonRecord SelectPersonById(string token, int id)
+            if (ok)
             {
-                bool ok;
                 try
                 {
-                    ok = Identification(token);
+                    return personsManager.Select();
                 }
                 catch (DatabaseConnectionException e)
                 {
@@ -170,10 +141,39 @@ namespace WCFService
                     sd.ErrorMessage = e.Message;
                     throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
                 }
+            }
+            else return null;
+        }
 
-                if (ok)
-                {
-                    try
+        public PersonRecord SelectPersonById(string token, int id)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
                 {
                     return personsManager.Select(id);
                 }
@@ -195,16 +195,225 @@ namespace WCFService
                     sd.ErrorMessage = e.Message;
                     throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
                 }
-                }
-                else return null;
+            }
+            else return null;
+        }
+
+        public void InsertPerson(string token, PersonRecord record)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
             }
 
-            public void InsertPerson(string token, PersonRecord record)
+            if (ok)
             {
-                bool ok;
+                try { personsManager.Insert(record); }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+
+                //try
+                //{
+                //    refreshManager.UpdateLastTime(DateTime.Now);
+                //}
+                //catch (DatabaseConnectionException e)
+                //{
+                //    ServiceData sd = new ServiceData();
+                //    sd.ErrorMessage = e.Message;
+                //    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                //}
+                //catch (DatabaseParameterException e)
+                //{
+                //    ServiceData sd = new ServiceData();
+                //    sd.ErrorMessage = e.Message;
+                //    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                //}
+            }
+        }
+
+        public void UpdatePerson(string token, PersonRecord record)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try { personsManager.Update(record); }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+
+                //try
+                //{
+                //    refreshManager.UpdateLastTime(DateTime.Now);
+                //}
+                //catch (DatabaseConnectionException e)
+                //{
+                //    ServiceData sd = new ServiceData();
+                //    sd.ErrorMessage = e.Message;
+                //    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                //}
+                //catch (DatabaseParameterException e)
+                //{
+                //    ServiceData sd = new ServiceData();
+                //    sd.ErrorMessage = e.Message;
+                //    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                //}
+            }
+        }
+
+        public void RemovePerson(string token, int id)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try { personsManager.Delete(id); }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+
+                //try
+                //{
+                //    refreshManager.UpdateLastTime(DateTime.Now);
+                //}
+                //catch (DatabaseConnectionException e)
+                //{
+                //    ServiceData sd = new ServiceData();
+                //    sd.ErrorMessage = e.Message;
+                //    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                //}
+                //catch (DatabaseParameterException e)
+                //{
+                //    ServiceData sd = new ServiceData();
+                //    sd.ErrorMessage = e.Message;
+                //    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                //}
+            }
+        }
+
+        public void generatePersons(string token, int numberOfPersons, bool dropFirst)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
                 try
                 {
-                    ok = Identification(token);
+                    personsManager.GeneratePersons(numberOfPersons, dropFirst);
+                    //refreshManager.UpdateLastTime(DateTime.Now);
                 }
                 catch (DatabaseConnectionException e)
                 {
@@ -225,317 +434,108 @@ namespace WCFService
                     throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
                 }
 
-                if (ok)
-                    {
-                        try { personsManager.Insert(record); }
-                        catch (DatabaseConnectionException e)
-                        {
-                            ServiceData sd = new ServiceData();
-                            sd.ErrorMessage = e.Message;
-                            throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                        }
-                        catch (DatabaseParameterException e)
-                        {
-                            ServiceData sd = new ServiceData();
-                            sd.ErrorMessage = e.Message;
-                            throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                        }
-
-                        try
-                        {
-                            refreshManager.UpdateLastTime(DateTime.Now);
-                        }
-                        catch (DatabaseConnectionException e)
-                        {
-                            ServiceData sd = new ServiceData();
-                            sd.ErrorMessage = e.Message;
-                            throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                        }
-                        catch (DatabaseParameterException e)
-                        {
-                            ServiceData sd = new ServiceData();
-                            sd.ErrorMessage = e.Message;
-                            throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                        }
-                    }
             }
 
-            public void UpdatePerson(string token, PersonRecord record)
+        }
+
+        //Refresh
+        public bool NeedRefresh(DateTime lastRefresh)
+        {
+            try
             {
-                bool ok;
-                try
-                {
-                    ok = Identification(token);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-
-                if (ok)
-                {
-                    try { personsManager.Update(record); }
-                    catch (DatabaseConnectionException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseParameterException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-
-                    try
-                    {
-                        refreshManager.UpdateLastTime(DateTime.Now);
-                    }
-                    catch (DatabaseConnectionException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseParameterException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                }
+                if (lastRefresh < LastModify().Time) return true;
+                return false;
             }
-
-            public void RemovePerson(string token, int id)
+            catch (DatabaseConnectionException e)
             {
-                bool ok;
-                try
-                {
-                    ok = Identification(token);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-
-                if (ok)
-                {
-                    try { personsManager.Delete(id); }
-                    catch (DatabaseConnectionException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseParameterException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-
-                    try
-                    {
-                        refreshManager.UpdateLastTime(DateTime.Now);
-                    }
-                    catch (DatabaseConnectionException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseParameterException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                }
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
             }
-
-            public void generatePersons(string token, int numberOfPersons, bool dropFirst)
+            catch (DatabaseCommandTextException e)
             {
-                bool ok;
-                try
-                {
-                    ok = Identification(token);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-
-                if (ok)
-                {
-                    try
-                    {
-                        personsManager.GeneratePersons(numberOfPersons, dropFirst);
-                        refreshManager.UpdateLastTime(DateTime.Now);
-                    }
-                    catch (DatabaseConnectionException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseCommandTextException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-                    catch (DatabaseParameterException e)
-                    {
-                        ServiceData sd = new ServiceData();
-                        sd.ErrorMessage = e.Message;
-                        throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                    }
-
-                }
-
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
             }
-        
-            //Refresh
-            public bool NeedRefresh(DateTime lastRefresh)
+            catch (DatabaseParameterException e)
             {
-                try
-                {
-                    if (lastRefresh < LastModify().Time) return true;
-                    return false;
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
             }
+        }
 
-            private RefreshRecord LastModify()
-            {
-                return refreshManager.lastRefresh();
-            }
+        private RefreshRecord LastModify()
+        {
+            return refreshManager.lastRefresh();
+        }
 
         //Identification
-            public string GetToken()
+        public string GetToken()
+        {
+            try
             {
-                try
-                {
-                    return tokenManager.GetToken();
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
+                return tokenManager.GetToken();
             }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+        }
 
-            public bool Identification(string token)
+        public bool Identification(string token)
+        {
+            try
             {
-                try
-                {
-                    return tokenManager.Identification(token);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseCommandTextException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
+                return tokenManager.Identification(token);
             }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+        }
 
-            public void DeleteToken(string token)
+        public void DeleteToken(string token)
+        {
+            try
             {
-                try
-                {
-                    tokenManager.Delete(token);
-                }
-                catch (DatabaseConnectionException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
-                catch (DatabaseParameterException e)
-                {
-                    ServiceData sd = new ServiceData();
-                    sd.ErrorMessage = e.Message;
-                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
-                }
+                tokenManager.Delete(token);
             }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+        }
     }
 }
