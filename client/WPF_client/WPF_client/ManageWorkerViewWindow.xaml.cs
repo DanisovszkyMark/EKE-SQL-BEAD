@@ -47,6 +47,23 @@ namespace WPF_client
 
         private void FillDatas()
         {
+            List<JobRecord> records = new List<JobRecord>();
+
+            try
+            {
+                records = client.SelectAllJobs(this.token).ToList();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
+
+            for (int i = 0; i < records.Count; i++)
+            {
+                this.cb_job.Items.Add(records[i].Job);
+            }
+
             if (this.id != -1)
             {
                 Logger.Info("Quering employee data for update");
@@ -54,8 +71,11 @@ namespace WPF_client
 
                 this.tb_name.Text = record.Name;
                 this.tb_birth.Text = record.Birt_day.ToString();
-                this.tb_job.Text = record.Job_id.ToString();
+                this.cb_job.SelectedIndex = record.Job_id -1;
                 this.tb_salary.Text = record.Salary.ToString();
+            }
+            else
+            {                         
             }
         }
 
@@ -66,7 +86,7 @@ namespace WPF_client
                 PersonRecord insertThis = new PersonRecord();
                 insertThis.Name = this.tb_name.Text;
                 insertThis.Birt_day = DateTime.Parse(this.tb_birth.Text);
-                insertThis.Job_id = int.Parse(this.tb_job.Text);
+                insertThis.Job_id = this.cb_job.SelectedIndex +1;
                 insertThis.Salary = int.Parse(this.tb_salary.Text);
 
                 try
@@ -88,7 +108,7 @@ namespace WPF_client
                 record.Id = this.id;
                 record.Name = this.tb_name.Text;
                 record.Birt_day = DateTime.Parse(this.tb_birth.Text);
-                record.Job_id = int.Parse(this.tb_job.Text);
+                record.Job_id = this.cb_job.SelectedIndex +1;
                 record.Salary = int.Parse(this.tb_salary.Text);
 
                 try

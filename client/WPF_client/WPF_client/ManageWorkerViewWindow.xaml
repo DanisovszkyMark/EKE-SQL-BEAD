@@ -29,7 +29,7 @@
 
         <TextBox x:Name="tb_name" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,30,0" Grid.Row="1" Grid.Column="2" FontSize="16"/>
         <TextBox x:Name="tb_birth" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,30,0" Grid.Row="2" Grid.Column="2" FontSize="16"/>
-        <TextBox x:Name="tb_job" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,30,0" Grid.Row="3" Grid.Column="2" FontSize="16"/>
+        <ComboBox x:Name="cb_job" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,30,0" Grid.Row="3" Grid.Column="2" FontSize="16"/>
         <TextBox x:Name="tb_salary" VerticalAlignment="Center" HorizontalAlignment="Stretch" Margin="10,0,30,0" Grid.Row="4" Grid.Column="2" FontSize="16"/>
 
         <Button x:Name="btn_ok" Content="Ok" HorizontalAlignment="Stretch" VerticalAlignment="Center" Margin="80,0,80,0" FontSize="18" Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2" Click="btn_ok_Click"/>

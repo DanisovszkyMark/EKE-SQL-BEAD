@@ -276,6 +276,99 @@ namespace WPF_client.ServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="JobRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
+    [System.SerializableAttribute()]
+    public partial class JobRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string DescriptionField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string JobField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string WorkplaceNameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Description {
+            get {
+                return this.DescriptionField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.DescriptionField, value) != true)) {
+                    this.DescriptionField = value;
+                    this.RaisePropertyChanged("Description");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Job {
+            get {
+                return this.JobField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.JobField, value) != true)) {
+                    this.JobField = value;
+                    this.RaisePropertyChanged("Job");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string WorkplaceName {
+            get {
+                return this.WorkplaceNameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.WorkplaceNameField, value) != true)) {
+                    this.WorkplaceNameField = value;
+                    this.RaisePropertyChanged("WorkplaceName");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.IService")]
     public interface IService {
@@ -349,6 +442,13 @@ namespace WPF_client.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/generatePersons", ReplyAction="http://tempuri.org/IService/generatePersonsResponse")]
         System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllJobs", ReplyAction="http://tempuri.org/IService/SelectAllJobsResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectAllJobsServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        WPF_client.ServiceReference.JobRecord[] SelectAllJobs(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllJobs", ReplyAction="http://tempuri.org/IService/SelectAllJobsResponse")]
+        System.Threading.Tasks.Task<WPF_client.ServiceReference.JobRecord[]> SelectAllJobsAsync(string token);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/NeedRefresh", ReplyAction="http://tempuri.org/IService/NeedRefreshResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/NeedRefreshServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
@@ -484,6 +584,14 @@ namespace WPF_client.ServiceReference {
         
         public System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst) {
             return base.Channel.generatePersonsAsync(token, numberOfPersons, dropFirst);
+        }
+        
+        public WPF_client.ServiceReference.JobRecord[] SelectAllJobs(string token) {
+            return base.Channel.SelectAllJobs(token);
+        }
+        
+        public System.Threading.Tasks.Task<WPF_client.ServiceReference.JobRecord[]> SelectAllJobsAsync(string token) {
+            return base.Channel.SelectAllJobsAsync(token);
         }
         
         public bool NeedRefresh(System.DateTime lastRefresh) {
