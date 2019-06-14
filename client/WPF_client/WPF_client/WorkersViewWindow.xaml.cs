@@ -45,6 +45,7 @@ namespace WPF_client
             refreshTimer.Tick += RefreshTimer_Tick;
 
             this.username = username;
+            this.lbl_username.Content = "Hello " + this.username;
             try
             {
                 Logger.Info("Querying the token from the server");

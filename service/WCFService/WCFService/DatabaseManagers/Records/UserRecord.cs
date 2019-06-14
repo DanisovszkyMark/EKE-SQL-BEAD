@@ -41,8 +41,6 @@ namespace WCFService.DatabaseManagers.Records
 
         public UserRecord(string Username)
         {
-            if (Username == null) throw new ArgumentNullException();
-
             this.Username = Username;
         }
 

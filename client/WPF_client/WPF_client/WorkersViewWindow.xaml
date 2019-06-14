@@ -47,10 +47,7 @@
             </StackPanel>
         </ScrollViewer>
 
-        <StackPanel Orientation="Horizontal" Margin="0,5,0,0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">
-            <Label Content="Processing: " VerticalAlignment="Center" Foreground="{DynamicResource LightForegroundBrush}"/>
-            <ProgressBar Width="150" Height="20" Background="{DynamicResource LightBackgroundBrush}"/>
-        </StackPanel>
+
 
         <Label x:Name="lbl_autoRefresh" Content="Auto refresh: " HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Center" Grid.Row="1" Grid.Column="4" Foreground="{DynamicResource LightForegroundBrush}"/>
         <CheckBox x:Name="cb_autoRefresh" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,10,0" Grid.Row="1" Grid.Column="4" Checked="cb_autoRefresh_Checked" Unchecked="cb_autoRefresh_Unchecked" />

@@ -185,6 +185,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\ServiceReference\Service.wsdl" />
+    <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.JobRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.PersonRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
