@@ -44,6 +44,15 @@
   <wsdl:message name="IService_Logout_ServiceDataFault_FaultMessage">
     <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q4:ServiceData" />
   </wsdl:message>
+  <wsdl:message name="IService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService_UpdateUser_ServiceDataFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q5:ServiceData" />
+  </wsdl:message>
   <wsdl:message name="IService_SelectAllPerson_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectAllPerson" />
   </wsdl:message>
@@ -51,7 +60,7 @@
     <wsdl:part name="parameters" element="tns:SelectAllPersonResponse" />
   </wsdl:message>
   <wsdl:message name="IService_SelectAllPerson_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q5:ServiceData" />
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q6:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_SelectPersonById_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectPersonById" />
@@ -60,7 +69,7 @@
     <wsdl:part name="parameters" element="tns:SelectPersonByIdResponse" />
   </wsdl:message>
   <wsdl:message name="IService_SelectPersonById_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q6:ServiceData" />
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q7:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_InsertPerson_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertPerson" />
@@ -69,7 +78,7 @@
     <wsdl:part name="parameters" element="tns:InsertPersonResponse" />
   </wsdl:message>
   <wsdl:message name="IService_InsertPerson_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q7:ServiceData" />
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q8:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_UpdatePerson_InputMessage">
     <wsdl:part name="parameters" element="tns:UpdatePerson" />
@@ -78,7 +87,7 @@
     <wsdl:part name="parameters" element="tns:UpdatePersonResponse" />
   </wsdl:message>
   <wsdl:message name="IService_UpdatePerson_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q8:ServiceData" />
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q9:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_RemovePerson_InputMessage">
     <wsdl:part name="parameters" element="tns:RemovePerson" />
@@ -87,7 +96,7 @@
     <wsdl:part name="parameters" element="tns:RemovePersonResponse" />
   </wsdl:message>
   <wsdl:message name="IService_RemovePerson_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q9:ServiceData" />
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q10:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_generatePersons_InputMessage">
     <wsdl:part name="parameters" element="tns:generatePersons" />
@@ -96,7 +105,7 @@
     <wsdl:part name="parameters" element="tns:generatePersonsResponse" />
   </wsdl:message>
   <wsdl:message name="IService_generatePersons_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q10:ServiceData" />
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q11:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_SelectAllJobs_InputMessage">
     <wsdl:part name="parameters" element="tns:SelectAllJobs" />
@@ -105,7 +114,7 @@
     <wsdl:part name="parameters" element="tns:SelectAllJobsResponse" />
   </wsdl:message>
   <wsdl:message name="IService_SelectAllJobs_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q11:ServiceData" />
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q12:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_InsertJob_InputMessage">
     <wsdl:part name="parameters" element="tns:InsertJob" />
@@ -114,7 +123,7 @@
     <wsdl:part name="parameters" element="tns:InsertJobResponse" />
   </wsdl:message>
   <wsdl:message name="IService_InsertJob_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q12:ServiceData" />
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q13:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_NeedRefresh_InputMessage">
     <wsdl:part name="parameters" element="tns:NeedRefresh" />
@@ -123,7 +132,7 @@
     <wsdl:part name="parameters" element="tns:NeedRefreshResponse" />
   </wsdl:message>
   <wsdl:message name="IService_NeedRefresh_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q13:ServiceData" />
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q14:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_GetToken_InputMessage">
     <wsdl:part name="parameters" element="tns:GetToken" />
@@ -132,7 +141,7 @@
     <wsdl:part name="parameters" element="tns:GetTokenResponse" />
   </wsdl:message>
   <wsdl:message name="IService_GetToken_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q14:ServiceData" />
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q15:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_Identification_InputMessage">
     <wsdl:part name="parameters" element="tns:Identification" />
@@ -141,7 +150,7 @@
     <wsdl:part name="parameters" element="tns:IdentificationResponse" />
   </wsdl:message>
   <wsdl:message name="IService_Identification_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q15:ServiceData" />
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q16:ServiceData" />
   </wsdl:message>
   <wsdl:message name="IService_DeleteToken_InputMessage">
     <wsdl:part name="parameters" element="tns:DeleteToken" />
@@ -150,7 +159,7 @@
     <wsdl:part name="parameters" element="tns:DeleteTokenResponse" />
   </wsdl:message>
   <wsdl:message name="IService_DeleteToken_ServiceDataFault_FaultMessage">
-    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q16:ServiceData" />
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/WCFService" name="detail" element="q17:ServiceData" />
   </wsdl:message>
   <wsdl:portType name="IService">
     <wsdl:operation name="CanLogin">
@@ -172,6 +181,11 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService/Logout" message="tns:IService_Logout_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService/LogoutResponse" message="tns:IService_Logout_OutputMessage" />
       <wsdl:fault wsaw:Action="http://tempuri.org/IService/LogoutServiceDataFault" name="ServiceDataFault" message="tns:IService_Logout_ServiceDataFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService/UpdateUser" message="tns:IService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService/UpdateUserResponse" message="tns:IService_UpdateUser_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IService/UpdateUserServiceDataFault" name="ServiceDataFault" message="tns:IService_UpdateUser_ServiceDataFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="SelectAllPerson">
       <wsdl:input wsaw:Action="http://tempuri.org/IService/SelectAllPerson" message="tns:IService_SelectAllPerson_InputMessage" />
@@ -274,6 +288,18 @@
     </wsdl:operation>
     <wsdl:operation name="Logout">
       <soap:operation soapAction="http://tempuri.org/IService/Logout" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ServiceDataFault">
+        <soap:fault use="literal" name="ServiceDataFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IService/UpdateUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -23,7 +23,7 @@
 
         <Image x:Name="img_useriamge" Margin="20,10,0,10" MaxHeight="110" MaxWidth="110" Grid.Row="0" Grid.Column="0" Source="Images/login.png"  />
         <Label x:Name="lbl_username" Content="Hello " MaxWidth="150" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,10,0,50" Grid.Row="0" Grid.Column="1"  Foreground="{DynamicResource LightForegroundBrush}" />
-        <Label x:Name="lbl_change" Content="Change data " MaxWidth="150" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,50,0,10" Grid.Row="0" Grid.Column="1" Foreground="{DynamicResource LinkBrush}" />
+        <Label x:Name="lbl_change" Content="Change data " MaxWidth="150" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,50,0,10" Grid.Row="0" Grid.Column="1" Foreground="{DynamicResource LinkBrush}" MouseEnter="lbl_change_MouseEnter" MouseLeave="lbl_change_MouseLeave" MouseUp="lbl_change_MouseUp"/>
         <Label x:Name="lbl_logout" Content="Logout" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" VerticalAlignment="Top" HorizontalAlignment="Right" Foreground="{DynamicResource LinkBrush}" MouseEnter="lbl_logout_MouseEnter" MouseLeave="lbl_logout_MouseLeave" MouseUp="lbl_logout_MouseUp"/>
         <Image x:Name="img_logo" Margin="22" MaxHeight="110" Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" Source="Images/logo.png" />
 

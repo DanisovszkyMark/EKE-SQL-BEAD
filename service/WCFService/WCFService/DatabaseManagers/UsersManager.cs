@@ -79,5 +79,29 @@ namespace WCFService.DatabaseManagers
                 throw new DatabaseCommandTextException();
             }
         }
+
+        public void UpdateUser(string username, string password, string newUsername, string newPassword)
+        {
+            SqlCommand cmd = new SqlCommand();
+
+            cmd.CommandText = "UpdateUser";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@username", username);
+            cmd.Parameters.AddWithValue("@password", password);
+            cmd.Parameters.AddWithValue("@newUsername", newUsername);
+            cmd.Parameters.AddWithValue("@newPassword", newPassword);
+
+            try { cmd.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            try { cmd.ExecuteNonQuery(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+        }
     }
 }

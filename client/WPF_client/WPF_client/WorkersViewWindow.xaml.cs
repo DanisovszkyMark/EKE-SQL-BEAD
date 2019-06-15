@@ -320,5 +320,44 @@ namespace WPF_client
         {
             FillDatas();
         }
+
+        private void lbl_change_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.lbl_change.Foreground = (SolidColorBrush)Application.Current.FindResource("LinkMouseOverBrush");
+        }
+
+        private void lbl_change_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.lbl_change.Foreground = (SolidColorBrush)Application.Current.FindResource("LinkBrush");
+        }
+
+        private void lbl_change_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            ChangeUserDataViewWindow changeUserWindow = new ChangeUserDataViewWindow(this.token, ref this.username);
+            changeUserWindow.Closed += ChangeUserWindow_Closed;
+            changeUserWindow.Show();
+        }
+
+        private void ChangeUserWindow_Closed(object sender, EventArgs e)
+        {
+            MessageBox.Show("Please login again!");
+            try
+            {
+                Logger.Info("Logout");
+                client.Logout(this.username);
+
+                Logger.Info("delete token");
+                client.DeleteToken(this.token);
+                logged = false;
+                LoginWindowView v = new LoginWindowView();
+                v.Show();
+                this.Close();
+            }
+            catch (FaultException<ServiceData> sd)
+            {
+                Logger.Error("[Service] " + sd.Message);
+                MessageBox.Show(sd.Message);
+            }
+        }
     }
 }

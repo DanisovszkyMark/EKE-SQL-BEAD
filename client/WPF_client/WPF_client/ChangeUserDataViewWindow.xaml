@@ -1,0 +1,40 @@
+﻿<Window x:Class="WPF_client.ChangeUserDataViewWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_client"
+        mc:Ignorable="d"
+        Title="Change datas" MinHeight="250" Height="250" MaxHeight="350" MinWidth="250" Width="250" MaxWidth="350">
+    <Grid Background="{DynamicResource DarkBackgroundBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.7*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Change data" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{DynamicResource LightForegroundBrush}" FontSize="20" />
+        <Label Content="New username: " Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
+        <Label Content="New password: " Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
+        <Label Content="Old password: " Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" Foreground="{DynamicResource LightForegroundBrush}" FontSize="16" />
+        <Label Content="Show passwords" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Foreground="{DynamicResource LightForegroundBrush}" FontSize="12" />
+
+        <TextBox x:Name="tb_username" Grid.Row="1" Grid.Column="1" Margin="10,10"/>
+
+        <TextBox x:Name="tb_newPassword" Grid.Row="2" Grid.Column="1" Margin="10,10" Visibility="Collapsed" />
+        <PasswordBox x:Name="pb_newPassword" Grid.Row="2" Grid.Column="1" Margin="10,10"/>
+
+        <TextBox x:Name="tb_password" Grid.Row="3" Grid.Column="1" Margin="10,10" Visibility="Collapsed" />
+        <PasswordBox x:Name="pb_password" Grid.Row="3" Grid.Column="1" Margin="10,10"/>
+
+        <CheckBox x:Name="cb_show_password" Grid.Row="4" Grid.Column="1" Margin="0,0,95,0"  HorizontalAlignment="Right" VerticalAlignment="Center" Checked="cb_show_password_Checked" Unchecked="cb_show_password_Unchecked"/>
+        <Button x:Name="btn_ok" Content="Ok" Grid.Row="5" Grid.ColumnSpan="2" FontSize="16" Click="btn_ok_Click" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}"/>
+    </Grid>
+</Window>

@@ -28,6 +28,10 @@ namespace WCFService
         [FaultContract(typeof(ServiceData))]
         void Logout(string username);
 
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
+        void UpdateUser(string token, string username, string password, string newUsername, string newPassword);
+
         //Persons
         [OperationContract]
         [FaultContract(typeof(ServiceData))]

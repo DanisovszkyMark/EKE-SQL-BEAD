@@ -401,6 +401,13 @@ namespace WPF_client.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Logout", ReplyAction="http://tempuri.org/IService/LogoutResponse")]
         System.Threading.Tasks.Task LogoutAsync(string username);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateUser", ReplyAction="http://tempuri.org/IService/UpdateUserResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/UpdateUserServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void UpdateUser(string token, string username, string password, string newUsername, string newPassword);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateUser", ReplyAction="http://tempuri.org/IService/UpdateUserResponse")]
+        System.Threading.Tasks.Task UpdateUserAsync(string token, string username, string password, string newUsername, string newPassword);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectAllPersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         WPF_client.ServiceReference.PersonRecord[] SelectAllPerson(string token);
@@ -543,6 +550,14 @@ namespace WPF_client.ServiceReference {
         
         public System.Threading.Tasks.Task LogoutAsync(string username) {
             return base.Channel.LogoutAsync(username);
+        }
+        
+        public void UpdateUser(string token, string username, string password, string newUsername, string newPassword) {
+            base.Channel.UpdateUser(token, username, password, newUsername, newPassword);
+        }
+        
+        public System.Threading.Tasks.Task UpdateUserAsync(string token, string username, string password, string newUsername, string newPassword) {
+            return base.Channel.UpdateUserAsync(token, username, password, newUsername, newPassword);
         }
         
         public WPF_client.ServiceReference.PersonRecord[] SelectAllPerson(string token) {

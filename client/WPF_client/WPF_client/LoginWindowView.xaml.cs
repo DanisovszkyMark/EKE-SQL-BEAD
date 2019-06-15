@@ -75,7 +75,7 @@ namespace WPF_client
         private bool canLogin()
         {
             ServiceClient client = new ServiceClient();
-            return client.CanLogin(this.tb_username.Text, StringToMD5(this.pb_password.Password));
+            return client.CanLogin(this.tb_username.Text, Encryption.StringToMD5(this.pb_password.Password));
         }
 
         private bool Login()
@@ -91,20 +91,6 @@ namespace WPF_client
             {
                 return false;
             }
-        }
-
-        private string StringToMD5(string s)
-        {
-            MD5CryptoServiceProvider csp = new MD5CryptoServiceProvider();
-            UTF8Encoding e = new UTF8Encoding();
-            byte[] b = csp.ComputeHash(e.GetBytes(s));
-            string password = "";
-            for (int i = 0; i < b.Length; i++)
-            {
-                password += b[i];
-            }
-
-            return password;
         }
     }
 }

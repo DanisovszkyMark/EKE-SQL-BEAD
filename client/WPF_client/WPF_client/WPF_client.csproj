@@ -69,11 +69,15 @@
     <Compile Include="AddParentControl.xaml.cs">
       <DependentUpon>AddParentControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ChangeUserDataViewWindow.xaml.cs">
+      <DependentUpon>ChangeUserDataViewWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Connected Services\ServiceReference\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Encryption.cs" />
     <Compile Include="ErrorLogControl.xaml.cs">
       <DependentUpon>ErrorLogControl.xaml</DependentUpon>
     </Compile>
@@ -103,6 +107,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="AddParentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChangeUserDataViewWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

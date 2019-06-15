@@ -91,6 +91,53 @@ namespace WCFService
             }
         }
 
+        public void UpdateUser(string token, string username, string password, string newUsername, string newPassword)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
+                {
+                    usersManager.UpdateUser(username, password, newUsername, newPassword);
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+            }
+        }
+
         //Persons
         public List<PersonRecord> SelectAllPerson(string token)
         {
