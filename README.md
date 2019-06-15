@@ -36,12 +36,39 @@ Használt elemek:
 
 -Hibaszerződés a kliens és a szolgáltatások között
 
+**Adatbázis**
 
-**Felületek bemutatása**
+Tervezett felépítése:
+
+<img src="database/DatabaseDesign.png">
+
+Tárolt eljárások:
+-CanLogin
+-DeletePerson
+-DeletePersonConnection
+-DeleteToken
+-Identification
+-InsertJob
+-InsertPerson
+-InsertToken
+-Login
+-Logout
+-UpdateLastModifyTime
+-UpatePerson
+-UpdateUser
+
+Triggerek:
+A Person táblára vonatkozóan az alábbi műveletek végrehajtása után a szerver automatikusan frissíti a legutóbbi módosítás idejét. UPDATE, INSERT, DELETE
+
+**Kliens felületeinek bemutatása**
 
 Bejelentkező felület:
 
 <img src="client/designs/screenshots/Login.png">
+
+Felhasználó adatainak módosítása:
+
+<img src="client/designs/screenshots/AdatValtoztatas.png">
 
 Dolgozók kezelésére szolgáló felület:
 
