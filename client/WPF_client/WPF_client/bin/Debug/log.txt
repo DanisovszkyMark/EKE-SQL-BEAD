@@ -4177,3 +4177,13 @@ Time 			| LogType 	| Message
 2019. 06. 16.-13:08	| [INFO]	|Querying Employee Data
 2019. 06. 16.-13:08	| [INFO]	|Logout
 2019. 06. 16.-13:08	| [INFO]	|delete token
+///// Log /////
+Time 			| LogType 	| Message
+2019. 06. 16.-19:35	| [INFO]	|Új felhasználó.
+2019. 06. 16.-19:35	| [INFO]	|login attempt. Username : admin admin
+2019. 06. 16.-19:35	| [INFO]	|the server connection has been established.
+2019. 06. 16.-19:35	| [INFO]	|Login successful (admin)
+2019. 06. 16.-19:35	| [INFO]	|Querying the token from the server
+2019. 06. 16.-19:35	| [INFO]	|Querying Employee Data
+2019. 06. 16.-19:38	| [INFO]	|Querying Employee Data
+2019. 06. 16.-19:38	| [INFO]	|Logout
