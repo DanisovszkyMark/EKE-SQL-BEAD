@@ -94,6 +94,14 @@ Információs felület:
 
 <img src="client/designs/screenshots/MunkahelyFelvetele.png">
 
+Szülő felvétele:
+
+<img src="client/designs/screenshots/SzuloFelvetele.png">
+
+Szülő hozzárendelése munkáshoz:
+
+<img src="client/designs/screenshots/SzuloMunkasKapcsolat.png">
+
 Adatok generálása:
 
 <img src="client/designs/screenshots/AdatokGeneralasa.png">
