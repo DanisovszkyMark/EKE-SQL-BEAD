@@ -21,9 +21,9 @@
         <Label Content="Add parent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
         <Label Content="Name:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
         <Label Content="Birth day:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
-        <TextBox Grid.Row="1" Grid.Column="1" FontSize="16" Margin="20,10,60,10" />
-        <TextBox Grid.Row="2" Grid.Column="1" FontSize="16" Margin="20,10,60,10" />
+        <TextBox x:Name="tb_name" Grid.Row="1" Grid.Column="1" FontSize="18" Margin="20,15,60,15" />
+        <TextBox x:Name="tb_birth_day" Grid.Row="2" Grid.Column="1" FontSize="18" Margin="20,15,60,15" />
 
-        <Button Content="Add parent" Grid.Row="3" MinHeight="60" Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontSize="20"/>
+        <Button x:Name="btn_add" Content="Add parent" Grid.Row="3" MinHeight="60" Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontSize="20" Click="btn_add_Click"/>
     </Grid>
 </UserControl>

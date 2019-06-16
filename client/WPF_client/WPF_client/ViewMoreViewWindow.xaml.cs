@@ -83,7 +83,7 @@ namespace WPF_client
 
         private void btn_newParent_Click(object sender, RoutedEventArgs e)
         {
-            AddParentControl control = new AddParentControl();
+            AddParentControl control = new AddParentControl(this.token);
 
             this.sp_view.Children.Clear();
             this.sp_view.Children.Add(control);
@@ -91,7 +91,7 @@ namespace WPF_client
 
         private void btn_PersonParent_Click(object sender, RoutedEventArgs e)
         {
-            PersonParentControl control = new PersonParentControl();
+            PersonParentControl control = new PersonParentControl(this.token);
 
             this.sp_view.Children.Clear();
             this.sp_view.Children.Add(control);

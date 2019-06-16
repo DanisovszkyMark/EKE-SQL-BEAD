@@ -278,6 +278,83 @@ namespace WPF_client.ServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ParentRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
+    [System.SerializableAttribute()]
+    public partial class ParentRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private System.DateTime Birth_dayField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public System.DateTime Birth_day {
+            get {
+                return this.Birth_dayField;
+            }
+            set {
+                if ((this.Birth_dayField.Equals(value) != true)) {
+                    this.Birth_dayField = value;
+                    this.RaisePropertyChanged("Birth_day");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="JobRecord", Namespace="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records")]
     [System.SerializableAttribute()]
     public partial class JobRecord : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -422,6 +499,13 @@ namespace WPF_client.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
         System.Threading.Tasks.Task<WPF_client.ServiceReference.PersonRecord> SelectPersonByIdAsync(string token, int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonId", ReplyAction="http://tempuri.org/IService/SelectPersonIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectPersonIdServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        int SelectPersonId(string token, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonId", ReplyAction="http://tempuri.org/IService/SelectPersonIdResponse")]
+        System.Threading.Tasks.Task<int> SelectPersonIdAsync(string token, string name);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/InsertPersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         void InsertPerson(string token, WPF_client.ServiceReference.PersonRecord record);
@@ -449,6 +533,34 @@ namespace WPF_client.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/generatePersons", ReplyAction="http://tempuri.org/IService/generatePersonsResponse")]
         System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllParent", ReplyAction="http://tempuri.org/IService/SelectAllParentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectAllParentServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        WPF_client.ServiceReference.ParentRecord[] SelectAllParent(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllParent", ReplyAction="http://tempuri.org/IService/SelectAllParentResponse")]
+        System.Threading.Tasks.Task<WPF_client.ServiceReference.ParentRecord[]> SelectAllParentAsync(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectParentId", ReplyAction="http://tempuri.org/IService/SelectParentIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectParentIdServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        int SelectParentId(string token, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectParentId", ReplyAction="http://tempuri.org/IService/SelectParentIdResponse")]
+        System.Threading.Tasks.Task<int> SelectParentIdAsync(string token, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertParent", ReplyAction="http://tempuri.org/IService/InsertParentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/InsertParentServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void InsertParent(string token, WPF_client.ServiceReference.ParentRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertParent", ReplyAction="http://tempuri.org/IService/InsertParentResponse")]
+        System.Threading.Tasks.Task InsertParentAsync(string token, WPF_client.ServiceReference.ParentRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPersonParent", ReplyAction="http://tempuri.org/IService/InsertPersonParentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/InsertPersonParentServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void InsertPersonParent(string token, int person_id, int parent_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPersonParent", ReplyAction="http://tempuri.org/IService/InsertPersonParentResponse")]
+        System.Threading.Tasks.Task InsertPersonParentAsync(string token, int person_id, int parent_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllJobs", ReplyAction="http://tempuri.org/IService/SelectAllJobsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WPF_client.ServiceReference.ServiceData), Action="http://tempuri.org/IService/SelectAllJobsServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
@@ -576,6 +688,14 @@ namespace WPF_client.ServiceReference {
             return base.Channel.SelectPersonByIdAsync(token, id);
         }
         
+        public int SelectPersonId(string token, string name) {
+            return base.Channel.SelectPersonId(token, name);
+        }
+        
+        public System.Threading.Tasks.Task<int> SelectPersonIdAsync(string token, string name) {
+            return base.Channel.SelectPersonIdAsync(token, name);
+        }
+        
         public void InsertPerson(string token, WPF_client.ServiceReference.PersonRecord record) {
             base.Channel.InsertPerson(token, record);
         }
@@ -606,6 +726,38 @@ namespace WPF_client.ServiceReference {
         
         public System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst) {
             return base.Channel.generatePersonsAsync(token, numberOfPersons, dropFirst);
+        }
+        
+        public WPF_client.ServiceReference.ParentRecord[] SelectAllParent(string token) {
+            return base.Channel.SelectAllParent(token);
+        }
+        
+        public System.Threading.Tasks.Task<WPF_client.ServiceReference.ParentRecord[]> SelectAllParentAsync(string token) {
+            return base.Channel.SelectAllParentAsync(token);
+        }
+        
+        public int SelectParentId(string token, string name) {
+            return base.Channel.SelectParentId(token, name);
+        }
+        
+        public System.Threading.Tasks.Task<int> SelectParentIdAsync(string token, string name) {
+            return base.Channel.SelectParentIdAsync(token, name);
+        }
+        
+        public void InsertParent(string token, WPF_client.ServiceReference.ParentRecord record) {
+            base.Channel.InsertParent(token, record);
+        }
+        
+        public System.Threading.Tasks.Task InsertParentAsync(string token, WPF_client.ServiceReference.ParentRecord record) {
+            return base.Channel.InsertParentAsync(token, record);
+        }
+        
+        public void InsertPersonParent(string token, int person_id, int parent_id) {
+            base.Channel.InsertPersonParent(token, person_id, parent_id);
+        }
+        
+        public System.Threading.Tasks.Task InsertPersonParentAsync(string token, int person_id, int parent_id) {
+            return base.Channel.InsertPersonParentAsync(token, person_id, parent_id);
         }
         
         public WPF_client.ServiceReference.JobRecord[] SelectAllJobs(string token) {

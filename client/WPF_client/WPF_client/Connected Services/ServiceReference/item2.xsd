@@ -97,6 +97,21 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="SelectPersonId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectPersonIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectPersonIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="InsertPerson">
     <xs:complexType>
       <xs:sequence>
@@ -150,6 +165,62 @@
       <xs:sequence />
     </xs:complexType>
   </xs:element>
+  <xs:element name="SelectAllParent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectAllParentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="SelectAllParentResult" nillable="true" type="q6:ArrayOfParentRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectParentId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SelectParentIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SelectParentIdResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertParent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="record" nillable="true" type="q7:ParentRecord" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertParentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPersonParent">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="token" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="person_id" type="xs:int" />
+        <xs:element minOccurs="0" name="parent_id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertPersonParentResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
   <xs:element name="SelectAllJobs">
     <xs:complexType>
       <xs:sequence>
@@ -160,7 +231,7 @@
   <xs:element name="SelectAllJobsResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="SelectAllJobsResult" nillable="true" type="q6:ArrayOfJobRecord" />
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCFService.DatabaseManagers.Records" minOccurs="0" name="SelectAllJobsResult" nillable="true" type="q8:ArrayOfJobRecord" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

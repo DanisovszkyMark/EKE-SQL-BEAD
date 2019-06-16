@@ -14,16 +14,16 @@
             <RowDefinition MinHeight="80" Height="80*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="100" Width="1*"/>
+            <ColumnDefinition MinWidth="100" Width="1.1*"/>
             <ColumnDefinition MinWidth="100" Width="2*"/>
         </Grid.ColumnDefinitions>
 
         <Label Content="Person-Parent" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
         <Label Content="Person name:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
         <Label Content="Parent name:" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" FontSize="30" Foreground="{DynamicResource LightForegroundBrush}"/>
-        <ComboBox Grid.Row="1" Grid.Column="1" FontSize="16" Margin="20,10,60,10" />
-        <ComboBox Grid.Row="2" Grid.Column="1" FontSize="16" Margin="20,10,60,10" />
+        <ComboBox x:Name="cb_person" Grid.Row="1" Grid.Column="1" FontSize="16" Margin="20,15,60,15" />
+        <ComboBox x:Name="cb_parent" Grid.Row="2" Grid.Column="1" FontSize="16" Margin="20,15,60,15" />
 
-        <Button Content="Ok" Grid.Row="3" MinHeight="60" Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontSize="20"/>
+        <Button x:Name="btn_ok" Content="Ok" Grid.Row="3" MinHeight="60" Grid.ColumnSpan="2" VerticalAlignment="Bottom" FontSize="20" Click="btn_ok_Click"/>
     </Grid>
 </UserControl>

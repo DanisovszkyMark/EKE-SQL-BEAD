@@ -196,6 +196,9 @@
     <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.JobRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.ParentRecord.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference\WPF_client.ServiceReference.PersonRecord.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
