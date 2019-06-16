@@ -43,6 +43,13 @@ namespace WCFService_host.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/Logout", ReplyAction="http://tempuri.org/IService/LogoutResponse")]
         System.Threading.Tasks.Task LogoutAsync(string username);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateUser", ReplyAction="http://tempuri.org/IService/UpdateUserResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/UpdateUserServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void UpdateUser(string token, string username, string password, string newUsername, string newPassword);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/UpdateUser", ReplyAction="http://tempuri.org/IService/UpdateUserResponse")]
+        System.Threading.Tasks.Task UpdateUserAsync(string token, string username, string password, string newUsername, string newPassword);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllPerson", ReplyAction="http://tempuri.org/IService/SelectAllPersonResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/SelectAllPersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
         WCFService.DatabaseManagers.Records.PersonRecord[] SelectAllPerson(string token);
@@ -56,6 +63,13 @@ namespace WCFService_host.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonById", ReplyAction="http://tempuri.org/IService/SelectPersonByIdResponse")]
         System.Threading.Tasks.Task<WCFService.DatabaseManagers.Records.PersonRecord> SelectPersonByIdAsync(string token, int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonId", ReplyAction="http://tempuri.org/IService/SelectPersonIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/SelectPersonIdServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        int SelectPersonId(string token, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectPersonId", ReplyAction="http://tempuri.org/IService/SelectPersonIdResponse")]
+        System.Threading.Tasks.Task<int> SelectPersonIdAsync(string token, string name);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPerson", ReplyAction="http://tempuri.org/IService/InsertPersonResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/InsertPersonServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
@@ -84,6 +98,34 @@ namespace WCFService_host.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/generatePersons", ReplyAction="http://tempuri.org/IService/generatePersonsResponse")]
         System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllParent", ReplyAction="http://tempuri.org/IService/SelectAllParentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/SelectAllParentServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        WCFService.DatabaseManagers.Records.ParentRecord[] SelectAllParent(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllParent", ReplyAction="http://tempuri.org/IService/SelectAllParentResponse")]
+        System.Threading.Tasks.Task<WCFService.DatabaseManagers.Records.ParentRecord[]> SelectAllParentAsync(string token);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectParentId", ReplyAction="http://tempuri.org/IService/SelectParentIdResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/SelectParentIdServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        int SelectParentId(string token, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectParentId", ReplyAction="http://tempuri.org/IService/SelectParentIdResponse")]
+        System.Threading.Tasks.Task<int> SelectParentIdAsync(string token, string name);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertParent", ReplyAction="http://tempuri.org/IService/InsertParentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/InsertParentServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void InsertParent(string token, WCFService.DatabaseManagers.Records.ParentRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertParent", ReplyAction="http://tempuri.org/IService/InsertParentResponse")]
+        System.Threading.Tasks.Task InsertParentAsync(string token, WCFService.DatabaseManagers.Records.ParentRecord record);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPersonParent", ReplyAction="http://tempuri.org/IService/InsertPersonParentResponse")]
+        [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/InsertPersonParentServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
+        void InsertPersonParent(string token, int person_id, int parent_id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/InsertPersonParent", ReplyAction="http://tempuri.org/IService/InsertPersonParentResponse")]
+        System.Threading.Tasks.Task InsertPersonParentAsync(string token, int person_id, int parent_id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService/SelectAllJobs", ReplyAction="http://tempuri.org/IService/SelectAllJobsResponse")]
         [System.ServiceModel.FaultContractAttribute(typeof(WCFService.ServiceData), Action="http://tempuri.org/IService/SelectAllJobsServiceDataFault", Name="ServiceData", Namespace="http://schemas.datacontract.org/2004/07/WCFService")]
@@ -187,6 +229,14 @@ namespace WCFService_host.ServiceReference1 {
             return base.Channel.LogoutAsync(username);
         }
         
+        public void UpdateUser(string token, string username, string password, string newUsername, string newPassword) {
+            base.Channel.UpdateUser(token, username, password, newUsername, newPassword);
+        }
+        
+        public System.Threading.Tasks.Task UpdateUserAsync(string token, string username, string password, string newUsername, string newPassword) {
+            return base.Channel.UpdateUserAsync(token, username, password, newUsername, newPassword);
+        }
+        
         public WCFService.DatabaseManagers.Records.PersonRecord[] SelectAllPerson(string token) {
             return base.Channel.SelectAllPerson(token);
         }
@@ -201,6 +251,14 @@ namespace WCFService_host.ServiceReference1 {
         
         public System.Threading.Tasks.Task<WCFService.DatabaseManagers.Records.PersonRecord> SelectPersonByIdAsync(string token, int id) {
             return base.Channel.SelectPersonByIdAsync(token, id);
+        }
+        
+        public int SelectPersonId(string token, string name) {
+            return base.Channel.SelectPersonId(token, name);
+        }
+        
+        public System.Threading.Tasks.Task<int> SelectPersonIdAsync(string token, string name) {
+            return base.Channel.SelectPersonIdAsync(token, name);
         }
         
         public void InsertPerson(string token, WCFService.DatabaseManagers.Records.PersonRecord record) {
@@ -233,6 +291,38 @@ namespace WCFService_host.ServiceReference1 {
         
         public System.Threading.Tasks.Task generatePersonsAsync(string token, int numberOfPersons, bool dropFirst) {
             return base.Channel.generatePersonsAsync(token, numberOfPersons, dropFirst);
+        }
+        
+        public WCFService.DatabaseManagers.Records.ParentRecord[] SelectAllParent(string token) {
+            return base.Channel.SelectAllParent(token);
+        }
+        
+        public System.Threading.Tasks.Task<WCFService.DatabaseManagers.Records.ParentRecord[]> SelectAllParentAsync(string token) {
+            return base.Channel.SelectAllParentAsync(token);
+        }
+        
+        public int SelectParentId(string token, string name) {
+            return base.Channel.SelectParentId(token, name);
+        }
+        
+        public System.Threading.Tasks.Task<int> SelectParentIdAsync(string token, string name) {
+            return base.Channel.SelectParentIdAsync(token, name);
+        }
+        
+        public void InsertParent(string token, WCFService.DatabaseManagers.Records.ParentRecord record) {
+            base.Channel.InsertParent(token, record);
+        }
+        
+        public System.Threading.Tasks.Task InsertParentAsync(string token, WCFService.DatabaseManagers.Records.ParentRecord record) {
+            return base.Channel.InsertParentAsync(token, record);
+        }
+        
+        public void InsertPersonParent(string token, int person_id, int parent_id) {
+            base.Channel.InsertPersonParent(token, person_id, parent_id);
+        }
+        
+        public System.Threading.Tasks.Task InsertPersonParentAsync(string token, int person_id, int parent_id) {
+            return base.Channel.InsertPersonParentAsync(token, person_id, parent_id);
         }
         
         public WCFService.DatabaseManagers.Records.JobRecord[] SelectAllJobs(string token) {

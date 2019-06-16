@@ -69,6 +69,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\WCFService.DatabaseManagers.Records.JobRecord.datasource" />
+    <None Include="Properties\DataSources\WCFService.DatabaseManagers.Records.ParentRecord.datasource" />
     <None Include="Properties\DataSources\WCFService.DatabaseManagers.Records.PersonRecord.datasource" />
   </ItemGroup>
   <ItemGroup>

@@ -43,6 +43,10 @@ namespace WCFService
 
         [OperationContract]
         [FaultContract(typeof(ServiceData))]
+        int SelectPersonId(string token, string name);
+
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
         void InsertPerson(string token, PersonRecord record);
 
         [OperationContract]
@@ -56,6 +60,23 @@ namespace WCFService
         [OperationContract]
         [FaultContract(typeof(ServiceData))]
         void generatePersons(string token, int numberOfPersons, bool dropFirst);
+
+        //Parents
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
+        List<ParentRecord> SelectAllParent(string token);
+
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
+        int SelectParentId(string token, string name);
+
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
+        void InsertParent(string token, ParentRecord record);
+
+        [OperationContract]
+        [FaultContract(typeof(ServiceData))]
+        void InsertPersonParent(string token, int person_id, int parent_id);
 
         //Jobs
         [OperationContract]

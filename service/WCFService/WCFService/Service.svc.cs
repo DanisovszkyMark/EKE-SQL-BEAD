@@ -18,6 +18,7 @@ namespace WCFService
         private RefreshManager refreshManager = new RefreshManager();
         private TokensManager tokenManager = new TokensManager();
         private JobsManager jobManager = new JobsManager();
+        private ParentManager parentManager = new ParentManager();
 
         //Users
         public bool CanLogin(string username, string password)
@@ -245,6 +246,60 @@ namespace WCFService
                 }
             }
             else return null;
+        }
+
+        public int SelectPersonId(string token, string name)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
+                {
+                    return personsManager.SelectPersonId(name);
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+            }
+            else return -1;
         }
 
         public void InsertPerson(string token, PersonRecord record)
@@ -484,6 +539,223 @@ namespace WCFService
 
             }
 
+        }
+
+        //Parents
+        public List<ParentRecord> SelectAllParent(string token)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
+                {
+                    return parentManager.SelectAll();
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+            }
+
+            return null;
+        }
+
+        public int SelectParentId(string token, string name)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
+                {
+                    return parentManager.SelectParentId(name);
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+            }
+
+            return -1;
+        }
+
+        public void InsertParent(string token, ParentRecord record)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
+                {
+                    parentManager.InsertParent(record);
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+            }
+        }
+
+        public void InsertPersonParent(string token, int person_id, int parent_id)
+        {
+            bool ok;
+            try
+            {
+                ok = Identification(token);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+
+            if (ok)
+            {
+                try
+                {
+                    parentManager.InsertPersonParent(person_id, parent_id);
+                }
+                catch (DatabaseConnectionException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseCommandTextException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+                catch (DatabaseParameterException e)
+                {
+                    ServiceData sd = new ServiceData();
+                    sd.ErrorMessage = e.Message;
+                    throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+                }
+            }
         }
 
         //Jobs

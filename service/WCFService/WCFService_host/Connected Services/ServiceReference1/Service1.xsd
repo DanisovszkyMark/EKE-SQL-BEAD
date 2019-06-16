@@ -24,6 +24,20 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="PersonRecord" nillable="true" type="tns:PersonRecord" />
+  <xs:complexType name="ArrayOfParentRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ParentRecord" nillable="true" type="tns:ParentRecord" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParentRecord" nillable="true" type="tns:ArrayOfParentRecord" />
+  <xs:complexType name="ParentRecord">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birth_day" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ParentRecord" nillable="true" type="tns:ParentRecord" />
   <xs:complexType name="ArrayOfJobRecord">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="JobRecord" nillable="true" type="tns:JobRecord" />

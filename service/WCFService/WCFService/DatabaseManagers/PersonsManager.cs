@@ -112,6 +112,49 @@ namespace WCFService.DatabaseManagers
             return loadedRecord;
         }
 
+        public int SelectPersonId(string name)
+        {
+            SqlCommand command = new SqlCommand();
+            command.CommandType = System.Data.CommandType.Text;
+            command.CommandText = @"SELECT * 
+                                    FROM Persons 
+                                    WHERE name = @name";
+
+            SqlParameter pName = new SqlParameter();
+            pName.ParameterName = "@name";
+            pName.Value = name;
+            pName.Direction = System.Data.ParameterDirection.Input;
+            pName.DbType = System.Data.DbType.String;
+            command.Parameters.Add(pName);
+
+            try { command.Connection = getConnection(); }
+            catch (Exception)
+            {
+                throw new DatabaseConnectionException();
+            }
+
+            SqlDataReader reader;
+
+            try { reader = command.ExecuteReader(); }
+            catch (Exception)
+            {
+                throw new DatabaseCommandTextException();
+            }
+
+            try
+            {
+                if (reader.Read())
+                {
+                    return int.Parse(reader["id"].ToString());
+                }
+            }
+            catch (Exception)
+            {
+                throw new DatabaseParameterException();
+            }
+
+            return -1;
+        }
         public void Insert(PersonRecord record)
         {
             SqlCommand cmd = new SqlCommand();
@@ -135,7 +178,6 @@ namespace WCFService.DatabaseManagers
                 throw new DatabaseCommandTextException();
             }
         }
-
 
         public void Update(PersonRecord record)
         {
