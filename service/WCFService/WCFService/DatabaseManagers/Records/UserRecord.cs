@@ -27,7 +27,6 @@ namespace WCFService.DatabaseManagers.Records
             set
             {
                 if (value == null) throw new ArgumentNullException();
-                else if (value.Length != 16) throw new ArgumentOutOfRangeException();
                 password = value;
             }
         }

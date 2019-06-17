@@ -49,7 +49,28 @@ namespace WCFService
 
         public void InsertUser(UserRecord record)
         {
-            throw new NotImplementedException();
+            try
+            {
+                usersManager.InsertUser(record.Username, record.Password);
+            }
+            catch (DatabaseConnectionException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseCommandTextException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
+            catch (DatabaseParameterException e)
+            {
+                ServiceData sd = new ServiceData();
+                sd.ErrorMessage = e.Message;
+                throw new FaultException<ServiceData>(sd, new FaultReason(sd.ErrorMessage));
+            }
         }
 
         public void Login(string username)
