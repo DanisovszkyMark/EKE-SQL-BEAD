@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_client"
         mc:Ignorable="d"
-        Title="ManageWorkerViewWindow" MinHeight="325" MaxHeight="420" Height="325" MinWidth="450" MaxWidth="675" Width="450" Background="{DynamicResource DarkBackgroundBrush}">
+        Title="Manage Worker" MinHeight="325" MaxHeight="420" Height="325" MinWidth="450" MaxWidth="675" Width="450" Background="{DynamicResource DarkBackgroundBrush}">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="60" Height="60*"/>

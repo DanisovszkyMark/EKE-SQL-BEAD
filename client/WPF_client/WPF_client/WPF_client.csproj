@@ -95,6 +95,9 @@
     <Compile Include="PersonParentControl.xaml.cs">
       <DependentUpon>PersonParentControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="RegisterViewWindow.xaml.cs">
+      <DependentUpon>RegisterViewWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Viewers\WorkerViewer.cs" />
     <Compile Include="ViewMoreViewWindow.xaml.cs">
       <DependentUpon>ViewMoreViewWindow.xaml</DependentUpon>
@@ -150,6 +153,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PersonParentControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterViewWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

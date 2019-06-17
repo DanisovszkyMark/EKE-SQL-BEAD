@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_client"
         mc:Ignorable="d"
-        Title="LoginWindowView" Height="220" MinHeight="200" MaxHeight="260" Width="260" MinWidth="260" MaxWidth="360" ResizeMode="CanResizeWithGrip">
+        Title="Login" Height="220" MinHeight="200" MaxHeight="260" Width="260" MinWidth="260" MaxWidth="360" ResizeMode="CanResizeWithGrip">
     <Grid Background="{DynamicResource DarkBackgroundBrush}">
         <Grid.RowDefinitions>
             <RowDefinition MinHeight="70" Height="1*"/>
             <RowDefinition MinHeight="30" Height="1*"/>
             <RowDefinition MinHeight="30" Height="1*"/>
+            <RowDefinition MinHeight="15" Height="0.7*"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -26,7 +27,9 @@
         <Label Content="Password:" Height="23" HorizontalAlignment="Right" Grid.Row="2" Foreground="{DynamicResource LightForegroundBrush}"/>
         <PasswordBox x:Name="pb_password" MinWidth="150" Height="23" Margin="5,5,40,0" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Stretch"/>
 
-        <Button x:Name="btn_login" Content="Login" Height="30" VerticalAlignment="Bottom" FontWeight="Bold" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_login_Click"/>
+        <Label x:Name="lbl_signUp" Content="Sing Up" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Center" FontSize="8" Foreground="{DynamicResource LinkBrush}" MouseEnter="lbl_signUp_MouseEnter" MouseLeave="lbl_signUp_MouseLeave" MouseUp="lbl_signUp_MouseUp"/>
+
+        <Button x:Name="btn_login" Content="Login" Height="30" VerticalAlignment="Bottom" FontWeight="Bold" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Background="{DynamicResource LightBackgroundBrush}" Foreground="{DynamicResource LightForegroundBrush}" Click="btn_login_Click"/>
         
     </Grid>
 </Window>

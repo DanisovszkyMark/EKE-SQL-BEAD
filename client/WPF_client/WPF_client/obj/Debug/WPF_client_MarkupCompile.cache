@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\App.xaml
-12-1445216223
+13-50832470
 
-211169766706
+22-440655055
 19-700165839
-AddJobControl.xaml;AddParentControl.xaml;ChangeUserDataViewWindow.xaml;ErrorLogControl.xaml;GenerateDataControl.xaml;InfoControl.xaml;LoginWindowView.xaml;MainWindow.xaml;ManageWorkerViewWindow.xaml;PersonParentControl.xaml;ViewMoreViewWindow.xaml;WorkersViewWindow.xaml;
+AddJobControl.xaml;AddParentControl.xaml;ChangeUserDataViewWindow.xaml;ErrorLogControl.xaml;GenerateDataControl.xaml;InfoControl.xaml;LoginWindowView.xaml;MainWindow.xaml;ManageWorkerViewWindow.xaml;PersonParentControl.xaml;RegisterViewWindow.xaml;ViewMoreViewWindow.xaml;WorkersViewWindow.xaml;
 
 False
 

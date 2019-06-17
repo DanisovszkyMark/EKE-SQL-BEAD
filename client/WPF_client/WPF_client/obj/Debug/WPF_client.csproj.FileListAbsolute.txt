@@ -38,3 +38,6 @@ D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\Ad
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\PersonParentControl.baml
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ChangeUserDataViewWindow.g.cs
 D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\ChangeUserDataViewWindow.baml
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\WPF_client.csprojAssemblyReference.cache
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\RegisterViewWindow.g.cs
+D:\Egyetem\6. félév\SQL\EKE-SQL-BEAD\client\WPF_client\WPF_client\obj\Debug\RegisterViewWindow.baml

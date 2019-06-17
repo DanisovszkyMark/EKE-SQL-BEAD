@@ -92,5 +92,29 @@ namespace WPF_client
                 return false;
             }
         }
+
+        private void lbl_signUp_MouseEnter(object sender, MouseEventArgs e)
+        {
+            this.lbl_signUp.Foreground = (SolidColorBrush)Application.Current.FindResource("LinkMouseOverBrush");
+        }
+
+        private void lbl_signUp_MouseLeave(object sender, MouseEventArgs e)
+        {
+            this.lbl_signUp.Foreground = (SolidColorBrush)Application.Current.FindResource("LinkBrush");
+        }
+
+        private void lbl_signUp_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            RegisterViewWindow reg = new RegisterViewWindow();
+            reg.Show();
+            this.Hide();
+
+            reg.Closed += Reg_Closed;
+        }
+
+        private void Reg_Closed(object sender, EventArgs e)
+        {
+            this.Show();
+        }
     }
 }
